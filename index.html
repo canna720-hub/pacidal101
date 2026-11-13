@@ -292,10 +292,10 @@ svg.bg .gt:not(.p):not(.d):not(.b):not(.hl) text{fill:var(--ink)!important;opaci
 
 
 
-<title>ᴘᴀᴄɪᴅᴀʟ101</title>
+<title>PACIDAL 101</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@500&family=Bebas+Neue&family=Italiana&family=Noto+Serif+TC:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@500&family=Bebas+Neue&family=Italiana&family=Noto+Serif+TC:wght@400;700&family=Playfair+Display:ital,wght@1,600&family=Zen+Old+Mincho:wght@500;700&family=Zen+Maru+Gothic:wght@700&family=Iansui&display=swap">
 <style>
 /* 版面：上方分頁列＋每頁「人體圖（左，固定）／說明（右）」雙欄；手機改單欄 */
 :root{
@@ -321,6 +321,7 @@ svg.bg .gt:not(.p):not(.d):not(.b):not(.hl) text{fill:var(--ink)!important;opaci
 [hidden]{display:none!important}
 .gen-hide{display:none!important}
 svg.bg .ch.hl .base{stroke:color-mix(in srgb,var(--hlc,var(--hl)) 50%,#FFFFFF)!important;stroke-opacity:1!important}
+nav.tabs button[data-tab="glossary"],#p-glossary{display:none!important}
 [data-open],[data-chpop],[data-gochan],[data-gl-go]{pointer-events:none!important;cursor:default!important}
 .gl:not([data-gl="x"]):not([data-gl="太陽"]):not([data-gl="地球"]):not([data-gl="月亮"]):not([data-gl="北交點"]):not([data-gl="南交點"]):not([data-gl="水星"]):not([data-gl="金星"]):not([data-gl="火星"]):not([data-gl="木星"]):not([data-gl="土星"]):not([data-gl="天王星"]):not([data-gl="海王星"]):not([data-gl="冥王星"]){pointer-events:none!important;border-bottom:0!important;cursor:default!important}
 .gname{background:none!important;color:inherit!important;text-decoration:none!important;cursor:default!important;padding:0!important}
@@ -333,6 +334,20 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;backgroun
 .brand{font-family:var(--display);font-size:clamp(15px,4.1vw,22px);font-weight:700;letter-spacing:.03em}
 .brand small{display:inline-block}.brand{display:inline-grid;line-height:1.15;justify-items:stretch}.brand-en{white-space:nowrap;background:linear-gradient(90deg,#3F5A96,#6A4FA3,#2F7DB5,#1F8A85,#3E9256,#8C9A2B,#C2862A,#C4612F,#B5434F,#9C3F7E);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}.brand-zh{display:block;font-size:1.33em;letter-spacing:0;white-space:nowrap;text-align:justify;text-align-last:justify;text-justify:inter-character;margin-top:2px}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .brand-en{filter:brightness(1.45) saturate(1.1)}}:root[data-theme="dark"] .brand-en{filter:brightness(1.45) saturate(1.1)}
 .brand small{font-family:var(--body);font-size:12px;color:var(--muted);letter-spacing:.1em;margin-left:8px;font-weight:400}
+nav.tabs{display:flex;gap:4px;overflow-x:auto;scrollbar-width:thin;min-width:0;padding-bottom:2px}
+nav.tabs button[data-tab=home]{position:sticky;left:0;z-index:2;background:var(--bg);box-shadow:8px 0 10px -6px var(--bg)}
+nav.tabs button[data-tab=home][aria-selected=true]{background:var(--ink)}
+.tabrow{display:flex;align-items:center;gap:6px;min-width:0}
+.tabrow>nav.tabs{flex:1 1 auto;min-width:0}
+.tab-fixed{flex:none;font:inherit;font-size:14px;font-weight:700;border:0;background:var(--f-head);color:#fff;padding:6px 12px;border-radius:999px;cursor:pointer;white-space:nowrap}
+.tab-fixed[aria-selected=true]{outline:2px solid var(--ink);outline-offset:-2px}
+.brand-row button[data-tab=home][aria-selected=true]{background:var(--ink);color:var(--bg)}
+nav.tabs button[data-tab=teacher]{position:sticky;right:0;z-index:2;background:var(--bg);box-shadow:-8px 0 10px -6px var(--bg)}
+nav.tabs button[data-tab=teacher][aria-selected=true]{background:var(--ink)}
+nav.tabs button{font:inherit;font-size:14px;border:0;background:transparent;color:var(--muted);padding:6px 12px;border-radius:999px;cursor:pointer;white-space:nowrap}
+nav.tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg)}
+nav.tabs button:hover{color:var(--ink)}
+nav.tabs button[aria-selected="true"]:hover{color:var(--bg)}
 button:focus-visible,input:focus-visible,textarea:focus-visible,.card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 h1,h2,h3{font-family:var(--display);font-weight:700;text-wrap:balance;line-height:1.35;margin:0}
 h1{font-size:clamp(30px,5vw,46px);letter-spacing:.04em}
@@ -356,6 +371,14 @@ svg.bg{width:100%;height:auto;display:block}
 .psym{display:inline-flex;align-items:center;justify-content:center;width:1.3em;height:1em;margin-right:.3em;font-family:"Segoe UI Symbol","Apple Symbols","Noto Sans Symbols 2","Noto Sans Symbols","DejaVu Sans",sans-serif;font-size:1.05em;line-height:1;vertical-align:-0.1em;font-weight:400;font-style:normal}
 
 .brand-row{display:flex;align-items:center;gap:8px}.brand-row .brand{margin-right:auto}
+.hd-mini{flex:0 0 auto;width:88px;margin-right:12px}
+.hd-mini svg{display:block;width:100%;height:auto}
+.hd-mini text,.hd-mini circle,.hd-mini .gt{display:none!important}
+.hd-mini polyline{stroke:#4A5263!important;stroke-width:1.3px!important;fill:none}
+.hd-mini polyline.hit,.hd-mini polyline.edge{stroke:none!important}
+.hd-mini polygon.ctr{stroke:#4A5263!important;stroke-width:1.6px!important}
+.hd-mini:empty{display:none}
+@media (max-width:640px){.hd-mini{width:64px;margin-right:8px}}
 .demo-bar{background:#E0A83A;color:#1E2624;padding:8px 16px;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;justify-content:center;font-size:14px;font-weight:600}.demo-bar button{font:inherit;font-size:13px;border:1px solid #1E2624;background:#fff;color:#1E2624;border-radius:999px;padding:3px 12px;cursor:pointer}.priv-btn{flex:none;font:inherit;font-size:13px;border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:999px;padding:4px 12px;cursor:pointer;white-space:nowrap}
 .cur-btn{flex:none;display:inline-flex;align-items:center;gap:6px;font:inherit;font-size:13px;border:1px solid var(--accent);background:var(--accent-soft);color:var(--ink);border-radius:999px;padding:3px 12px 3px 9px;cursor:pointer;max-width:46vw;min-width:0}
 .cur-btn svg{flex:none;color:var(--accent)}.cur-btn .cur-lab{color:var(--muted);white-space:nowrap}.cur-btn .cur-who{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
@@ -381,6 +404,7 @@ svg.bg{width:100%;height:auto;display:block}
 .pp-bulk.on{background:var(--accent-soft);outline:1px solid var(--accent)}
 .pp-t .xs{font-size:12px;color:var(--muted)}.pp-more{position:relative}.pp-more summary{list-style:none;cursor:pointer;font-size:12px;border:1px solid var(--line);border-radius:999px;padding:2px 9px;color:var(--muted)}.pp-more summary::-webkit-details-marker{display:none}
 .pp-more[open] .pp-menu{position:absolute;right:0;top:100%;z-index:5;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:6px;display:flex;flex-direction:column;gap:4px;box-shadow:0 6px 18px rgba(0,0,0,.12);min-width:120px}
+#p-people .toast:empty{display:none}.pp-t .acts{flex-wrap:nowrap!important;align-items:center}.pp-t .acts .btn,.pp-t .acts .xs{white-space:nowrap}
 #tr-bg[hidden],#tr-bglg[hidden]{display:none!important}
 .en-n{font-size:.62em;font-weight:400;color:var(--muted);letter-spacing:.01em;font-family:var(--sans,inherit)}.en-s{display:block;font-size:11px;font-weight:400;color:var(--muted);margin-top:1px}
 .sens.ok{border-color:var(--accent)}.sens.warn{border-color:#D9A33A;background:color-mix(in srgb,#F2C14E 10%,var(--surface))}
@@ -388,6 +412,9 @@ svg.bg{width:100%;height:auto;display:block}
 .sens-segs{display:flex;flex-direction:column;gap:2px;margin-top:4px;font-size:13px}.sens-seg{color:var(--muted)}.sens-seg.on{color:var(--ink);font-weight:700}.sens-seg.on::after{content:'　← 目前';color:var(--accent);font-weight:400;font-size:12px}
 .gl{border-bottom:1.5px dotted var(--accent);cursor:help;color:inherit}.gl:hover,.gl:focus{background:var(--accent-soft);outline:none;border-radius:3px}
 .rp .gl{border:0;background:none;cursor:auto}
+#gl-pop{position:fixed;z-index:60;background:var(--surface);color:var(--ink);border:1px solid var(--accent);border-radius:12px;padding:12px 14px;box-shadow:0 10px 30px rgba(0,0,0,.18);display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:1.6}
+#gl-pop .gl-h{display:flex;align-items:baseline;gap:8px}#gl-pop .gl-h b{font-size:17px}#gl-pop .gl-h span{font-size:12px;color:var(--muted);flex:1}
+#gl-pop .gl-x{border:0;background:none;color:var(--muted);cursor:pointer;font-size:14px}#gl-pop .gl-a{display:flex;flex-wrap:wrap;gap:6px}
 .gl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px;margin-top:8px}.gl-item.hit{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
 .src-tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.02em;line-height:1.5;padding:0 7px;border-radius:999px;margin-left:6px;vertical-align:2px;white-space:nowrap;border:1px solid}
 .src-tag.hd{color:var(--ink);border-color:var(--ink);background:var(--surface)}.src-tag.yi{color:#9A3B2E;border-color:#C9786B;background:color-mix(in srgb,#C9786B 12%,var(--surface))}
@@ -413,6 +440,7 @@ details.fold[open]>summary .fold-btn::before{content:'收合';}details.fold[open
 #hb-dlg{z-index:70}.hb-modal{position:relative;max-width:820px;width:calc(100% - 32px);margin:auto;max-height:92vh;overflow:auto}.hb-x{position:absolute;top:10px;right:12px;border:0;background:none;font-size:18px;color:var(--muted);cursor:pointer}
 .hb-open{border-style:dashed}
 .pp-name{font:inherit;border:0;background:none;padding:0;color:var(--ink);cursor:pointer;text-align:left}.pp-name:hover b,.pp-name:focus b{color:var(--accent);text-decoration:underline}
+.tab-no.rn{font-family:var(--body);padding:0 .3em;font-size:10.5px}.tab-no{display:inline-block;min-width:1.35em;height:1.35em;line-height:1.35em;border-radius:999px;font-size:11px;font-weight:700;text-align:center;margin-right:5px;background:var(--sunk);color:var(--muted);font-family:var(--mono,inherit)}nav.tabs button[aria-selected="true"] .tab-no{background:var(--bg);color:var(--ink)}
 .rp-hd{position:absolute;left:52px;right:52px;top:14px;display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:11px;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:5px}.rp-hd b{font-family:var(--display);font-size:15px;color:var(--ink)}.sh-head{display:flex;justify-content:space-between;gap:12px;border-bottom:2px solid var(--ink);padding-bottom:8px;margin-bottom:6px}.sh-notes{gap:6px}.sh-line{height:30px;border-bottom:1px solid var(--line)}
 .pp-pager{display:flex;align-items:center;justify-content:center;gap:6px;font-size:14px}.pp-pager button{font:inherit;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;padding:2px 10px;cursor:pointer}.pp-pager button:disabled{opacity:.35;cursor:default}
 .pd-cur{display:grid;grid-template-columns:minmax(0,560px) minmax(0,1fr);gap:18px;align-items:stretch;border:1px solid var(--accent);background:var(--accent-soft);border-radius:14px;padding:14px 16px}
@@ -601,6 +629,23 @@ svg.bg.i-channel .ch:hover .base{stroke:var(--hl)}
 @keyframes hx-rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 @keyframes hx-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
 @keyframes hx-drift{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
+#p-home .hero .eyebrow,#p-home .hero h1,#p-home .hero p.lead{animation:hx-rise .8s cubic-bezier(.2,.7,.2,1) both}
+#p-home .hero h1{animation-delay:.12s}
+#p-home .hero p.lead{animation-delay:.24s}
+#p-home .hexrow>span{display:inline-block;opacity:0;animation:hx-rise .6s cubic-bezier(.2,.7,.2,1) both}
+#p-home .hexrow>span:nth-child(1){animation-delay:.40s}
+#p-home .hexrow>span:nth-child(2){animation-delay:.48s}
+#p-home .hexrow>span:nth-child(3){animation-delay:.56s}
+#p-home .hexrow>span:nth-child(4){animation-delay:.64s}
+#p-home .hexrow>span:nth-child(5){animation-delay:.72s}
+#p-home .hexrow>span:nth-child(6){animation-delay:.80s}
+#p-home .hexrow>span:nth-child(7){animation-delay:.88s}
+#p-home .hexrow>span:nth-child(8){animation-delay:.96s}
+#p-home .hexrow>span svg{animation:hx-float 5s ease-in-out infinite}
+#p-home .hexrow>span:nth-child(odd) svg{animation-delay:-1.2s}
+#p-home .hexrow>span:nth-child(3n) svg{animation-duration:6.5s}
+#p-home .bgbox{animation:hx-drift 1s cubic-bezier(.2,.7,.2,1) .35s both}
+@media (prefers-reduced-motion: reduce){#p-home .hero *,#p-home .hexrow>span svg,#p-home .bgbox{animation:none!important}#p-home .hexrow>span,#p-home .bgbox{opacity:1!important}}
 .path{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:32px}
 .step{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;cursor:pointer;text-align:left;font:inherit;color:inherit;display:flex;flex-direction:column;gap:6px}
 .step:hover{border-color:var(--accent)}
@@ -692,8 +737,42 @@ details.adv[open] summary{margin-bottom:8px}
 .ex-flag{font-size:12px;color:var(--red);letter-spacing:.06em}
 .toast{font-size:13px;color:var(--accent);min-height:1em}
 /* v2 */
+nav.tabs button[data-tab=home],#p-home{--tc:#3F5A96}
+#p-home{display:none!important}
+.tabs button[data-tab=transit],#p-transit{--tc:#B0567A}
+.tabs button[data-tab=centers],#p-centers{--tc:#6A4FA3}
+.tabs button[data-tab=type],#p-type{--tc:#2F7DB5}
+.tabs button[data-tab=authority],#p-authority{--tc:#1F8A85}
+.tabs button[data-tab=definition],#p-definition{--tc:#3E9256}
+.tabs button[data-tab=profile],#p-profile{--tc:#8C9A2B}
+.tabs button[data-tab=channels],#p-channels{--tc:#C2862A}
+.tabs button[data-tab=circuit],#p-circuit{--tc:#C4612F}
+.tabs button[data-tab=gates],#p-gates{--tc:#B5434F}
+.tabs button[data-tab=cross],#p-cross{--tc:#9C3F7E}
+.tabs button[data-tab=planets],#p-planets{--tc:#4B5FB0}
+.tabs button[data-tab=cycles],#p-cycles{--tc:#2E86A8}
+.tabs button[data-tab=arrows],#p-arrows{--tc:#3A8F72}
+.tabs button[data-tab=dream],#p-dream{--tc:#6B5BB5}
+.tabs button[data-tab=composite],#p-composite{--tc:#B0567A}
+.tabs button[data-tab=group],#p-group{--tc:#B0567A}
+.tabs button[data-tab=yijing],#p-yijing{--tc:#A8452F}
+.tabs button[data-tab=genekeys],#p-genekeys{--tc:#C0902A}
+.tabs button[data-tab=chakra],#p-chakra{--tc:#7A6A9E}
+.tabs button[data-tab=numer],#p-numer{--tc:#3F7F8C}
+.tabs button[data-tab=sheet],#p-sheet{--tc:#5B6B72}
+.tabs button[data-tab=glossary],#p-glossary{--tc:#5B6B72}
+.tabs button[data-tab=stats],#p-stats{--tc:#5B6B72}
+.tabs button[data-tab=people],#p-people{--tc:#5B6B72}
+.tabs button[data-tab=teacher],#p-teacher{--tc:#5B6B72}
+nav.tabs button{color:color-mix(in srgb,var(--tc,var(--muted)) 72%,var(--ink));box-shadow:inset 0 -2px 0 color-mix(in srgb,var(--tc,transparent) 45%,transparent)}
+nav.tabs button:hover{background:color-mix(in srgb,var(--tc,var(--ink)) 12%,transparent);color:color-mix(in srgb,var(--tc,var(--ink)) 85%,var(--ink))}
+nav.tabs button[aria-selected="true"],nav.tabs button[data-tab=home][aria-selected=true]{background:var(--tc,var(--ink));color:#fff;box-shadow:none}
+nav.tabs button[aria-selected="true"]:hover{color:#fff;background:var(--tc,var(--ink))}
+nav.tabs button .tab-no{background:var(--tc,var(--sunk));color:#fff}
+nav.tabs button[aria-selected="true"] .tab-no{background:#fff;color:var(--tc,var(--ink))}
 .panel > .eyebrow{color:var(--tc,var(--muted));font-weight:700}
 .panel > h2{border-left:6px solid var(--tc,transparent);padding-left:10px}
+nav.tabs .sep{font-size:11px;color:var(--muted);letter-spacing:.14em;align-self:center;padding:0 4px 0 10px;white-space:nowrap;border-left:1px solid var(--line)}
 .ck-sw{display:inline-block;width:14px;height:14px;border-radius:50%;border:1px solid rgba(0,0,0,.18);vertical-align:-2px;margin-right:3px}.ck-c{display:inline-block;padding:2px 8px;border-radius:6px;color:#1E2624;font-weight:700;white-space:nowrap}.ck-tb td{font-size:14px}.ck-cr{white-space:nowrap}.ck-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:12px}.ck-card{border:1px solid var(--line);border-left:5px solid var(--line);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:6px;background:var(--bg)}.ck-card.on{border-left-color:var(--cc)}.ck-h{display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap}.ck-t{font-size:14px}.ck-star{color:#C0902A;margin-left:2px;font-size:12px}.ck-today .ck-c{font-size:.92em;padding:0 6px;margin:0 2px}
 .tt-g{font:inherit;color:var(--accent);background:none;border:0;padding:0;margin:0;cursor:pointer;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:3px;font-weight:600}.tt-g:hover{color:var(--ink)}
 .tr-foot{font-size:12.5px;color:var(--muted);margin-top:28px;padding-top:10px;border-top:1px dashed var(--line);max-width:46em;line-height:1.7}
@@ -813,6 +892,7 @@ svg.bg .portalline{stroke:var(--accent);stroke-width:2;stroke-dasharray:3 5;opac
 .rm-tabs button.seen{border-color:var(--accent);background:var(--accent-soft)}.rm-tabs button.seen::before{content:'✓ ';color:var(--accent);font-weight:700}
 .rm-q{font-size:13px;color:var(--muted)}.rm-q b{color:var(--ink)}.rm-me{font-size:13px;background:var(--accent-soft);border-radius:8px;padding:6px 10px}
 .rm-tag{position:absolute;top:12px;right:14px;font-size:11px;color:var(--accent);font-weight:700}
+body.beg nav.tabs button:not(.beg),body.beg nav.tabs .sep{display:none}
 
 /* 流日「今天的我」：依主題分色（沿用各分頁代表色） */
 .tip.t-ch{--tip-c:#C2862A}.tip.t-def{--tip-c:#3E9256}.tip.t-ck{--tip-c:#7A6A9E}.tip.t-nu{--tip-c:#3F7F8C}
@@ -882,7 +962,7 @@ svg.bg .portalline{stroke:var(--accent);stroke-width:2;stroke-dasharray:3 5;opac
 .pc-cr{font-size:11px;color:var(--muted);text-align:center;letter-spacing:.04em;margin-top:2px}
 .pz{display:inline-grid;gap:4px;line-height:1.1;min-width:0}
 .pz-top{display:flex;align-items:center;gap:10px;width:0;min-width:100%}
-.pz-en{font-family:"Noto Sans TC",sans-serif;font-size:clamp(13px,1.5vw,17px);font-weight:500;letter-spacing:.42em;white-space:nowrap;background:linear-gradient(90deg,#3F5A96,#6A4FA3,#2F7DB5,#1F8A85,#3E9256,#8C9A2B,#C2862A,#C4612F,#B5434F,#9C3F7E);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.pz-en{font-family:"Italiana",serif;font-size:clamp(13px,1.5vw,17px);font-weight:400;letter-spacing:.3em;white-space:nowrap;background:linear-gradient(90deg,#3F5A96,#6A4FA3,#2F7DB5,#1F8A85,#3E9256,#8C9A2B,#C2862A,#C4612F,#B5434F,#9C3F7E);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .pz-en{filter:brightness(1.45) saturate(1.1)}}
 :root[data-theme="dark"] .pz-en{filter:brightness(1.45) saturate(1.1)}
 .pz-top>*{flex-shrink:0}
@@ -893,20 +973,303 @@ svg.bg .portalline{stroke:var(--accent);stroke-width:2;stroke-dasharray:3 5;opac
 :root[data-theme="dark"] .pz-zh{filter:brightness(1.45) saturate(1.1)}
 .pz-sep{display:inline-block;width:1px;height:.9em;background:var(--edge)}
 @media (max-width:480px){.pz-en{letter-spacing:.3em;font-size:13px}.pz-top{gap:8px}.pz-dots{gap:1px;width:110px}.pz-dots i{width:6px;height:6px;flex-basis:6px}}
-.pz-line2{display:flex;align-items:center;gap:14px;margin-top:2px;font-family:"Noto Serif TC","Songti TC",serif;font-weight:700;font-size:clamp(28px,3.4vw,42px);line-height:1.1;letter-spacing:.03em;color:var(--ink);white-space:nowrap}
+nav.tabs,.tabrow{display:none!important}
+.pz-line2{display:flex;align-items:center;gap:14px;margin-top:2px;font-family:"Zen Maru Gothic","Noto Sans TC",sans-serif;font-weight:700;font-size:clamp(28px,3.4vw,42px);line-height:1.1;letter-spacing:.03em;color:var(--ink);white-space:nowrap}
 .pz-line2 .pz-bar{display:inline-block;width:2px;height:.8em;background:var(--ink);opacity:.45;border-radius:1px}
-@media (max-width:480px){.pz-line2{font-size:26px;gap:10px}}
+@media (max-width:480px){.pz-line2{font-size:26px;gap:10px}}.pz-line2 .pz-t1{letter-spacing:.05em}.pz-line2 .pz-t2{font-weight:700}.pz-line2 em{font-style:normal;font-size:1em;letter-spacing:.02em;margin-left:.12em;background:linear-gradient(90deg,#C4612F,#C2862A,#8C9A2B,#3E9256,#1F8A85,#2F7DB5,#6A4FA3,#9C3F7E);-webkit-background-clip:text;background-clip:text;color:transparent}
 #p-sheet .split{align-items:stretch;grid-template-columns:minmax(360px,1.15fr) minmax(360px,1fr)}
 #p-sheet .split>.stick{display:flex;flex-direction:column}
 #p-sheet #s-chart{position:sticky;top:24px;width:100%}
 @media (max-width:600px){#p-sheet .split{grid-template-columns:1fr}#p-sheet #s-chart{position:static}}
-</style>
+.pz{gap:0!important}.pz-top{gap:14px!important;justify-content:space-between!important;align-items:center!important}.pz-en{letter-spacing:.18em!important}.pz-dots{flex:1 1 auto!important;width:auto!important;max-width:none!important;gap:0!important;justify-content:space-between!important}.pz-dots i{width:5px!important;height:5px!important;flex:0 0 5px!important}.pz-line2{margin-top:-2px!important;font-weight:700!important}.pz-line2 *{font-weight:700!important}.pz-line2 .pz-t1{font-family:"Zen Maru Gothic","Noto Sans TC",sans-serif!important}.pz-line2 .pz-t2{font-family:"Iansui","Noto Serif TC",serif!important;font-weight:400!important}.pz-line2 .pz-t2 *{font-weight:400!important}.pz-en{background:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;filter:none!important;color:#1E2624!important;-webkit-text-fill-color:#1E2624!important}.pz-dots i:not(:nth-child(4n+2)){display:none!important}
+/* 標題區塊與左側流日小圖同高：英文在上、中文在下，兩端對齊小圖上下緣 */
+.brand-row{align-items:stretch!important}
+.brand-row>*:not(.brand):not(.hd-mini){align-self:flex-end!important;margin-bottom:0!important}
+@media (max-width:640px){
+ .brand-row{flex-wrap:nowrap!important}
+ .brand-row>.hd-mini{order:-3}
+ .brand-row>.brand{order:0}
+ .brand-row #cur-btn{order:1;position:static!important;align-self:flex-end!important;width:40px!important;min-width:0!important;max-width:none!important;padding:0!important;height:40px!important;justify-content:center;border-radius:999px;background:var(--surface)!important;border:1px solid var(--line)!important;color:var(--muted)!important;margin:0!important}
+ .brand-row button[aria-label="首頁"]{order:2}
+ .brand-row #cur-btn .cur-who{display:none!important}
+ .brand-row #cur-btn svg{width:20px!important;height:20px!important;color:var(--muted)!important}
+ .brand-row button[aria-label="首頁"]{width:40px!important;height:40px!important;min-width:40px!important;min-height:0!important;padding:0!important;border-radius:999px!important;box-sizing:border-box!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;margin:0!important}
+ .brand-row button[aria-label="首頁"] svg{width:20px!important;height:20px!important}
+ .brand-row #cur-btn{box-sizing:border-box!important;height:40px!important;width:40px!important}
+}
+.brand-row .brand.pz{align-self:stretch!important;display:flex!important;flex-direction:column!important;justify-content:center!important;padding-block:0!important}
+.pz-101{font-style:normal;font-weight:700;letter-spacing:.06em;margin-left:.2em;background:linear-gradient(90deg,#C4612F,#C2862A,#8C9A2B,#3E9256,#1F8A85,#2F7DB5,#6A4FA3,#9C3F7E);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.brand-row .pz-top{align-items:center!important}
+.brand-row .pz-top{width:auto!important;min-width:0!important}
+.brand-row .pz-en{display:flex!important;flex-direction:column!important;align-items:flex-start!important;width:auto!important;max-width:none!important;letter-spacing:0!important;line-height:1!important}
+.brand-row .pz-l1,.brand-row .pz-l2{display:inline-block;white-space:nowrap;letter-spacing:0;line-height:1}
+.brand-row .pz-l2{font-weight:700!important;-webkit-text-stroke:.35px currentColor}
+.brand-row .pz-dots{display:none!important}
+.brand-row .pz-dots i{width:6px!important;height:6px!important;flex:0 0 6px!important}
+.brand-row .pz-line2{font-size:clamp(40px,5vw,60px)!important;line-height:1!important;margin-top:0!important;letter-spacing:.02em!important}
+.brand-row .pz-line2 em{letter-spacing:.04em!important}
+.sh-t1,.sh-t2,.sh-t3,.sh-t4,.sh-t5,.sh-t6,.sh-t7,.sh-t8,.sh-blk,.sh-tint{background:#F2F1EC!important}.sh-blk .box,.sh-tint .box{background:transparent!important}</style>
 <header class="top"><div class="wrap">
-  <div class="brand-row"><div class="brand pz" aria-label="HUMAN DESIGN PACIDAL全景人類圖初階課程"><div class="pz-top"><span class="pz-en">HUMAN DESIGN</span><span class="pz-dots" aria-hidden="true"><i style="background:hsl(0 46% 52%)"></i><i style="background:hsl(21 46% 52%)"></i><i style="background:hsl(43 46% 52%)"></i><i style="background:hsl(64 46% 52%)"></i><i style="background:hsl(86 46% 52%)"></i><i style="background:hsl(107 46% 52%)"></i><i style="background:hsl(129 46% 52%)"></i><i style="background:hsl(150 46% 52%)"></i><i style="background:hsl(171 46% 52%)"></i><i style="background:hsl(193 46% 52%)"></i><i style="background:hsl(214 46% 52%)"></i><i style="background:hsl(236 46% 52%)"></i><i style="background:hsl(257 46% 52%)"></i><i style="background:hsl(279 46% 52%)"></i><i style="background:hsl(300 46% 52%)"></i></span></div><div class="pz-line2"><span>PACIDAL</span><i class="pz-bar"></i><span>全景人類圖</span></div></div><button type="button" class="priv-btn" onclick="location.reload()" aria-label="首頁" title="回到首頁開場動畫" style="display:inline-flex;align-items:center;justify-content:center;line-height:normal;vertical-align:middle;min-height:32px;padding-top:8px;padding-bottom:8px"><svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M3 9.2 10 3.5l7 5.7v7.3a.5.5 0 0 1-.5.5h-4v-4.5h-5V17h-4a.5.5 0 0 1-.5-.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></button><span id="cur-btn" class="cur-btn" title="目前套用的人物"><svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><circle cx="10" cy="6.5" r="3.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 18c.8-3.8 3.6-5.6 7-5.6s6.2 1.8 7 5.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="cur-who" id="cur-who">尚未套用</span></span><button type="button" id="priv-btn" class="priv-btn" aria-pressed="false" title="隱藏畫面上的人物姓名與生日">隱私</button></div>
+  <div class="brand-row"><div class="hd-mini" id="hd-mini" role="img" aria-label="今日流日人類圖" title="今日流日人類圖"></div><div class="brand pz"aria-label="HUMAN DESIGN PACIDAL全景人類圖初階課程"><div class="pz-top"><span class="pz-en"><span class="pz-l1">PACiDAL</span><span class="pz-l2">HUMAN DESIGN <em class="pz-101">101</em></span></span><span class="pz-dots" aria-hidden="true"><i style="background:hsl(0 46% 52%)"></i><i style="background:hsl(21 46% 52%)"></i><i style="background:hsl(43 46% 52%)"></i><i style="background:hsl(64 46% 52%)"></i><i style="background:hsl(86 46% 52%)"></i><i style="background:hsl(107 46% 52%)"></i><i style="background:hsl(129 46% 52%)"></i><i style="background:hsl(150 46% 52%)"></i><i style="background:hsl(171 46% 52%)"></i><i style="background:hsl(193 46% 52%)"></i><i style="background:hsl(214 46% 52%)"></i><i style="background:hsl(236 46% 52%)"></i><i style="background:hsl(257 46% 52%)"></i><i style="background:hsl(279 46% 52%)"></i><i style="background:hsl(300 46% 52%)"></i></span></div></div><button type="button" class="priv-btn" onclick="location.reload()" aria-label="首頁" title="回到首頁開場動畫" style="display:inline-flex;align-items:center;justify-content:center;line-height:normal;vertical-align:middle;min-height:32px;padding-top:8px;padding-bottom:8px"><svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M3 9.2 10 3.5l7 5.7v7.3a.5.5 0 0 1-.5.5h-4v-4.5h-5V17h-4a.5.5 0 0 1-.5-.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></button><span id="cur-btn" class="cur-btn" title="目前套用的人物"><svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><circle cx="10" cy="6.5" r="3.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 18c.8-3.8 3.6-5.6 7-5.6s6.2 1.8 7 5.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="cur-who" id="cur-who">＋人物</span></span><button type="button" id="priv-btn" class="priv-btn" aria-pressed="false" title="隱藏畫面上的人物姓名與生日">隱私</button></div>
+  <div class="tabrow"><button role="tab" data-tab="sheet" aria-selected="false" class="tab-fixed">ABOUT ME</button>
+  <nav class="tabs" role="tablist" aria-label="主要分頁"><button role="tab" data-tab="centers" aria-selected="false"><span class="tab-no">1</span>九大中心</button><button role="tab" data-tab="type" aria-selected="false"><span class="tab-no">2</span>類型</button><button role="tab" data-tab="authority" aria-selected="false"><span class="tab-no">3</span>內在權威</button><button role="tab" data-tab="definition" aria-selected="false"><span class="tab-no">4</span>定義</button><button role="tab" data-tab="profile" aria-selected="false"><span class="tab-no">5</span>六爻與人生角色</button><button role="tab" data-tab="channels" aria-selected="false"><span class="tab-no">6</span>36 通道</button><button role="tab" data-tab="circuit" aria-selected="false"><span class="tab-no">7</span>迴路</button><button role="tab" data-tab="gates" aria-selected="false"><span class="tab-no">8</span>64 閘門</button><button role="tab" data-tab="glossary" aria-selected="false"><span class="tab-no">9</span>名詞解釋</button></nav></div>
 </div></header>
 
 <main class="wrap">
 
+<!-- 導覽 -->
+<section class="panel" id="p-home">
+  <div class="hero">
+    <div>
+      <div class="eyebrow">自我探索入門課</div>
+      <h1>人生攻略</h1>
+      <p class="lead">人類圖（Human Design）由 Ra Uru Hu 於 1987 年提出，融合了易經、占星、卡巴拉生命樹與脈輪系統。它用一張「人體圖」描繪每個人與生俱來的能量配置：九大中心、36 條通道、64 個閘門。</p>
+      <div class="hexrow" id="hexrow" aria-hidden="true"></div>
+    </div>
+    <div class="bgbox" id="home-bg"></div>
+  </div>
+
+  <div id="roadmap" style="margin-top:24px"></div>
+
+  <div id="hb-out" style="margin-top:24px"></div>
+
+  <div style="margin-top:40px;font-size:13px;color:var(--muted);line-height:1.8">
+      </div>
+</section>
+
+<!-- 九大中心 -->
+<section class="panel" id="p-type" hidden>
+  <div class="eyebrow">初階・第 2 課・Type</div>
+  <h2>類型：我的能量怎麼運作</h2>
+  <div id="ty-mine" style="margin:14px 0 22px"></div>
+  <p class="lede">人類圖依照「哪些中心有定義」以及「動力中心是否連到喉嚨」，把人分成五種類型。類型決定我和世界互動的方式，以及最適合我的「策略」：照著策略生活，會感到滿足、成功、平靜或驚喜；偏離時，則會感到挫敗、苦澀、憤怒或失望。</p>
+  <details class="block fold gen-hide" style="margin:0 0 14px">
+    <summary><h2>五種類型速覽</h2><span class="fold-sub">五種類型的判斷方式、策略與感受</span><span class="fold-btn">展開</span></summary>
+    <p class="muted" style="margin-top:6px">類型由「哪些中心有定義」以及「動力中心是否連到喉嚨」決定，個人檔案會幫你自動判斷。</p>
+    <div class="tscroll"><table class="types">
+      <thead><tr><th>類型</th><th>判斷方式</th><th>策略</th><th>活出自己時的感受</th><th>還沒對齊時的感受</th></tr></thead>
+      <tbody>
+        <tr><td><b>生產者</b></td><td>薦骨中心有定義</td><td>等待回應</td><td>滿足</td><td>挫折</td></tr>
+        <tr><td><b>顯示生產者</b></td><td>薦骨有定義，且動力中心接到喉嚨</td><td>等待回應，再告知</td><td>滿足、平和</td><td>挫折、憤怒</td></tr>
+        <tr><td><b>顯示者</b></td><td>薦骨未定義，動力中心接到喉嚨</td><td>行動前先告知</td><td>平和</td><td>憤怒</td></tr>
+        <tr><td><b>投射者</b></td><td>薦骨未定義，動力中心沒接到喉嚨</td><td>等待邀請</td><td>成功</td><td>苦澀</td></tr>
+        <tr><td><b>反映者</b></td><td>九大中心全部未定義</td><td>等待一個月亮週期（約 28 天）</td><td>驚喜</td><td>失望</td></tr>
+      </tbody>
+    </table></div>
+  </details>
+  <div class="sec gen-hide"><h3>五種類型</h3><div class="info" id="ty-all" style="gap:12px"></div></div>
+  </section>
+
+<section class="panel" id="p-authority" hidden>
+  <div class="eyebrow">初階・第 3 課・Authority</div>
+  <h2>內在權威：身體替我做決定的方式</h2>
+  <div id="au-mine" style="margin:14px 0 22px"></div>
+  <p class="lede">內在權威是我做決定時，最值得信任的身體智慧。它不是頭腦的分析，而是某個有定義的中心給我的訊號。依照策略等待時機，再用內在權威確認，就是人類圖最核心的實踐。</p>
+  <div class="sec gen-hide"><h3>七種內在權威</h3><div class="info" id="au-all" style="gap:12px"></div></div>
+  <div class="sec"><div class="box"><h4>這週的小實驗</h4><p style="font-size:14px">遇到一件不急的決定時，先不要馬上用頭腦下結論，試著照自己的內在權威等一等、感覺一下，再決定。記下兩種方式的差別。內在權威是要在生活中驗證的，不是讀了就相信。</p></div></div>
+</section>
+
+<section class="panel" id="p-circuit" hidden>
+  <div class="eyebrow">初階・第 7 課・Circuitry</div>
+  <h2>迴路：我的天賦為誰而存在</h2>
+  <div id="ci-mine" style="margin:14px 0 22px"></div>
+  <p class="lede">36 條通道依照能量的目的，分成三大迴路與一組整合通道：個體人迴路帶來突變與獨特，集體迴路為人類整體分享，部落迴路照顧家人與群體，整合通道讓人自給自足。</p>
+  <div class="sec gen-hide"><h3>三大迴路與整合通道</h3><div class="info" id="ci-all" style="gap:12px"></div></div>
+</section>
+
+<section class="panel" id="p-centers" hidden>
+  <div class="eyebrow">初階・第 1 課・Centers</div>
+  <h2 style="margin-bottom:12px">九大中心</h2>
+<div class="box" style="margin:0 0 18px"><h4>人體圖怎麼讀？</h4><p style="font-size:15px">圖上九個幾何圖形就是九大中心。塗上顏色的叫「有定義」，代表那股能量在你身上穩定運作；白色的叫「未定義」，代表你容易接收、放大別人的這種能量，也是你學習智慧的地方。</p></div>
+  <div id="c-mine" style="margin-bottom:16px"></div>
+  <div id="c-list" style="margin-bottom:24px"></div>
+  <div class="split">
+    <div class="stick"><div class="bgbox" id="c-bg"></div><p class="muted" style="font-size:13px;display:table;margin:8px auto 0;text-align:left">點選圖上的中心看說明</p></div>
+    <div class="info" id="c-info"></div>
+  </div>
+  <div class="sec">
+    <h3>未定義中心：制約與去制約</h3>
+    <div class="box" style="max-width:46em"><p style="font-size:15px">未定義（白色）的中心會接收、放大身邊的人與環境的能量。例如情緒中心未定義的人，可能常把別人的情緒當成自己的。這種被外在能量帶著走、以為那就是自己的現象，稱為「制約」。制約本身不是壞事，它也是我們向別人學習的方式。</p><p style="font-size:15px">依照自己的策略與內在權威生活之後，會慢慢分辨「哪些是我、哪些是外來的」，這個過程稱為「去制約」。去制約不是要把開放的中心變得有定義，而是學會不被它牽著走，讓開放的中心成為智慧的來源。</p><p class="hint">問問自己：最近一次被別人的情緒、壓力或想法帶著走，是在哪一個未定義的中心？</p></div>
+  </div>
+</section>
+
+<!-- 通道 -->
+<section class="panel" id="p-channels" hidden>
+  <div class="eyebrow">初階・第 6 課・Channels</div>
+  <h2>通道：我身上穩定、一貫的天賦</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:14px 0 26px">
+    <div class="me"><h4>如果我有一條通道</h4><p>兩端的閘門我都有，這股能量在我身上會穩定、持續地運作，是我可以依賴的天賦與生命主題。它也讓兩端的中心同時變成「有定義」，別人和我相處時，也會感受到這股能量。</p></div>
+    <div class="box"><h4>如果我只有一端（懸掛閘門）</h4><p>這是我「渴望」的能量。我會被擁有另一端閘門的人吸引，和他在一起時，通道會被點亮，我會短暫體驗到完整的感覺。</p></div>
+    <div class="box"><h4>如果兩端我都沒有</h4><p>我不會固定地擁有這股能量，而是從別人身上、或在行星行運經過時體驗它。這是我觀察與學習的地方，不是我的缺點。</p></div>
+  </div>
+  <div id="h-mine" style="margin-bottom:26px"></div>
+  <h3 class="gen-hide" style="margin-bottom:10px">我的通道在人體圖上</h3>
+  <div class="split">
+    <div class="stick"><div class="bgbox" id="h-bg"></div><p class="muted gen-hide" style="font-size:13px;display:table;margin:8px auto 0;text-align:left">點選圖上的線看說明</p></div>
+    <div class="info">
+      <div id="h-info" class="info"></div>
+      <div>
+        <h3 class="gen-hide" style="margin-bottom:4px">其他通道（全部 36 條）</h3><p class="hint gen-hide" style="margin-bottom:10px">標 ★ 的是我擁有的通道。</p>
+        <div class="chips" id="h-filter" style="margin-bottom:12px"></div>
+        <div class="chlist" id="h-list"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 閘門 -->
+<section class="panel" id="p-gates" hidden>
+  <div class="eyebrow">初階・第 8 課・Gates</div>
+  <h2>64 閘門</h2>
+  <div class="toolbar">
+    <input class="search" id="g-search" type="search" placeholder="搜尋：號碼、卦名、關鍵字" aria-label="搜尋閘門">
+    <div class="chips" id="g-filter"></div>
+  </div>
+  <div class="ggrid" id="g-grid"></div>
+  <div id="g-multi" hidden></div>
+  <p class="empty" id="g-empty" hidden>找不到符合的閘門，試試其他關鍵字。</p>
+</section>
+
+<!-- 易經入門 -->
+<!-- 六爻與人生角色 -->
+<section class="panel" id="p-profile" hidden>
+  <div class="eyebrow">初階・第 5 課・Profile</div>
+  <h2>六爻與 12 種人生角色</h2>
+  <div id="pf-mine" style="margin:14px 0 22px"></div>
+  <p class="lede">人生角色（Profile）由兩個數字組成：前面是「個性太陽」所在的爻（意識到的自己），後面是「設計太陽」所在的爻（身體裡、不自覺的自己）。例如個性太陽在 34.2、設計太陽在 30.4，人生角色就是 2/4。先認識六種爻的原型，再看 12 種組合。</p>
+  <div class="grid2" style="margin-top:16px">
+    <div class="me"><h4>人生角色代表我什麼</h4><p>人生角色像我在人生舞台上穿的「戲服」：我用什麼方式學習、怎麼與人互動、別人通常怎麼看我。它不決定我做什麼工作，而是決定我「用什麼方式」走自己的路。</p></div>
+    <div class="box"><h4>前面的數字 vs. 後面的數字</h4><p><b>前面（個性太陽的爻）</b>：我意識得到、自己認同的那一面。也稱「頭腦」或「意識」的那一面。<br><b>後面（設計太陽的爻）</b>：身體裡、不自覺的那一面，常常是別人先看到的我。也稱「身體」或「無意識」的那一面。</p></div>
+  </div>
+  <div class="sec gen-hide"><h3>六種爻的原型</h3>
+    <div class="box" style="border-color:var(--accent)"><h4>規則</h4><p style="font-size:14px">・每個閘門都有六條爻，我的星體落在哪一爻，就以那一爻的方式運用這個閘門。<br>・人生角色＝個性太陽的爻／設計太陽的爻。前面的數字是意識得到的我，後面的數字是身體裡、常被別人先看到的我。<br>・下卦（1–3 爻）關注自己、個人的生命；上卦（4–6 爻）關注他人、外在世界，和易經「內卦、外卦」的概念一致。<br>・1 與 4、2 與 5、3 與 6 爻互相呼應，和易經的「相應」相同。</p></div>
+    <div class="grid3" id="pf-lines" style="margin-top:10px"></div></div>
+  <div class="sec gen-hide"><h3>全部 12 種人生角色</h3><p class="muted">點選任一角色看詳細說明。標 ★ 的是我的人生角色。</p><div class="grid3" id="pf-grid"></div><div id="pf-detail"></div></div>
+  <div class="sec gen-hide"><h3>三種人生軌跡（幾何）</h3><p class="hint">我的人生角色屬於哪一種軌跡，代表我的人生主題比較偏向「自己的旅程」還是「與他人的連結」。</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px">
+      <div class="box"><h4>右角度・個人命運</h4><p>1/3、1/4、2/4、2/5、3/5、3/6、4/6。代表我：人生主題圍繞在自己的經歷與成長，遇見的人是為了幫我完成自己的旅程。</p></div>
+      <div class="box"><h4>並列・固定命運</h4><p>只有 4/1。代表我：走一條很固定、獨特的路，不容易被外界改變，也不容易改變方向。這是最少見的幾何。</p></div>
+      <div class="box"><h4>左角度・跨個人業力</h4><p>5/1、5/2、6/2、6/3。代表我：人生主題與他人緊密相關，我常在關係與合作中完成使命。</p></div>
+    </div></div>
+</section>
+
+<!-- 四箭頭 -->
+<!-- 合圖 -->
+<div id="p-composite" hidden>
+  <div class="eyebrow">進階・第 Ⅴ 課・Composite</div>
+  <h2>合圖：兩個人在一起時的化學反應</h2>
+  <p class="lede">把兩個人的人體圖疊在一起，就是「合圖」。它不是在判斷兩人「合不合」，而是看見兩人在一起時，會產生哪些新的能量、哪些地方會吸引、哪些地方會摩擦。可以用在朋友、家人、同學、分組合作。</p>
+  <div class="sec"><h3>四種通道連結</h3><div class="grid2" id="cp-types"></div></div>
+  <div class="sec">
+    <h3>選擇兩個人，看合圖</h3>
+    <div class="box" style="gap:10px;margin-bottom:12px"><p style="font-size:14px"><b>甲</b>：目前套用的人物（不需選擇）</p><div class="form bf"><label class="bf-m">乙・姓名<input id="cb-name" type="text" placeholder="陽明崔老妮"></label><label class="bf-m">乙・出生地<select id="cb-tz"></select></label><label>乙・出生日期<input id="cb-date" type="date"></label><label>乙・出生時間<input id="cb-time" type="time"></label><input id="cb-tu" type="checkbox" hidden><div class="btnrow bf-go"><button class="btn" id="cb-go" type="button">計算乙</button></div></div><p class="toast" id="cb-err" style="color:var(--red);font-weight:700"></p></div>
+    <div hidden><input id="cp-an" type="text" value="甲"><textarea id="cp-a"></textarea><input id="cp-bn" type="text" value="乙"><textarea id="cp-b"></textarea><button id="cp-ex" type="button"></button><button id="cp-me" type="button"></button></div>
+    <div class="result tri-wrap" style="gap:10px;padding:14px"><div class="tri">
+     <div class="tri-c"><div class="tri-h"><b class="cp-na">甲</b><span id="cp-ta"></span></div><div id="cp-bga"></div><div class="sl-leg"><span style="display:inline-flex;align-items:center;gap:5px"><i style="display:inline-block;width:22px;height:8px;border-radius:99px;background:#2A9D8F"></i><b class="cp-na" style="color:#2A9D8F"></b></span></div></div>
+     <div class="tri-c mid"><div class="tri-h"><b>合圖</b><span id="cp-tm"></span></div><details class="lgd"><summary>圖例</summary><div class="lgd-row"><span class="lgi"><i class="dot" style="background:#2A9D8F"></i><span id="cp-la" style="color:#2A9D8F;font-weight:700">甲</span></span><span class="lgi"><i class="dot" style="background:#F4A261"></i><span id="cp-lb" style="color:#F4A261;font-weight:700">乙</span></span><span class="lgi"><i class="dot" style="background:repeating-linear-gradient(45deg,#2A9D8F 0 2px,#F4A261 2px 4px)"></i><b style="background:linear-gradient(90deg,#2A9D8F,#F4A261);-webkit-background-clip:text;background-clip:text;color:transparent">兩者都有</b></span><span class="lgi"><i class="dot ring"></i><b style="color:var(--ink)">合圖後才定義的中心</b></span></div></details><div id="cp-bg"></div></div>
+     <div class="tri-c"><div class="tri-h"><b class="cp-nb">乙</b><span id="cp-tb"></span></div><div id="cp-bgb"></div><div class="sl-leg"><span style="display:inline-flex;align-items:center;gap:5px"><i style="display:inline-block;width:22px;height:8px;border-radius:99px;background:#F4A261"></i><b class="cp-nb" style="color:#F4A261"></b></span></div></div>
+    </div></div>
+    <div id="cp-out" class="result" style="margin-top:16px"></div>
+  </div>
+  <div class="box" style="margin-top:16px"><h4>合圖不是配對分數</h4><p style="font-size:14px">合圖描述的是兩個人在一起時能量怎麼流動，不能判斷「合不合」「適不適合」，也不該用來決定一段關係、選擇朋友或評斷別人。看到「摩擦」或「讓步」的地方，可以把它當成溝通的起點：我們在這個主題上，各自的感受是什麼？</p></div>
+</div>
+
+<!-- 夢圖 -->
+<!-- 星體 -->
+<section class="panel" id="p-planets" hidden>
+  <div class="eyebrow">進階・第 Ⅰ 課・Planets</div>
+  <h2>星體：13 顆星落在哪一卦、哪一爻</h2>
+  <p class="lede">人類圖用出生當下（個性，黑色）與出生前約 88 天（設計，紅色）兩個時刻，記錄 13 個星體的位置。每個星體落在曼陀羅的某一個閘門與爻，也就是易經的某一卦、某一爻。同一個閘門，由不同的星體啟動，會在我身上以不同的方式表現。黑色的個性也稱「頭腦」或「意識」，紅色的設計也稱「身體」或「無意識」。</p>
+  <div class="box" style="margin-top:14px"><h4>黑色與紅色是什麼？</h4><p style="font-size:15px">排盤時會算兩組資料：出生當下的「個性（黑色）」是頭腦：我想的、我以為的、有自覺的自己；出生前約三個月（太陽往回 88°）的「設計（紅色）」是身體帶著的能量與天性，但可能不自覺。本站用深色實線代表個性、朱紅色代表設計。其他書籍或網站常用另外兩組說法：<b>頭腦／身體</b>、<b>意識／無意識</b>，對照如下：</p><div class="tscroll" style="margin-top:6px"><table class="t pd-t" style="table-layout:fixed"><thead><tr><th>常見說法</th><th>黑色</th><th>紅色</th></tr></thead><tbody>
+<tr><td>本站用語</td><td><b>個性</b>（Personality）</td><td><b>設計</b>（Design）</td></tr>
+<tr><td>頭腦／身體</td><td><b>頭腦</b>：我想的、我以為的、有自覺的</td><td><b>身體</b>：身體帶著的能量與天性，但可能不自覺</td></tr>
+<tr><td>意識／無意識</td><td><b>意識</b>：自己察覺得到、認同的一面</td><td><b>無意識</b>（潛意識）：自己不容易察覺，常是別人先看到的一面</td></tr>
+<tr><td>計算的時刻</td><td>出生當下</td><td>出生前約 88 天（太陽位置往回推 88° 的時刻）</td></tr>
+</tbody></table></div><p class="hint">這幾組說法指的是同一件事：讀到「頭腦」「意識」就對照黑色的個性，讀到「身體」「無意識」就對照紅色的設計。</p></div>
+  <div class="split" style="margin-top:24px">
+    <div class="stick">
+      <div class="bgbox" id="pl-wheel"></div>
+      <div class="legend"><span><i style="background:var(--ink)"></i>個性</span><span><i style="background:var(--red)"></i>設計</span><span>線：輪迴交叉</span></div>
+      <p class="hint" style="display:table;margin-left:auto;margin-right:auto;text-align:left">人類圖曼陀羅：64 卦圍成一圈，外圈是黃道十二星座。點任一格看該閘門。</p>
+    </div>
+    <div class="info">
+      <div class="form">
+        <h3>我的 13 個星體</h3><span hidden><button type="button" id="pl-gocalc"></button></span>
+        <p class="muted" style="font-size:13px">依首頁輸入的出生資料自動計算。數字是「閘門.爻」，例如 34.2 代表閘門 34 的第 2 爻。</p>
+        <div class="tscroll" style="margin-top:0"><table class="t" style="min-width:420px"><thead><tr><th>星體</th><th>個性（黑）</th><th>設計（紅）</th></tr></thead><tbody id="pl-tbody"></tbody></table></div>
+        <div class="btnrow" hidden><button class="btn ghost" id="pl-ex" type="button">載入範例</button><button class="btn ghost" id="pl-clear" type="button">清除</button><button class="btn" id="pl-send" type="button">帶入個人檔案</button><span class="toast" id="pl-toast"></span></div>
+      </div>
+      <div id="pl-out" class="info"></div>
+      <div><h3 style="margin-bottom:8px">13 個星體的意義</h3><div class="grid3" id="pl-cards"></div></div>
+    </div>
+  </div>
+  <div class="sec"><h3>認識星體</h3>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:8px">
+    <div class="me"><h4>星體代表我什麼</h4><p>閘門告訴我「有什麼能量」，星體告訴我「這股能量在我人生的哪個面向發揮」：太陽是人生光芒，水星是溝通，金星是價值觀，土星是不照法則走時的後果。</p></div>
+    <div class="box"><h4>太陽與地球最重要</h4><p>太陽和地球合起來約占整張圖 70% 的能量，四個太陽、地球閘門組成「輪迴交叉」，也就是人生目的。</p></div>
+    <div class="box"><h4>外行星是一個世代</h4><p>天王星、海王星、冥王星移動很慢，同年出生的同學常常落在同一個閘門，代表一整個世代的共同主題。</p></div>
+  </div>
+  <div class="box" style="margin-top:12px"><h4>占星 vs 人類圖：同一顆星，不同的讀法</h4><p style="font-size:15px">人類圖和西洋占星用同一套天文曆，星體的位置完全相同；但人類圖不看星體落在哪個星座、哪一宮，而是看它落在哪個閘門、哪一爻，意義由那一卦的主題決定。太陽、水星的意思和占星接近；月亮、交點、土星、海王星、冥王星差異較大，讀其他占星資料時要特別留意。</p><div class="tscroll" style="margin-top:6px"><table class="t pd-t" style="table-layout:fixed"><thead><tr><th>項目</th><th>西洋占星</th><th>人類圖（依 Ra Uru Hu 的說法）</th></tr></thead><tbody><tr><td>解讀的單位</td><td>星座、宮位、相位</td><td>閘門與爻（易經 64 卦 × 6 爻）</td></tr><tr><td>宮位、相位</td><td>很重要</td><td>不使用</td></tr><tr><td>計算的時刻</td><td>出生當下</td><td>出生當下（黑色）＋出生前太陽往回 88°（紅色）</td></tr><tr><td>地球</td><td>通常不看</td><td>一定看，和太陽成對，兩者合計約占七成能量</td></tr><tr><td>太陽</td><td>自我、生命力</td><td>人生光芒：最核心的特質</td></tr><tr><td>月亮</td><td>情緒、內在需求、安全感</td><td>驅動力：推動我前進的力量</td></tr><tr><td>南北交點</td><td>業力、前世與今生的方向</td><td>前半生與後半生的環境</td></tr><tr><td>水星</td><td>溝通、思考</td><td>溝通：我想說出來的</td></tr><tr><td>金星</td><td>愛情、美感、價值觀</td><td>價值觀與道德</td></tr><tr><td>火星</td><td>行動力、慾望、衝勁</td><td>不成熟、需要時間成熟的能量</td></tr><tr><td>木星</td><td>擴張、幸運</td><td>法則與保護：照著走就可能有回報</td></tr><tr><td>土星</td><td>限制、紀律、考驗</td><td>法官：不照法則走時的後果</td></tr><tr><td>天王星</td><td>突變、革新</td><td>與眾不同、不尋常</td></tr><tr><td>海王星</td><td>夢想、幻象、靈性</td><td>面紗：自己不容易看清的地方</td></tr><tr><td>冥王星</td><td>轉化、毀滅與重生</td><td>真相：終究會被揭露的事</td></tr></tbody></table></div><p class="hint">兩套系統各有自己的語言，沒有誰對誰錯；在本站讀星體時，請以右欄人類圖的意思為準。</p></div>
+  </div>
+</section>
+
+<!-- 輪迴交叉 -->
+<div id="p-cross" hidden>
+  <div class="eyebrow">初階・第 9 課・Incarnation Cross</div>
+  <h2>輪迴交叉：我這一生的目的</h2>
+  <p class="lede">輪迴交叉由四個閘門組成：個性太陽、個性地球、設計太陽、設計地球。它們在曼陀羅上剛好形成一個十字，描述我這一生的主題與目的。人類圖共有 192 個輪迴交叉，再依人生角色分成三種角度。</p>
+  <div class="box" style="margin-top:16px;font-size:14px;gap:6px"><h4>先認識幾個名詞</h4><p><b>閘門</b>：人類圖的 64 個能量開關，每個都有編號與名稱。<br><b>個性（Personality）</b>：意識清醒時感受到的那一面，依出生時太陽與地球的位置計算。<br><b>設計（Design）</b>：身體潛意識的那一面，依出生前約 88 天的太陽位置計算。<br><b>曼陀羅</b>：本站用來排列閘門的圓形圖。<br><b>版本</b>：同一種交叉，依個性太陽落在哪個位置而有的不同呈現。</p></div>
+  <div class="split" style="margin-top:24px">
+    <div class="stick form">
+      <h3>我的四個閘門</h3><p class="muted" style="font-size:13px">依首頁輸入的出生資料自動計算。</p>
+      <label hidden>個性太陽<input id="cx-ps" type="text" placeholder="例如 34.2"></label>
+      <label hidden>個性地球<input id="cx-pe" type="text" placeholder="空白則自動推算"></label>
+      <label hidden>設計太陽<input id="cx-ds" type="text" placeholder="例如 59.4"></label>
+      <label hidden>設計地球<input id="cx-de" type="text" placeholder="空白則自動推算"></label>
+      <p class="hint" id="cx-prof"></p>
+      <div class="bgbox" id="cx-wheel"></div>
+      <p class="note" id="cx-desc" style="font-size:14px"></p>
+    </div>
+    <div class="info">
+      <div id="cx-out" class="result"></div>
+          </div>
+  </div>
+  <div class="sec" style="font-size:13px;color:var(--muted)"><h3>認識三種角度</h3>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:8px">
+    <div class="me"><h4>輪迴交叉代表我什麼</h4><p>它是我人生的「主題曲」：不必刻意追求，只要依照我的策略（做決定的方式）與內在權威，這個目的自然會在我的人生中展開。</p></div>
+    <div class="box"><h4>右角度（個人命運）</h4><p>人生角色 1/3、1/4、2/4、2/5、3/5、3/6、4/6（數字代表六爻的組合，詳見「六爻與人生角色」）。目的在自己的旅程中完成。共 16 種，每種 4 個版本。</p></div>
+    <div class="box"><h4>並列（固定命運）</h4><p>只有 4/1。走一條固定的路，以個性太陽閘門為核心。共 64 種。</p></div>
+    <div class="box"><h4>左角度（與他人相遇）</h4><p>5/1、5/2、6/2、6/3。目的在與他人的相遇中完成。共 32 種，每種 2 個版本。</p></div>
+  </div>
+  </div>
+</div>
+
+<!-- 定義 -->
+<section class="panel" id="p-definition" hidden>
+  <div class="eyebrow">初階・第 4 課・Definition</div>
+  <h2>定義：我的能量連成幾塊？</h2>
+  <p class="lede">把我所有接通的通道看成一張網：有定義的中心如果全部連在一起，就是「一分人」；分成兩塊互不相連，就是「二分人」；以此類推。定義的分法，說明我如何消化資訊、需要多少時間做決定，以及我會被什麼樣的人吸引。</p>
+  <div class="split" style="margin-top:20px">
+    <div class="stick"><div class="bgbox" id="df-bg"></div><p class="hint" style="display:table;margin-left:auto;margin-right:auto;text-align:left">依照我的出生資料繪製；同一塊能量的中心用相同的編號標示。</p></div>
+    <div class="info"><div id="df-me"></div><div class="info" id="df-cards"></div></div>
+  </div>
+</section>
+
+<!-- 人生週期 -->
+<!-- 基因天命 -->
+
+
+<!-- 名詞解釋 -->
+<section class="panel" id="p-glossary" hidden>
+  <div class="eyebrow">Glossary</div>
+  <h2>名詞解釋</h2>
+  <p class="lede">人類圖常用名詞的簡短解釋。網站各頁中，名詞第一次出現時會加上虛線底線，點一下就會跳出這裡的解釋。</p>
+  <div class="btnrow" style="align-items:center;margin-top:12px"><input class="search" id="gl-q" type="search" placeholder="搜尋名詞，例如：薦骨、懸掛閘門" aria-label="搜尋名詞" style="max-width:360px;width:100%;margin:0"><span class="hint" id="gl-count"></span></div>
+  <div id="gl-src" style="margin-top:14px"></div>
+  <div id="gl-list"></div>
+</section>
+
+<!-- 學習單 -->
 <section class="panel" id="p-sheet" hidden>
   <div class="split">
     <div class="stick form">
@@ -936,7 +1299,6 @@ svg.bg .portalline{stroke:var(--accent);stroke-width:2;stroke-dasharray:3 5;opac
       </div>
       </div>
       <div class="bgbox" id="s-bg" hidden></div>
-      <div class="legend"><span><i style="background:var(--ink)"></i>個性</span><span><i style="background:var(--red)"></i>設計</span><span><i style="background:var(--sunk)"></i>未啟動</span></div>
     </div>
     <div id="s-out" class="result"></div>
   </div>
@@ -946,7 +1308,7 @@ svg.bg .portalline{stroke:var(--accent);stroke-width:2;stroke-dasharray:3 5;opac
 <datalist id="tw-places"><option value="臺北市"></option><option value="臺北市中正區"></option><option value="臺北市大同區"></option><option value="臺北市中山區"></option><option value="臺北市松山區"></option><option value="臺北市大安區"></option><option value="臺北市萬華區"></option><option value="臺北市信義區"></option><option value="臺北市士林區"></option><option value="臺北市北投區"></option><option value="臺北市內湖區"></option><option value="臺北市南港區"></option><option value="臺北市文山區"></option><option value="新北市"></option><option value="新北市板橋區"></option><option value="新北市三重區"></option><option value="新北市中和區"></option><option value="新北市永和區"></option><option value="新北市新莊區"></option><option value="新北市新店區"></option><option value="新北市土城區"></option><option value="新北市蘆洲區"></option><option value="新北市樹林區"></option><option value="新北市汐止區"></option><option value="新北市鶯歌區"></option><option value="新北市三峽區"></option><option value="新北市淡水區"></option><option value="新北市林口區"></option><option value="新北市五股區"></option><option value="新北市泰山區"></option><option value="新北市瑞芳區"></option><option value="新北市八里區"></option><option value="新北市深坑區"></option><option value="桃園市"></option><option value="桃園市桃園區"></option><option value="桃園市中壢區"></option><option value="桃園市平鎮區"></option><option value="桃園市八德區"></option><option value="桃園市楊梅區"></option><option value="桃園市蘆竹區"></option><option value="桃園市大溪區"></option><option value="桃園市龜山區"></option><option value="桃園市大園區"></option><option value="桃園市觀音區"></option><option value="桃園市新屋區"></option><option value="桃園市龍潭區"></option><option value="桃園市復興區"></option><option value="臺中市"></option><option value="臺中市中區"></option><option value="臺中市東區"></option><option value="臺中市南區"></option><option value="臺中市西區"></option><option value="臺中市北區"></option><option value="臺中市北屯區"></option><option value="臺中市西屯區"></option><option value="臺中市南屯區"></option><option value="臺中市太平區"></option><option value="臺中市大里區"></option><option value="臺中市霧峰區"></option><option value="臺中市烏日區"></option><option value="臺中市豐原區"></option><option value="臺中市后里區"></option><option value="臺中市東勢區"></option><option value="臺中市潭子區"></option><option value="臺中市大雅區"></option><option value="臺中市神岡區"></option><option value="臺中市沙鹿區"></option><option value="臺中市清水區"></option><option value="臺中市梧棲區"></option><option value="臺中市大甲區"></option><option value="臺中市龍井區"></option><option value="臺南市"></option><option value="臺南市中西區"></option><option value="臺南市東區"></option><option value="臺南市南區"></option><option value="臺南市北區"></option><option value="臺南市安平區"></option><option value="臺南市安南區"></option><option value="臺南市永康區"></option><option value="臺南市歸仁區"></option><option value="臺南市新化區"></option><option value="臺南市新營區"></option><option value="臺南市善化區"></option><option value="臺南市麻豆區"></option><option value="臺南市佳里區"></option><option value="臺南市仁德區"></option><option value="高雄市"></option><option value="高雄市新興區"></option><option value="高雄市前金區"></option><option value="高雄市苓雅區"></option><option value="高雄市鹽埕區"></option><option value="高雄市鼓山區"></option><option value="高雄市旗津區"></option><option value="高雄市前鎮區"></option><option value="高雄市三民區"></option><option value="高雄市楠梓區"></option><option value="高雄市小港區"></option><option value="高雄市左營區"></option><option value="高雄市鳳山區"></option><option value="高雄市岡山區"></option><option value="高雄市大寮區"></option><option value="高雄市仁武區"></option><option value="高雄市旗山區"></option><option value="高雄市美濃區"></option><option value="高雄市鳥松區"></option><option value="基隆市"></option><option value="基隆市仁愛區"></option><option value="基隆市信義區"></option><option value="基隆市中正區"></option><option value="基隆市中山區"></option><option value="基隆市安樂區"></option><option value="基隆市暖暖區"></option><option value="基隆市七堵區"></option><option value="新竹市"></option><option value="新竹市東區"></option><option value="新竹市北區"></option><option value="新竹市香山區"></option><option value="嘉義市"></option><option value="嘉義市東區"></option><option value="嘉義市西區"></option><option value="新竹縣"></option><option value="新竹縣竹北市"></option><option value="新竹縣竹東鎮"></option><option value="新竹縣湖口鄉"></option><option value="新竹縣新豐鄉"></option><option value="新竹縣關西鎮"></option><option value="苗栗縣"></option><option value="苗栗縣苗栗市"></option><option value="苗栗縣頭份市"></option><option value="苗栗縣竹南鎮"></option><option value="苗栗縣後龍鎮"></option><option value="苗栗縣苑裡鎮"></option><option value="彰化縣"></option><option value="彰化縣彰化市"></option><option value="彰化縣員林市"></option><option value="彰化縣鹿港鎮"></option><option value="彰化縣和美鎮"></option><option value="彰化縣溪湖鎮"></option><option value="彰化縣北斗鎮"></option><option value="南投縣"></option><option value="南投縣南投市"></option><option value="南投縣埔里鎮"></option><option value="南投縣草屯鎮"></option><option value="南投縣竹山鎮"></option><option value="雲林縣"></option><option value="雲林縣斗六市"></option><option value="雲林縣虎尾鎮"></option><option value="雲林縣北港鎮"></option><option value="雲林縣西螺鎮"></option><option value="雲林縣斗南鎮"></option><option value="嘉義縣"></option><option value="嘉義縣太保市"></option><option value="嘉義縣朴子市"></option><option value="嘉義縣民雄鄉"></option><option value="嘉義縣大林鎮"></option><option value="屏東縣"></option><option value="屏東縣屏東市"></option><option value="屏東縣潮州鎮"></option><option value="屏東縣東港鎮"></option><option value="屏東縣恆春鎮"></option><option value="屏東縣內埔鄉"></option><option value="宜蘭縣"></option><option value="宜蘭縣宜蘭市"></option><option value="宜蘭縣羅東鎮"></option><option value="宜蘭縣蘇澳鎮"></option><option value="宜蘭縣頭城鎮"></option><option value="花蓮縣"></option><option value="花蓮縣花蓮市"></option><option value="花蓮縣吉安鄉"></option><option value="花蓮縣玉里鎮"></option><option value="花蓮縣鳳林鎮"></option><option value="臺東縣"></option><option value="臺東縣臺東市"></option><option value="臺東縣成功鎮"></option><option value="臺東縣關山鎮"></option><option value="澎湖縣"></option><option value="澎湖縣馬公市"></option><option value="金門縣"></option><option value="金門縣金城鎮"></option><option value="金門縣金湖鎮"></option><option value="金門縣金沙鎮"></option><option value="連江縣"></option><option value="連江縣南竿鄉"></option><option value="連江縣北竿鄉"></option></datalist>
   <div class="scrim" id="hb-dlg" hidden><div class="result hb-modal" id="hb" role="dialog" aria-modal="true" aria-label="輸入出生資料"><button type="button" class="hb-x" data-hb-close aria-label="關閉">✕</button>
     <div><div class="eyebrow">一次輸入，全站套用</div><h2>輸入我的出生資料</h2></div>
-    <div class="form bf bf3"><input id="hb-name" type="hidden" value="我"><label class="bf-m">出生地<select id="hb-tz"></select></label><label>出生日期<input id="hb-date" type="date"></label><label>出生時間<input id="hb-time" type="time"></label><label class="bf-tu"><input id="hb-tu" type="checkbox">不知道出生時間</label><label hidden>出生地點<input id="hb-place" type="text" list="tw-places" placeholder="例如：桃園市中壢區" autocomplete="off"></label><div class="btnrow bf-go"><button class="btn" id="hb-go" type="button">計算並套用到全站</button></div>
+    <div class="form bf bf3"><input id="hb-name" type="hidden" value="我"><label class="bf-m">出生地<select id="hb-tz"></select></label><label>出生日期<input id="hb-date" type="date"></label><label>出生時間<input id="hb-time" type="time"></label><input id="hb-tu" type="checkbox" hidden><label hidden>出生地點<input id="hb-place" type="text" list="tw-places" placeholder="例如：桃園市中壢區" autocomplete="off"></label><div class="btnrow bf-go"><button class="btn" id="hb-go" type="button">計算並套用到全站</button></div>
     </div>
     <p class="toast" id="hb-err" style="color:var(--red);font-weight:700"></p><p class="muted" style="font-size:12px" id="hb-note">預設為台灣（UTC+8，1945–1979 年間部分年份的夏令時間會自動判斷）。在國外出生請選擇出生的國家或地區，系統會依當地時區與當年的夏令時間換算；出生時間請填「當地時間」。</p>
     <p class="muted" style="font-size:12px">本站不會上傳或保存你的出生資料，資料只存在這個瀏覽器中。請自行截圖保存重要結果。</p>
@@ -957,9 +1319,7 @@ svg.bg .portalline{stroke:var(--accent);stroke-width:2;stroke-dasharray:3 5;opac
 <footer style="border-top:1px solid var(--line);margin-top:48px;padding:24px 0 40px;font-size:13px;color:var(--muted);line-height:1.8">
 <div class="wrap" style="padding-block:0">
 <p style="font-weight:700;color:var(--ink)">版權所有 © 2026 LEE HUI-YUN．All rights reserved.</p>
-<p>本網站「PACIDAL全景人類圖」由 LEE HUI-YUN 製作，為人類圖（Human Design）、易經 64 卦與基因天命（Gene Keys）的教學整理。網站的文字說明、版面設計與教學架構為作者原創。</p>
-<p>本站內容僅供自我探索與學習參考，不是心理診斷、醫療建議，也不應作為重大人生決定的唯一依據。未經同意，不得重製、轉載、販售或作為他用；引用時請標示出處與連結。</p>
-<p>出生資料與人物資料僅儲存在使用者自己的瀏覽器中，本站不會上傳或保存。</p>
+<p><a href="https://www.instagram.com/pacidal_flow/" target="_blank" rel="noopener">Instagram：@pacidal_flow</a></p>
 <p id="visit-count" hidden>本站瀏覽人次：<span id="vc-n">—</span></p>
 </div>
 </footer>
@@ -2266,8 +2626,7 @@ const esc=s=>String(s).replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;',
 function arrowsSVG(A){const one=(k,x,y,side,lab)=>{const v=A.dir[k];if(!v)return '';const L=v==='L';const cls=side==='d'?'var(--red)':'var(--ink)';
  const x1=L?x+14:x-14,x2=L?x-14:x+14,h=L?5:-5;
  return `<g class="arw" style="cursor:pointer;color:${cls}"><title>${lab}箭頭：${L?'朝左':'朝右'}・色 ${A.c[k]}・調 ${A.t[k]}</title><path stroke="currentColor" d="M${x1},${y} L${x2},${y} M${x2+h},${y-5} L${x2},${y} L${x2+h},${y+5}"/><text fill="currentColor" x="${x}" y="${y+13}">${A.c[k]}.${A.t[k]}</text></g>`};
- return `<text class="arw" x="128" y="${36+OY}" fill="var(--red)"><tspan class="cap">設計</tspan></text><text class="arw" x="312" y="${36+OY}" fill="currentColor" style="color:var(--ink)"><tspan class="cap">個性</tspan></text>`+
-  one('det',128,52+OY,'d','消化')+one('env',128,86+OY,'d','環境')+one('mot',312,52+OY,'p','動機')+one('per',312,86+OY,'p','觀點')}
+ return one('det',128,52+OY,'d','消化')+one('env',128,86+OY,'d','環境')+one('mot',312,52+OY,'p','動機')+one('per',312,86+OY,'p','觀點')}
 function bodygraph(o={}){
  const gs=o.gates||new Map(),def=o.defined||new Set(),hlG=o.hlGates||new Set(),only=o.only,off=o.off||new Set(),portals=o.portals||new Set();
  const ZB='zb'+(window.__ZBN=(window.__ZBN||0)+1);const ZP={tr:['var(--tr-me)','#E07A8F'],cp:['var(--cpA)','var(--cpB)'],sl:['var(--tr-me)','var(--sl-d)']}[o.pal];
@@ -2292,23 +2651,33 @@ function bodygraph(o={}){
 /* ===== 分頁 ===== */
 const TABS=['sheet'];
 function show(t){if(t==='home')t='sheet';if(!TABS.includes(t))t='sheet';
-
-
+ document.querySelectorAll('[data-tab]').forEach(b=>b.setAttribute('aria-selected',b.dataset.tab===t));
+ document.querySelectorAll('.tgroup').forEach(g=>{if(g.querySelector('[data-tab="'+t+'"]')){g.classList.remove('closed');g.querySelector('.tg-head').setAttribute('aria-expanded','true')}});
  TABS.forEach(x=>document.getElementById('p-'+x).hidden=x!==t);
  if(t==='pano')renderPano();
  
  if(t==='group'&&typeof renderGroup==='function')renderGroup();
  try{history.replaceState(null,'','#'+t)}catch(e){}
  window.scrollTo({top:0})}
-
+document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>show(b.dataset.tab));
 document.querySelectorAll('.tg-head').forEach(h=>h.onclick=()=>{const g=h.parentElement;const open=g.classList.contains('closed');g.classList.toggle('closed',!open);h.setAttribute('aria-expanded',String(open))});
 document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>show(b.dataset.go));
 /* 切換全景或人物後，重新畫出所有依人物而變的內容（不含學習單本身） */
-
+function rerenderPersonal(){
+ ['renderHome','renderRoadmap','renderCenter','renderChannels','renderGates','renderProfile','renderArrows','renderComposite','renderPlanets','renderCross','renderCrossBrowse','renderDefinition','renderCycles','renderGeneKeys','renderCMine','renderHMine','renderArMine','renderTypePage','renderAuthPage','renderCircuitPage','renderGroup'].forEach(n=>{try{if(typeof window[n]==='function')window[n]()}catch(e){}});
+}
 /* 切換全景或人物後，重新畫出所有依人物而變的內容（不含學習單本身） */
-
+function rerenderPersonal(){
+ ['renderHome','renderRoadmap','renderCenter','renderChannels','renderGates','renderProfile','renderArrows','renderComposite','renderPlanets','renderCross','renderCrossBrowse','renderDefinition','renderCycles','renderGeneKeys','renderCMine','renderHMine','renderArMine','renderTypePage','renderAuthPage','renderCircuitPage','renderGroup'].forEach(n=>{try{if(typeof window[n]==='function')window[n]()}catch(e){}});
+}
 /* 全景模式：開啟後切換任何分頁都顯示不篩選的內容；再按一次回到原本的人物 */
-
+function setPano(on){
+ if(on&&!PANO){PANO={gs:MYGATES,has:MYHAS,def:MYDEF,lines:MYLINES,birth:BIRTH,p:sP.value,d:sD.value,pl:PL,plsrc:PLSRC,prof:sProf.value};MYGATES=new Map();MYHAS=false;MYDEF=new Set();MYLINES={};BIRTH=null;sP.value='';sD.value='';sProf.value='';PL={p:{},d:{}};PLSRC='none';gFilter=null}
+ else if(!on&&PANO){MYGATES=PANO.gs;MYHAS=PANO.has;MYDEF=PANO.def;MYLINES=PANO.lines;BIRTH=PANO.birth;sP.value=PANO.p;sD.value=PANO.d;sProf.value=PANO.prof;PL=PANO.pl;PLSRC=PANO.plsrc;PANO=null}
+ const b=document.getElementById('pano-btn');if(b)b.setAttribute('aria-pressed',!!PANO);
+ try{updCur()}catch(e){}
+ rerenderPersonal();
+}
 /* LEE 互換（方案二）：同一時間只顯示一人。按 LEE 換成 LEE，再按換回原本的人物（分頁不變） */
 var LEE_PREV=null;
 function isLeeNow(){return !!(BIRTH&&BIRTH.ms&&BIRTH.date==='1983-07-20'&&BIRTH.time==='15:15'&&BIRTH.tz==='Asia/Taipei'&&sName.value==='LEE')}
@@ -2330,8 +2699,8 @@ function renderPano(){
 }
 
 /* 首頁 */
-
-
+document.getElementById('hexrow').innerHTML=[1,2,29,30,51,52,57,58].map(n=>`<span style="color:var(--${n%2?'ink':'accent'})">${hexSVG(n)}</span>`).join('');
+document.getElementById('home-bg').innerHTML=bodygraph({colorAll:true});
 
 /* 九大中心 */
 const CHAKRA_INFO={head:['頭頂（松果體）','頂輪：與更高意識連結。在人類圖是靈感與疑問的來源，帶來「想弄清楚」的思考壓力。'],
@@ -2344,24 +2713,70 @@ const CHAKRA_INFO={head:['頭頂（松果體）','頂輪：與更高意識連結
  sacral:['下腹部（生殖系統）','臍輪：創造與生命力。在人類圖是工作力、持續力、性能量，以及「嗯哼／嗯嗯」的身體回應。'],
  root:['脊椎底部（腎上腺）','海底輪：生存與穩定。在人類圖是壓力與動力的來源，推動我把事情開始與完成。']};
 let curC='g';
-
-
-
-
-
+function renderCenter(){if(!cTouched&&MYHAS&&!MYDEF.has(curC)){const f=CENTERS.find(x=>MYDEF.has(x.id));if(f)curC=f.id}renderCMine();const c=CBY[curC];
+ document.getElementById('c-bg').innerHTML=bodygraph({mode:'center',defined:new Set([curC]),hlCenter:curC,hlGates:new Set(c.gates)});
+ const chs=CH.map((x,i)=>i).filter(i=>GC[CH[i][0]]===curC||GC[CH[i][1]]===curC);
+ const mine=MYHAS?MYDEF.has(curC):null;
+ document.getElementById('c-info').innerHTML=`
+  <div><div class="eyebrow">${esc(c.alias)}</div><h2><span class="cswatch" style="background:var(--f-${c.id});width:16px;height:16px"></span>${c.name}</h2>
+  <div class="tagrow" style="margin-top:8px"><span class="tag acc">${c.kind}</span><span class="tag" style="background:var(--f-${c.id});color:${c.darkText?'#1E2624':'#FFFFFF'}">${c.chakra}</span><span class="tag">主題：${c.theme}</span><span class="tag">對應：${c.body}</span></div></div>
+  ${mine!==null?`<div class="me"><h4>我的${c.name}</h4><p>我的${c.name}是<b>${mine?'有定義（上色）':'未定義（白色）'}</b>。${mine?CENTER_D[c.id].def:CENTER_D[c.id].open}</p></div>`:''}
+  <div class="duo"><div class="box"><h4>如果我的${c.name}有定義（上色）</h4><p>${CENTER_D[c.id].def}</p></div><div class="box"><h4>如果我的${c.name}未定義（白色）</h4><p>${CENTER_D[c.id].open}</p></div></div>
+  <div class="box"><h4>未定義時，問問自己</h4><p class="ask">${c.ask}</p></div>
+  <div><h3 style="margin-bottom:4px">這個中心的 ${c.gates.length} 個閘門</h3><p class="hint" style="margin-bottom:8px">點一個閘門，看「如果我有這個閘門」代表我什麼特質。</p><div class="chips">${c.gates.slice().sort((a,b)=>a-b).map(g=>`<button class="chip" data-open="${g}"><span class="num">${g}</span>　${G[g].hex}・${gN(g)}</button>`).join('')}</div></div>
+  <div><h3 style="margin-bottom:4px">連接的通道</h3><p class="hint" style="margin-bottom:8px">只要我有其中任何一條通道，這個中心就會有定義。點一條通道看它代表我什麼天賦。</p><div class="chips">${chs.map(i=>`<button class="chip" data-gochan="${i}">${chName(i)}</button>`).join('')}</div></div>
+  <details class="adv"><summary>進階補充</summary><p>${c.adv}</p></details>
+  <div><h3 style="margin-bottom:8px">切換其他中心</h3><div class="chips">${CENTERS.map(x=>`<button class="chip" data-center-pick="${x.id}" aria-pressed="${x.id===curC}"><span class="cswatch" style="background:var(--f-${x.id})"></span>${x.name}</button>`).join('')}</div></div>`;
+}
+document.getElementById('c-bg').addEventListener('click',e=>{const t=e.target.closest('[data-center]');if(t){cTouched=true;curC=t.dataset.center;renderCenter()}});
+document.getElementById('c-info').addEventListener('click',e=>{const p=e.target.closest('[data-center-pick]');if(p){cTouched=true;curC=p.dataset.centerPick;renderCenter()}});
+document.getElementById('c-list').addEventListener('click',e=>{const p=e.target.closest('[data-center-pick]');if(p){cTouched=true;curC=p.dataset.centerPick;renderCenter();document.getElementById('c-info').scrollIntoView({behavior:'smooth',block:'start'})}});
+document.getElementById('c-mine').addEventListener('click',e=>{const p=e.target.closest('[data-center-pick]');if(p){cTouched=true;curC=p.dataset.centerPick;renderCenter();document.getElementById('c-info').scrollIntoView({behavior:'smooth',block:'start'})}});
 
 /* 通道 */
 let curH=30,hFilter='all';
 function chKey(i){return CH[i][0]+'-'+CH[i][1]}
-
-
-
+function renderChannels(){const mineOnly=MYHAS?myChans():[];if(!mineOnly.length){document.getElementById('h-bg').innerHTML=bodygraph({mode:'channel',hlCh:-1,hlGates:new Set(),defined:new Set()});document.getElementById('h-info').innerHTML='';document.getElementById('h-filter').innerHTML='';document.getElementById('h-list').innerHTML='';renderHMine();return}if(!mineOnly.includes(curH))curH=mineOnly[0];renderHMine();const c=CH[curH];const m=CH_ME[chKey(curH)];const cir=CIRCUIT[m[0]];
+ document.getElementById('h-bg').innerHTML=bodygraph({mode:'channel',hlCh:curH,hlGates:new Set([c[0],c[1]]),defined:new Set([GC[c[0]],GC[c[1]]])});
+ const ga=G[c[0]],gb=G[c[1]];
+ const has=MYHAS?{a:MYGATES.has(c[0]),b:MYGATES.has(c[1])}:null;
+ let mineTxt='';
+ if(has){if(has.a&&has.b)mineTxt=`我有這條通道！${m[1]}`;else if(has.a||has.b){const h=has.a?c[0]:c[1],o=has.a?c[1]:c[0];mineTxt=`我有閘門 ${h}，沒有閘門 ${o}。這是我的懸掛閘門：我會被擁有閘門 ${o}（${G[o].hd}）的人吸引，和他在一起時才會體驗到完整的${c[2]}通道（${c[3]}）。`}else mineTxt=`我兩端都沒有。我會從擁有這條通道的人身上體驗「${c[2]}」的能量，這是我觀察與學習的地方。`}
+ document.getElementById('h-info').innerHTML=`
+  <div><div class="eyebrow">通道 <span class="num">${c[0]}-${c[1]}</span>・${esc(c[3])}</div><h2>${c[2]}通道 <span class="en-n">Channel of ${esc(c[3])}</span></h2>
+  <div class="tagrow" style="margin-top:8px"><span class="tag acc">${CBY[ga.center].name} ↔ ${CBY[gb.center].name}</span><span class="tag">${cir[0]}</span></div>${chAltHTML(curH)}
+  <p style="margin-top:10px;font-size:16px">${c[4]}</p></div>
+  ${mineTxt?`<div class="me"><h4>我和這條通道</h4><p>${mineTxt}</p></div>`:''}
+  <div class="me"><h4>如果我有這條通道，代表我</h4><p>${m[1]}</p><p class="sub">它讓我的${CBY[ga.center].name}和${CBY[gb.center].name}都變成有定義：${CBY[ga.center].theme}，與${CBY[gb.center].theme}，在我身上會穩定運作。</p></div>
+  <div class="grid3"><div class="box"><h4>天賦</h4><p>${m[2]}</p></div><div class="box"><h4>適合發展的地方</h4><p>${m[3]}</p></div><div class="box"><h4>給我的提醒</h4><p>${m[4]}</p></div></div>
+  <div class="box"><h4>所屬迴路：${cir[0]}</h4><p>這條通道${cir[1]}</p></div>
+  <div class="duo">${[ga,gb].map(g=>`<button class="box" style="text-align:left;font:inherit;color:inherit;cursor:pointer" data-open="${g.n}"><h4>如果我只有閘門 <span class="num">${g.n}</span>（${CBY[g.center].name}）</h4>
+   <div style="display:flex;gap:10px;align-items:center"><span style="color:var(--accent)">${hexSVG(g.n).replace('<svg ','<svg style="width:34px;height:34px" ')}</span><div><b style="font-family:var(--display);font-size:18px">${fullHex(g.n)}</b><br><span class="muted" style="font-size:13px">${g.hd}</span></div></div>
+   <p style="font-size:13px">我帶著「${g.hd}」的特質，並會被擁有閘門 ${g.n===c[0]?c[1]:c[0]} 的人吸引。點開看詳細。</p></button>`).join('')}</div>`;
+ const f=document.getElementById('h-filter');
+ f.innerHTML=`<button class="chip" data-hf="all" aria-pressed="${hFilter==='all'}">全部</button>`+CENTERS.map(x=>`<button class="chip" data-hf="${x.id}" aria-pressed="${hFilter===x.id}">${x.name}</button>`).join('')+(hFilter!=='all'?`<p class="hint" style="flex-basis:100%">以下是連到${CBY[hFilter].name}的通道。只要我有其中一條，我的${CBY[hFilter].name}就會有定義。</p>`:'');
+ document.getElementById('h-list').innerHTML=CH.map((x,i)=>i).filter(i=>hFilter==='all'||GC[CH[i][0]]===hFilter||GC[CH[i][1]]===hFilter)
+  .map(i=>`<button class="chitem" data-ch-pick="${i}" aria-pressed="${i===curH}"><b>${CH[i][2]}${MYHAS&&MYGATES.has(CH[i][0])&&MYGATES.has(CH[i][1])?' ★':''}</b><small class="muted" style="font-size:11px">${CH[i][3]}</small> <span class="num">${CH[i][0]}-${CH[i][1]}</span></button>`).join('');
+}
+document.getElementById('h-bg').addEventListener('click',e=>{const t=e.target.closest('[data-ch]');if(t&&myChans().includes(+t.dataset.ch)){hTouched=true;curH=+t.dataset.ch;renderChannels()}});
+document.getElementById('p-channels').addEventListener('click',e=>{const a=e.target.closest('[data-ch-pick]');if(a){hTouched=true;curH=+a.dataset.chPick;renderChannels();document.getElementById('h-bg').scrollIntoView({behavior:'smooth',block:'start'})}
+ const f=e.target.closest('[data-hf]');if(f){hFilter=f.dataset.hf;renderChannels()}});
 
 /* 閘門 */
 let gFilter=null;
-
-
-
+function renderGates(){const q=document.getElementById('g-search').value.trim();const gf='mine';const PA={};allActs().forEach(a=>(PA[a.g]=PA[a.g]||[]).push(a));
+ document.getElementById('g-filter').innerHTML=(MYHAS?`<button class="chip" data-gf="mine" aria-pressed="${gf==='mine'}">★ 我的閘門（${MYGATES.size}）</button>`:'')+`<button class="chip" data-gf="all" aria-pressed="${gf==='all'}">全部 64</button>`+CENTERS.map(x=>`<button class="chip" data-gf="${x.id}" aria-pressed="${gf===x.id}"><span class="cswatch" style="background:var(--f-${x.id})"></span>${x.name}</button>`).join('');
+ const list=[];for(let n=1;n<=64;n++){const g=G[n];if(gf==='mine'){if(!MYGATES.has(n))continue}else if(gf!=='all'&&g.center!==gf)continue;
+  if(q){const hay=[n,g.hex,fullHex(n),g.hd,g.en,GATE_ALT[n]||'',g.theme,g.xiang,CBY[g.center].name].join(' ').toLowerCase();if(/^\d+$/.test(q)?String(n)!==q:!hay.includes(q.toLowerCase()))continue}
+  list.push(g)}
+ document.getElementById('g-grid').innerHTML=list.map(g=>`<div class="card gcard"><span class="gn">${g.n}</span><span class="hn">${g.hd}<small class="en-s">${esc(g.en)}</small></span><span class="gline">${((D[g.n]||{}).trait||'').split('。')[0]}。</span><span class="hd"><span class="cswatch" style="background:var(--f-${g.center})"></span>${CBY[g.center].name}</span>${PA[g.n]?`<span style="font-size:12px;line-height:1.5">${PA[g.n].map(a=>`<span style="color:${a.side==='d'?'var(--red)':'var(--ink)'};white-space:nowrap">${psym(a.pk)}${PLANETS.find(P=>P.k===a.pk).n} ${a.g}.${a.l||''}</span>`).join(' ')}</span>`:''}</div>`).join('');
+ document.getElementById('g-empty').hidden=list.length>0;
+ /* 多顆行星落在同一閘門（我的閘門中，同一閘門有 3 顆以上的行星啟動）*/
+ {const box=document.getElementById('g-multi');if(box){const multi=MYHAS?[...MYGATES.keys()].filter(n=>(PA[n]||[]).length>=3).sort((a,b)=>(PA[b].length-PA[a].length)||(a-b)):[];
+  box.hidden=!multi.length;
+  box.innerHTML=multi.length?`<div style="margin:14px 0 0;padding:10px 14px;border-radius:12px;background:#E9F0EA;border:1px solid #C9D9CC;font-size:13px"><div style="font-weight:700;color:#2F4A3F;margin-bottom:4px">多顆行星落在同一閘門 <span style="font-weight:400;font-size:11px;color:#5B6B63">（依閘門描述自動組合的參考說明）</span></div><p style="margin:0 0 8px;color:#3D4A44;line-height:1.6">主題在你身上特別密集，較常經歷也較容易被感受到。不代表「開了很多次」或命定，也不代表好壞；真正的決定仍依策略與內在權威。</p><p style="margin:0 0 8px;font-size:12px;color:#5B6B63;line-height:1.6">本說明為自我探索的參考，不是心理診斷或醫療建議，也不應作為重大人生決定的唯一依據。</p>${multi.map(n=>{const acts=PA[n];const hasP=acts.some(a=>a.side==='p'),hasD=acts.some(a=>a.side==='d');const pl=acts.map(a=>{const P=PLANETS.find(x=>x.k===a.pk);return P.n+(a.side==='d'?'（設計）':'（個性）')}).join('、');const areas=[...new Set(acts.map(a=>PLANET_D[a.pk].area))].join('、');const both=hasP&&hasD?'個性與設計兩側都有啟動，代表這個主題同時在意識與身體層面被觸發。':'';const dd=D[n];return `<details style="margin:4px 0"><summary style="cursor:pointer;font-size:12px;font-weight:600;color:#2F4A3F"><span class="cswatch" style="background:var(--f-${G[n].center})"></span>${n}・${esc(G[n].hd)}（${acts.length} 顆）</summary><p style="margin:6px 0 0;color:#3D4A44;line-height:1.7">${pl}同落在閘門 ${n}・${esc(G[n].hd)}上，把「${areas}」的能量集中到這裡。${both}${String(dd.trait||'').replace(/[。．.]+$/,'')}。天賦是「${String(dd.gift||'').replace(/[。．.]+$/,'')}」，要留意的陰影是「${String(dd.shadow||'').replace(/[。．.]+$/,'')}」。</p></details>`}).join('')}</div>`:''}}}
+document.getElementById('g-search').addEventListener('input',renderGates);
+document.getElementById('g-filter').addEventListener('click',e=>{const f=e.target.closest('[data-gf]');if(f){gFilter=f.dataset.gf;renderGates()}});
 
 /* ===== 進階資料 ===== */
 const LINES=[
@@ -2477,7 +2892,7 @@ function closeGate(){modal.hidden=true;document.body.style.overflow='';if(lastFo
 modal.addEventListener('click',e=>{if(e.target===modal||e.target.closest('[data-close]'))closeGate()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!modal.hidden)closeGate()});
 document.addEventListener('click',e=>{const o=e.target.closest('[data-open]');if(o){openGate(o.dataset.open);return}
- const gc=e.target.closest('[data-gochan]');if(gc){if(!gc.closest('#modal')){e.preventDefault();openChanPop(gc.dataset.gochan);return}}
+ const gc=e.target.closest('[data-gochan]');if(gc){if(!gc.closest('#modal')){e.preventDefault();openChanPop(gc.dataset.gochan);return}curH=+gc.dataset.gochan;hFilter='all';renderChannels();show('channels')}
  const gt=e.target.closest('svg.i-gate [data-gate]');if(gt)openGate(gt.dataset.gate)});
 
 /* ===== 共用分析 ===== */
@@ -2528,14 +2943,20 @@ function renderBuilder(){
 
 /* ===== 人生角色 ===== */
 let curPf=null;
-
+function renderProfile(){
+ document.getElementById('pf-lines').innerHTML=LINES.filter(l=>{const m=(sProf.value||'').split('/');return m[0]==String(l.n)||m[1]==String(l.n)}).map((l,i)=>{const my=(sProf.value||'').split('/');const tag=[my[0]==String(l.n)?'我的個性爻':'',my[1]==String(l.n)?'我的設計爻':''].filter(Boolean).join('・');return `<div class="box"${tag?' style="border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)"':''}><h4>${l.n} 爻・${l.en}${tag?'・★ '+tag:''}</h4><h3>${l.name}</h3><p><b>${l.key}</b>　${l.desc}</p><p class="muted" style="font-size:13px">天賦：${l.gift}</p><p class="muted" style="font-size:13px">課題：${l.lesson}</p>
+  <p style="font-size:13px;border-top:1px dashed var(--line);padding-top:6px;margin-top:4px"><span style="color:var(--accent)">易經對照</span>　${l.yi}</p></div>`}).join('');
+ document.getElementById('pf-grid').innerHTML=PROFILES.map(p=>{const [a,b]=p[0].split('/');return `<button class="pcard" data-pf="${p[0]}" aria-pressed="${p[0]===curPf}"><span class="pn">${p[0]}${sProf.value===p[0]?' ★':''}</span><b>${LINES[a-1].name}／${LINES[b-1].name}</b><span class="muted" style="font-size:12px">${p[1]}</span></button>`}).join('');
+ const my=sProf.value;
+ document.getElementById('pf-mine').innerHTML=my?`<div class="eyebrow" style="margin-bottom:4px">我的人生角色</div>`+profDetail(my):NOBIRTH;
+ document.getElementById('pf-detail').innerHTML=curPf?profDetail(curPf):'';}
 function profDetail(pf){const p=PROFILES.find(x=>x[0]===pf);const [a,b]=p[0].split('/').map(Number);const pm=PROF_ME[p[0]];
  return `<div class="result" style="margin-top:4px"><div><div class="eyebrow">${p[1]}・個性 ${a} 爻／設計 ${b} 爻</div><h2>${p[0]}　${LINES[a-1].name}／${LINES[b-1].name}</h2><p style="margin-top:8px;font-size:16px">${p[2]}</p></div>
   <div class="me"><h4>如果我是 ${p[0]}，代表我</h4><p><b>我意識到的自己（${a} 爻）：</b>${LINE_ME[a-1].p}</p><p><b>別人看到、身體裡的我（${b} 爻）：</b>${LINE_ME[b-1].d}</p><p><b>我的學習方式：</b>${pm[0]}</p><p><b>我的人際關係：</b>${pm[1]}</p></div>
   <div class="duo"><div class="box"><h4>意識的我：${a} 爻 ${LINES[a-1].name}</h4><p>${LINES[a-1].desc}</p></div><div class="box"><h4>身體的我：${b} 爻 ${LINES[b-1].name}</h4><p>${LINES[b-1].desc}</p></div></div>
   <div class="duo"><div class="box"><h4>適合發展的地方</h4><p>${p[3]}</p></div><div class="box"><h4>給自己的一句話</h4><p class="ask">${p[4]}</p></div></div>
 </div>`}
-
+document.getElementById('p-profile').addEventListener('click',e=>{const b=e.target.closest('[data-pf]');if(b){curPf=b.dataset.pf;renderProfile();document.getElementById('pf-detail').scrollIntoView({behavior:'smooth',block:'start'})}const sp=e.target.closest('[data-setprof]');if(sp){sProf.value=sp.dataset.setprof;renderSheet();renderProfile();sp.textContent='已帶入個人檔案'}});
 
 /* ===== 四箭頭 ===== */
 let ARRC={det:'',env:'',mot:'',per:''},ARRT={det:'',env:'',mot:'',per:''};
@@ -2559,13 +2980,75 @@ function renderArrows(){if(!document.getElementById('ar-four'))return;renderArMi
 
 /* ===== 合圖 ===== */
 const CP_EX={a:'1, 8, 34, 20, 57, 51, 12, 48, 63, 17, 10, 2, 14, 30, 41, 46, 22',b:'6, 59, 37, 40, 25, 13, 33, 1, 8, 20, 34, 44, 26, 4'};
-
+const cpA=document.getElementById('cp-a'),cpB=document.getElementById('cp-b'),cpAn=document.getElementById('cp-an'),cpBn=document.getElementById('cp-bn');
 /* 四種通道連結：有甲與乙時，依通道分區塊列出這一對人的每一條通道（可點開說明），說明文字放在下方 */
-
-
-
-
-
+function renderCpTypes(A,B){
+ const el=document.getElementById('cp-types');if(!el)return;
+ const hasPair=A.size>0&&B.size>0;const cls={em:[],co:[],dom:[],cp:[]};
+ if(hasPair)CH.forEach((c,i)=>{const a1=A.has(c[0]),a2=A.has(c[1]),b1=B.has(c[0]),b2=B.has(c[1]);
+  const fa=a1&&a2,fb=b1&&b2,ea=a1||a2,eb=b1||b2;let k=null;
+  if(fa&&fb)k='co';
+  else if((fa&&!eb)||(fb&&!ea))k='dom';
+  else if(fa||fb)k='cp';
+  else if((a1&&b2)||(a2&&b1))k='em';
+  if(k)cls[k].push(i)});
+ const an=(cpAn&&cpAn.value)||'甲',bn=(cpBn&&cpBn.value)||'乙';
+ el.innerHTML=Object.entries(CPT).map(([k,v])=>{const list=cls[k]||[];
+  const chans=hasPair?(list.length?`<div class="chips" style="margin-top:8px">${list.map(i=>{const c=CH[i];return `<button class="chip" type="button" data-chpop="${i}" title="看通道與兩個閘門的說明"><span class="num">${c[0]}-${c[1]}</span>　${c[2]}通道 <span class="cp-i">ⓘ</span></button>`}).join('')}</div>`:'<p class="hint" style="margin-top:8px">這一對人沒有此類通道。</p>'):'';
+  const desc=(hasPair?v[2].replace(/甲/g,esc(an)).replace(/乙/g,esc(bn)):v[2]);
+  return `<div class="box cpt-${k}"><h4><span class="ctype ${k}">${v[0]}</span>　${v[1]}</h4>${chans}<p style="margin-top:10px">${desc}</p></div>`}).join('');
+}
+function renderComposite(){
+ const A=new Set(parseGates(cpA.value)),B=new Set(parseGates(cpB.value));renderCpTypes(A,B);const PRV=document.body.classList.contains('priv');const an=PRV?'甲':(cpAn.value||'甲'),bn=PRV?'乙':(cpBn.value||'乙');
+ document.getElementById('cp-la').textContent=an;document.getElementById('cp-lb').textContent=bn;
+ const gs=new Map();A.forEach(n=>gs.set(n,'p'));B.forEach(n=>gs.set(n,gs.has(n)?'b':'d'));
+const cd=defAnalysis(gs);
+ const r=analyseMap(gs);
+ const dA=analyse([...A],[]).def,dB=analyse([...B],[]).def;const cens=new Set();r.def.forEach(id=>{if(!dA.has(id)&&!dB.has(id))cens.add(id)});
+ document.getElementById('cp-bg').innerHTML=bodygraph({mode:'gate',gates:gs,defined:r.def,pal:'cp',hlCenterSet:cens});
+ const one=S=>{const m=new Map();S.forEach(n=>m.set(n,'p'));return m};
+ document.getElementById('cp-bga').innerHTML=A.size?bodygraph({mode:'gate',gates:one(A),defined:dA,pal:'ca'}):'<p class="muted" style="font-size:13px;text-align:center">請選擇甲</p>';
+ document.getElementById('cp-bgb').innerHTML=B.size?bodygraph({mode:'gate',gates:one(B),defined:dB,pal:'cb'}):'<p class="muted" style="font-size:13px;text-align:center">請選擇乙</p>';
+ document.querySelectorAll('.cp-na').forEach(e=>e.textContent=an);document.querySelectorAll('.cp-nb').forEach(e=>e.textContent=bn);
+ document.getElementById('cp-ta').textContent=A.size?analyse([...A],[]).type:'';document.getElementById('cp-tb').textContent=B.size?analyse([...B],[]).type:'';document.getElementById('cp-tm').textContent=A.size&&B.size?'兩人在一起：'+r.type:'';
+ const rows={em:[],co:[],dom:[],cp:[]};
+ CH.forEach((c,i)=>{const [x,y]=c;const af=A.has(x)&&A.has(y),bf=B.has(x)&&B.has(y);const ah=A.has(x)||A.has(y),bh=B.has(x)||B.has(y);
+  if(af&&bf)rows.co.push([i,'']);else if(af&&!bh)rows.dom.push([i,`${an} → ${bn}`]);else if(bf&&!ah)rows.dom.push([i,`${bn} → ${an}`]);
+  else if(af&&bh)rows.cp.push([i,`${bn} 讓步`]);else if(bf&&ah)rows.cp.push([i,`${an} 讓步`]);
+  else if(ah&&bh&&gs.has(x)&&gs.has(y))rows.em.push([i,''])});
+ const ra=analyse([...A],[]),rb=analyse([...B],[]);CP_LAST={A,B,an,bn};
+ const out=document.getElementById('cp-out');
+ if(!A.size||!B.size){out.innerHTML='';return}
+ const say=(k,i,note)=>{const nm=chN(i),th=CH_ME[chKey(i)][2],[x,y]=CH[i];const gA=[x,y].filter(g=>A.has(g)),gB=[x,y].filter(g=>B.has(g));const N=v=>`<b>${esc(v)}</b>`;
+  if(k==='em')return `${N(an)}有閘門 ${gA.join('、')}，${N(bn)}有閘門 ${gB.join('、')}，兩人在一起時會點亮「${nm}」（${th}）。這是${N(an)}和${N(bn)}互相吸引的地方，也可能是摩擦點。`;
+  if(k==='co')return `${N(an)}和${N(bn)}都有完整的「${nm}」，這是兩人的共同語言，在這個主題上很容易理解彼此。`;
+  if(k==='dom'){const [g,r]=note.split(' → ');return `${N(g)}有完整的「${nm}」（${th}），${N(r)}兩端都沒有。${N(r)}和${N(g)}在一起時，會體驗、學習這股能量，也可能被它影響。`}
+  const who=note.replace(' 讓步',''),oth=who===an?bn:an,wg=who===an?gA:gB;return `${N(oth)}有完整的「${nm}」，${N(who)}只有其中一端（閘門 ${wg.join('、')}）。在這個主題上，${N(who)}常得讓步、容易覺得被${N(oth)}壓過，需要多溝通。`};
+ const cpHint=k=>({em:`${esc(an)}有通道的一端，${esc(bn)}有另一端，兩人在一起時整條通道接通。帶來強烈的吸引與火花，「在一起才完整」；但也常是兩人摩擦的地方。`,co:`${esc(an)}和${esc(bn)}都有同一條完整通道。這是共同點，彼此理解、相處自在，但不會從對方身上學到新東西。`,dom:`其中一人有完整通道，另一人兩端都沒有（下面每條都寫明是誰）。沒有的人會受這股能量影響並學習它，是學習，也是制約。`,cp:`其中一人有完整通道，另一人只有其中一端（下面每條都寫明是誰）。只有一端的人在這個主題上常得讓步，容易覺得被壓過，是常見的摩擦來源。`})[k];
+ const sec=k=>`<div class="cpt-sec cpt-${k}"><h3 style="margin-bottom:4px"><span class="ctype ${k}">${CPT[k][0]}</span>　${CPT[k][0]}連結（${rows[k].length}）</h3><p class="hint" style="margin-bottom:6px">${cpHint(k)}</p>${rows[k].length?`<div class="clist">${rows[k].map(([i,note])=>`<p><button class="chip cp-chb" type="button" data-chpop="${i}" title="看通道與兩個閘門的說明"><b>${chN(i)}</b> <span class="num">${CH[i][0]}-${CH[i][1]}</span> <span class="cp-i">ⓘ</span></button><br><span style="color:var(--muted)">${say(k,i,note)}</span></p>`).join('')}</div>`:'<p class="muted" style="font-size:14px">沒有</p>'}</div>`;
+  const holderOf=g=>A.has(g)&&B.has(g)?'兩人都有':(A.has(g)?esc(an):(B.has(g)?esc(bn):'兩人都沒有'));
+ const chLine=i=>`<li>${chN(i)}：閘門 ${CH[i][0]}（${holderOf(CH[i][0])}）與閘門 ${CH[i][1]}（${holderOf(CH[i][1])}）</li>`;
+ let pressBody;
+ if(cd.n<2) pressBody='<p>合圖只有一塊定義（或沒有定義），沒有分裂，因此沒有需要橋接的壓力點。</p>';
+ else if(cd.bridges.length){
+  const gates=[...new Set(cd.bridges.map(b=>b.gate))];
+  pressBody=`<p>合圖是${['零','一','二','三','四'][cd.n]}分人，兩塊之間只要一個閘門就能接起來。下列橋接閘門兩人都沒有，是兩人一起渴望、想要接通的地方。</p><div class="press-grid">`+gates.map(g=>{const chs=cd.bridges.filter(b=>b.gate===g).map(b=>b.ch);return `<div class="box" style="padding:10px 12px;font-size:13px"><h4 style="font-size:13px"><button class="chip" type="button" data-open="${g}">橋接閘門 ${g} ${gN(g)}</button></h4><ul style="margin:6px 0 0 16px;line-height:1.6">${chs.map(chLine).join('')}</ul></div>`}).join('')+'</div>';
+ } else {
+  const miss=CH.map((c,i)=>i).filter(i=>{const [a,b]=CH[i];if(gs.has(a)||gs.has(b))return false;const ca=cd.comp[GC[a]],cb=cd.comp[GC[b]];return ca!==undefined&&cb!==undefined&&ca!==cb});
+  pressBody=`<p>合圖是${['零','一','二','三','四'][cd.n]}分人，兩塊之間沒有單一的橋接閘門，需要整條缺少的通道才能接起來。下列通道兩人都沒有，是兩人一起渴望、想要接通的地方。</p>`+(miss.length?`<div class="press-grid">${miss.map(i=>`<div class="box" style="padding:10px 12px;font-size:13px">${chN(i)}<br>閘門 ${CH[i][0]}（${holderOf(CH[i][0])}）<br>閘門 ${CH[i][1]}（${holderOf(CH[i][1])}）</div>`).join('')}</div>`:'<p>找不到可以接起來的缺少通道。</p>');
+ }
+ const pressHTML=`<div class="box"><h4>兩人合圖的壓力點</h4>${pressBody}<p class="hint" style="margin-top:10px">壓力點描述的是能量互動，不是好壞。</p></div>`;
+const open=CENTERS.filter(c=>!r.def.has(c.id));
+ out.innerHTML=`<div><div class="eyebrow">合圖分析</div><h2>${esc(an)} × ${esc(bn)}</h2></div>
+  <div class="kv"><div><small>${esc(an)}</small><b>${ra.type}</b></div><div><small>${esc(bn)}</small><b>${rb.type}</b></div><div><small>兩人在一起時</small><b>${r.type}</b><p>合圖有定義中心 ${r.def.size}／未定義 ${9-r.def.size}</p></div></div>
+  <div class="me"><h4>這代表我們</h4><p>兩個人在一起時，整體會像一個「${r.type}」：${TYPE_ME[r.type]}</p><p class="sub">電磁 ${rows.em.length} 條是吸引點，友伴 ${rows.co.length} 條是共同點，支配 ${rows.dom.length} 條是互相學習的地方，妥協 ${rows.cp.length} 條是需要多溝通的地方。</p></div>
+  ${sec('em')}${sec('co')}${sec('dom')}${sec('cp')}
+  ${pressHTML}
+  <div class="box"><h4>兩人一起時仍然開放的中心</h4><p>${open.length?open.map(c=>c.name).join('、')+'。這些是兩人都開放的地方，外人進來時，會在這裡帶來影響。':'沒有。兩人在一起時九個中心全部有定義，關係很自成一體，外人較難加入。'}</p></div>
+  <p class="note">合圖描述的是能量互動，不是好壞或適不適合。每段關係裡，最重要的仍然是兩個人各自依照策略與權威做決定。</p>`}
+[cpA,cpB,cpAn,cpBn].forEach(el=>el.addEventListener('input',renderComposite));
+document.getElementById('cp-ex').onclick=()=>{cpAn.value='範例甲';cpBn.value='範例乙';cpA.value=CP_EX.a;cpB.value=CP_EX.b;renderComposite()};
+document.getElementById('cp-me').onclick=()=>{cpAn.value=sName.value||'我';cpA.value=[sP.value,sD.value].filter(Boolean).join(', ');renderComposite()};
 
 /* ===== 學習單 ===== */
 const EX={name:'範例同學（虛構）',p:'34.2, 20.2, 30.1, 29.1, 1.3, 8.5, 57.4, 51.6, 12.2, 48.1, 63.5, 17.3, 10.4',d:'59.4, 55.4, 41.3, 31.3, 2.6, 14.1, 6.2, 46.3, 22.5, 16.2, 63.2, 17.5, 10.6',prof:'2/4',arr:{det:'L',env:'R',mot:'L',per:'R'}};
@@ -2589,23 +3072,24 @@ function renderSheet(save=true){
  const und=CENTERS.filter(c=>!r.def.has(c.id));
 
  const pf=PROFILES.find(x=>x[0]===sProf.value);
- const arrTxt=ARROWS.filter(a=>ARR[a.k]).map(a=>`<p style="font-size:14px"><b>${a.name}</b>　${ARR[a.k]==='L'?'← 左：'+a.L:'右 →：'+a.R}</p>`).join('');
+ const ARRPOS={det:'grid-column:1;grid-row:1',env:'grid-column:1;grid-row:2',mot:'grid-column:2;grid-row:1',per:'grid-column:2;grid-row:2'};
+ const arrTxt=ARROWS.filter(a=>ARR[a.k]).map(a=>`<div style="display:flex;flex-direction:column;gap:4px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 10px;${ARRPOS[a.k]||''}"><p style="font-size:14px;margin:0"><b>${a.name}</b>　${ARR[a.k]==='L'?'← 左：'+a.L:'右 →：'+a.R}</p>${ARRC[a.k]?`<p style="font-size:13px;color:var(--muted);margin:0">${arrowMe(a.k)}</p>`:''}</div>`).join('');
  const lineOf=n=>(MYLINES[n]||[]).map(x=>`${yaoLabel(n,x.l-1)}`).join('、');
  out.innerHTML=`${isEx?'<div class="ex-flag">這是範例資料，換成你自己的閘門試試看</div>':''}
-  <div><div class="eyebrow">我的人類圖特色卡</div><h2>${pv(esc(sName.value||'未填姓名'))}</h2></div>
-  <div class="me"><h4>這代表我</h4><p><b>我是${r.type}：</b>${TYPE_ME[r.type]}</p><p><b>我的權威是${r.auth}：</b>${AUTH_TIP[r.auth]}</p></div>
-  <div class="kv"><div><small>類型</small><b>${r.type}</b></div><div><small>內在權威</small><b>${r.auth}</b></div><div><small>人生角色</small><b>${pf?pf[0]:'—'}</b><p>${pf?(()=>{const [a,b]=pf[0].split('/');return LINES[a-1].name+'／'+LINES[b-1].name+'・'+pf[1]})():'在左邊選擇你的人生角色'}</p></div></div>
-  ${(()=>{const x=TYPE_D[r.type]||{};return `<div class="kv" style="margin-top:4px"><div><small>策略</small><b>${x.strategy||''}</b></div><div><small>順著自己的感受（自己）</small><b>${x.sig||''}</b></div><div><small>偏離自己的感受（非我）</small><b>${x.notself||''}</b></div></div>`})()}
-  ${pf?`<div class="box sh-t1"><h4>人生角色：${pf[0]}</h4><p>${pf[2]}</p><p style="font-size:14px"><b>我的學習方式：</b>${PROF_ME[pf[0]][0]}</p><p style="font-size:14px"><b>我的人際關係：</b>${PROF_ME[pf[0]][1]}</p><p class="muted" style="font-size:13px">適合發展：${pf[3]}</p></div>`:''}
-  ${typeof crossSheet==='function'?`<div class="sh-tint sh-t2">${crossSheet()}</div>`:''}${typeof defAnalysis==='function'?(()=>{const d=defAnalysis(r.gs);const {t,extra}=defText(d);return `<div class="box sh-t3"><h4>定義：${t[0]}（${t[1]}）</h4><p style="font-size:14px">代表我：${t[3]}</p>${extra}</div>`})():''}
-  ${arrTxt?`<div class="box sh-t4"><h4>四箭頭</h4>${arrTxt}${ARROWS.filter(a=>ARRC[a.k]).map(a=>`<p style="font-size:13px;color:var(--muted)">${arrowMe(a.k)}</p>`).join('')}</div>`:''}
-  <div class="sh-blk sh-t5"><h3 style="margin-bottom:8px">有定義的中心（${r.def.size}）</h3>${r.def.size?`<div class="clist">${CENTERS.filter(c=>r.def.has(c.id)).map(c=>`<p><span class="cswatch" style="background:var(--f-${c.id})"></span><b>${c.name}</b>（${c.theme}）<br><span class="muted">代表我：${c.def}</span></p>`).join('')}</div>`:'<span class="muted">沒有，全部開放</span>'}</div>
-  ${und.length?`<div class="sh-blk sh-t6"><h3 style="margin-bottom:8px">未定義中心的提醒</h3><div class="info" style="gap:6px">${und.map(c=>`<p style="font-size:14px"><b>${c.name}</b>：<span class="muted">代表我${c.undef} 問問自己：${c.ask}</span></p>`).join('')}</div></div>`:''}
+  <div><div class="eyebrow">我的人類圖特色卡</div></div>
+  <div class="kv"><div><small>類型</small><b>${r.type}</b></div><div><small>內在權威</small><b>${r.auth}</b></div><div><small>人生角色</small><b>${pf?pf[0]:'—'}</b>${pf?'':'<p>在左邊選擇你的人生角色</p>'}</div></div>
+  ${(()=>{const x=TYPE_D[r.type]||{};return `<div class="kv" style="margin-top:4px"><div><small>策略</small><b>${x.strategy||''}</b></div><div><small>順著自己的感受</small><b>${x.sig||''}</b></div><div><small>偏離自己的感受</small><b>${x.notself||''}</b></div></div>`})()}
+  <div class="me"><h4>我是${r.type}</h4><p>${TYPE_ME[r.type]}</p><p><b>我的權威是${r.auth}：</b>${AUTH_TIP[r.auth]}</p></div>
+  ${pf?`<div class="box sh-t1"><h4>人生角色：${pf[0]}</h4><p class="muted" style="font-size:13px;margin-top:-4px">${(()=>{const [a,b]=pf[0].split('/');return LINES[a-1].name+'／'+LINES[b-1].name+'・'+pf[1]})()}</p><p>${pf[2]}</p><p style="font-size:14px"><b>我的學習方式：</b>${PROF_ME[pf[0]][0]}</p><p style="font-size:14px"><b>我的人際關係：</b>${PROF_ME[pf[0]][1]}</p><p class="muted" style="font-size:13px">適合發展：${pf[3]}</p></div>`:''}
+  ${typeof crossSheet==='function'?crossSheet():''}${typeof defAnalysis==='function'?(()=>{const d=defAnalysis(r.gs);const {t,extra}=defText(d);return `<div class="box sh-t3"><h4>定義：${t[0]}（${t[1]}）</h4><p style="font-size:14px">代表我：${t[3]}</p>${extra}</div>`})():''}
+  <div class="sh-blk sh-t5"><h3 style="margin-bottom:8px">有定義的中心（${r.def.size}）</h3>${r.def.size?`<div class="clist">${CENTERS.filter(c=>r.def.has(c.id)).map(c=>`<p style="background:color-mix(in srgb,var(--f-${c.id}) 18%,var(--surface))"><span class="cswatch" style="background:var(--f-${c.id})"></span><b>${c.name}</b>（${c.theme}）<br><span class="muted">代表我：${c.def}</span></p>`).join('')}</div>`:'<span class="muted">沒有，全部開放</span>'}</div>
+  ${und.length?`<div class="sh-blk sh-t6"><h3 style="margin-bottom:8px">未定義中心的提醒（${und.length}）</h3><div class="clist">${und.map(c=>`<p style="font-size:14px"><b>${c.name}</b><br><span class="muted">代表我${c.undef}<br>問問自己：${c.ask}</span></p>`).join('')}</div></div>`:''}
   <div class="sh-blk sh-t7"><h3 style="margin-bottom:8px">接通的通道（${r.chans.length}）</h3>${r.chans.length?`<div class="info" style="gap:6px">${r.chans.map(i=>`<p style="font-size:14px"><button class="chip" data-gochan="${i}"><b>${chN(i)}</b> <span class="num">${CH[i][0]}-${CH[i][1]}</span></button><br><span class="muted">代表我：${CH_ME[chKey(i)][1]}</span></p>`).join('')}</div>`:'<p class="muted">目前沒有完整接通的通道。</p>'}</div>
-  <div class="sh-blk sh-t8"><h3>我的閘門</h3><p class="muted" style="font-size:13px;margin-bottom:6px">黑色為個性（意識｜頭腦），紅色為設計（無意識｜身體）。點任一列看閘門特質與適合發展的地方。</p><div class="glist">${all.map(n=>{const st=r.gs.get(n);return `<div class="grow" data-open="${n}" role="button" tabindex="0"><span class="num ${st==='d'?'d':'p'}">${n}${st==='b'?'<small style="color:var(--red)">＋</small>':''}</span><div style="grid-column:2 / -1"><div class="t">${gN(n)}</div><div class="q"><b class="gk">特質</b>：${D[n].trait||''}</div><div class="q"><b class="gk">適合領域</b>：${D[n].dev}</div></div></div>`}).join('')}</div></div>
-  
-  <p class="note">類型與權威由本頁依閘門自動推算，僅供學習參考；若與排盤網站結果不同，請以排盤網站為準（常見原因是漏抄閘門）。</p>`;
- renderArrows();
+  <div class="sh-blk sh-t8"><h3>我的閘門</h3><p class="muted" style="font-size:13px;margin-bottom:6px">黑色為個性（意識｜頭腦）<br>紅色為設計（無意識｜身體）<br>數字＋代表紅黑都有</p><div class="glist">${all.map(n=>{const st=r.gs.get(n);return `<div class="grow" data-open="${n}" role="button" tabindex="0"><span class="num ${st==='d'?'d':'p'}">${n}${st==='b'?'<small style="color:var(--red)">＋</small>':''}</span><div style="grid-column:2 / -1"><div class="t">${gN(n)}</div><div class="q"><b class="gk">特質</b>：${D[n].trait||''}</div><div class="q"><b class="gk">適合領域</b>：${D[n].dev}</div></div></div>`}).join('')}</div></div>
+  ${arrTxt?`<div class="box sh-t4"><h4>四箭頭</h4><div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px">${arrTxt}</div></div>`:''}
+
+  `;
+ if(typeof renderCenter==='function'&&save){if(typeof renderTypePage==='function'){renderTypePage();renderAuthPage();renderCircuitPage()}renderCenter();renderChannels();renderProfile();renderGates();renderArrows();if(typeof renderCross==='function')renderCross();if(typeof renderDefinition==='function')renderDefinition()}
  try{tuApplySheet(out)}catch(e){}
   }
 [sName,sP,sD].forEach(el=>el.addEventListener('input',()=>renderSheet()));
@@ -2695,14 +3179,25 @@ function plInputsHTML(){return PLANETS.map(P=>`<tr><td>${psym(P)}${P.n}</td>${['
 function planetLine(P,side,a){const g=G[a.g];const yi=a.l?`<p style="font-size:13px"><span style="color:var(--accent)">${yaoLabel(a.g,a.l-1)}</span>　<span style="font-family:var(--display)">${YAO[a.g-1][a.l-1]}</span><br><span class="muted">${D[a.g].yb[a.l-1]}　（${a.l} 爻・${LINES[a.l-1].name}：${LINE_ME[a.l-1].how}）</span></p>`:'';
  return `<div style="border-top:1px solid var(--line);padding-top:8px;display:flex;flex-direction:column;gap:4px"><div><span class="tag" style="background:${side==='p'?'var(--ink)':'var(--red)'};color:${side==='p'?'var(--bg)':'var(--on-red)'}">${side==='p'?'個性':'設計'}</span> <button class="chip" data-open="${a.g}"><span class="num">${a.g}${a.l?'.'+a.l:''}</span>　${fullHex(a.g)}・${g.hd}</button>${a.auto?' <span class="muted" style="font-size:12px">（由對面推算）</span>':''}</div>
   <p style="font-size:14px"><b>代表我：</b>${P.t.replace('{hd}',g.hd)}${side==='d'?'（設計：這一面在身體裡、較不自覺，常是別人先看到）':''}</p>${yi}</div>`}
-
-
-
-
-
-
+function renderPlanetOut(){const acts=allActs();
+ const ps=act('p','sun'),pe=act('p','earth'),ds=act('d','sun'),de=act('d','earth');
+ document.getElementById('pl-wheel').innerHTML=wheel({acts,cross:[ps,pe,ds,de].filter(Boolean).map(a=>a.g),lines:[[ps&&ps.g,pe&&pe.g,'var(--ink)'],[ds&&ds.g,de&&de.g,'var(--red)']]});
+ const out=document.getElementById('pl-out');
+ if(!acts.length){out.innerHTML='<div class="me" style="border-left-color:var(--red)"><h4 style="color:var(--red)">還沒有出生資料</h4><p>請先按右上角「＋ 出生資料」輸入出生日期與時間，全站會自動套用。</p><div><button class="btn" type="button" data-go2="home">輸入出生資料</button></div></div>';return}
+ out.innerHTML=`<h3>我的星體解讀</h3>`+PLANETS.map(P=>{const a=act('p',P.k),b=act('d',P.k);if(!a&&!b)return '';
+  return `<div class="box"><h4>${psym(P)}${P.n}・${P.en}</h4><p><b>${P.kw}</b>　<span class="muted">${P.desc}</span></p>${a?planetLine(P,'p',a):''}${b?planetLine(P,'d',b):''}</div>`}).join('')}
+function renderPlanets(){
+ document.getElementById('pl-tbody').innerHTML=plInputsHTML();
+ document.getElementById('pl-cards').innerHTML=PLANETS.map(P=>`<div class="box"><h4>${P.en}</h4><h3>${psym(P)}${P.n}</h3><p><b>${P.kw}</b>　${P.desc}</p><p class="hint">如果我的${P.n}在某個閘門：${P.t.replace('「{hd}」','那個閘門的特質')}</p></div>`).join('');
+ renderPlanetOut()}
+document.getElementById('pl-tbody').addEventListener('input',e=>{const t=e.target.closest('[data-pl]');if(!t)return;const [side,k]=t.dataset.pl.split('|');PL[side][k]=t.value;PLSRC='manual';ls.set('hd-plsrc','manual');ls.set('hd-pl',JSON.stringify(PL));renderPlanetOut();syncCrossInputs();renderCross()});
+document.getElementById('pl-gocalc').onclick=()=>show('sheet');
+document.getElementById('pl-ex').onclick=()=>{PL=JSON.parse(JSON.stringify(PL_EX));PLSRC='example';ls.set('hd-plsrc','example');ls.set('hd-pl',JSON.stringify(PL));renderPlanets();syncCrossInputs();renderCross()};
+document.getElementById('pl-clear').onclick=()=>{PL={p:{},d:{}};PLSRC='none';ls.set('hd-plsrc','none');ls.set('hd-pl',JSON.stringify(PL));renderPlanets();syncCrossInputs();renderCross()};
 function plProfile(){const a=act('p','sun'),b=act('d','sun');if(a&&b&&a.l&&b.l){const p=a.l+'/'+b.l;if(PROFILES.find(x=>x[0]===p))return p}return ''}
-
+document.getElementById('pl-send').onclick=()=>{const acts=allActs();if(!acts.length)return;
+ sP.value=acts.filter(a=>a.side==='p').map(a=>a.g+(a.l?'.'+a.l:'')).join(', ');sD.value=acts.filter(a=>a.side==='d').map(a=>a.g+(a.l?'.'+a.l:'')).join(', ');
+ const pf=plProfile();if(pf)sProf.value=pf;renderSheet();document.getElementById('pl-toast').textContent='已帶入個人檔案'+(pf?`，人生角色 ${pf}`:'')};
 
 /* ===== 輪迴交叉：深入解讀 ===== */
 const RAX_LONG=[
@@ -2881,7 +3376,7 @@ function crossDeep(c){if(!c)return [];const f=c.four;const ps=f.ps,pe=f.pe,ds=f.
  const gtxt=(a,nm,role,key)=>{if(!a)return '';const d=D[a.g],gk=gkOf(a.g),L=a.l?LINE_ME[a.l-1]:null,side=key[0]==='p';
   return `<div class="box"><h4>${nm}・閘門 ${a.g}${a.l?'.'+a.l:''}「${G[a.g].hd}」｜${fullHex(a.g)}</h4><p class="hint">${role}</p><p>${d.trait}</p>${pairNote([a.g])}<p style="font-size:14px"><b>天賦：</b>${d.gift}。<b>要留意的陰影：</b>${d.shadow}。</p>${L?`<p class="hint" style="margin:0">爻是卦中的一條線，由下往上數，1 為初爻，6 為上爻。</p><p style="font-size:14px"><b>${a.l} 爻・${LINES[a.l-1].name}：</b>${side?L.p:L.d}${L.how}</p>`:''}<p style="font-size:14px"><b>基因天命：</b>（陰影是需要覺察的傾向，天賦是它轉化後的能力，神性是更高的覺醒狀態）從陰影「${gk.sh}」，經過天賦「${gk.gi}」，走向神性「${gk.si}」。</p><p style="font-size:14px"><b>生活中的樣子：</b>${key==='ps'?`這是我最想發光的方式。當我投入和「${G[a.g].hd}」有關的事，例如走向「${d.dev.split(/[；;。]/)[0]}」這類方向時，我可能會覺得「這就是我」。`:key==='pe'?`當我覺得迷失、被拉扯時，回到「${G[a.g].hd}」的主題，可能就能重新站穩。它是我太陽光芒的地基。`:key==='ds'?`這份能量常常是別人先看到的。朋友可能會說我很「${d.gift.split('、')[0]}」，我自己卻不一定察覺。`:`它在身體深處給我安定感。當生活符合「${G[a.g].hd}」的節奏，我可能會有一種說不出的踏實。`}</p></div>`};
  const out=[];
- out.push(`<div class="box" style="border-color:var(--accent)"><h4>我這一生的主題</h4><p><b>${c.title}</b><span class="en-n" style="display:block;margin-top:3px">${c.name.en}</span></p><p>${deep}</p></div>`);
+ out.push(`<div class="box" style="border-color:var(--accent)"><h4>我這一生的主題</h4><p><b>${c.title}</b><span class="en-n" style="display:block;margin-top:3px;font-size:15px">${c.name.en}</span></p><p>${deep}</p></div>`);
  if(roles)out.push(`<div class="box"><h4>舉例來說：在不同的角色裡</h4><p class="hint">以下是這個交叉在生活中「可能」出現的樣子，每個人活出的方式都不同，僅供對照與參考。</p>${roles}${ps&&ds?`<p style="font-size:14px;margin-top:6px">放到我自己的生活裡：我可能會用「${G[ps.g].hd}」的方式去觀察、參與這個主題${pe?`，並以「${G[pe.g].hd}」作為穩住自己的根基`:''}；別人在我身上看到的，可能是設計太陽「${G[ds.g].hd}」的特質${de?`，身體深處則可能以「${G[de.g].hd}」給我安定感`:''}。這四股能量合起來，就是我活出「${c.name.full.split('・')[1]||c.name.full}」的獨特版本，沒有第二個人會用一模一樣的方式活出它。</p>`:''}</div>`);
   out.push(crossCombo(c));
  out.push(crossVerHTML(c));
@@ -2899,20 +3394,48 @@ function crossDeep(c){if(!c)return [];const f=c.four;const ps=f.ps,pe=f.pe,ds=f.
  return [...imp,...aux]}
 
 /* 輪迴交叉頁 */
-
+const cxIn={ps:document.getElementById('cx-ps'),pe:document.getElementById('cx-pe'),ds:document.getElementById('cx-ds'),de:document.getElementById('cx-de')};
 const CXMAP={ps:['p','sun'],pe:['p','earth'],ds:['d','sun'],de:['d','earth']};
-
-
+function syncCrossInputs(){Object.entries(CXMAP).forEach(([id,[side,k]])=>{if(document.activeElement!==cxIn[id])cxIn[id].value=PL[side][k]||''})}
+Object.entries(cxIn).forEach(([id,el])=>el.addEventListener('input',()=>{const [side,k]=CXMAP[id];PL[side][k]=el.value;PLSRC='manual';ls.set('hd-plsrc','manual');ls.set('hd-pl',JSON.stringify(PL));renderCross();renderPlanets()}));
 function crossTitleOf(name,ps,pe,ds,de){const L=[ps,pe].filter(Boolean).map(a=>a.g).join('/');const R=[ds,de].filter(Boolean).map(a=>a.g).join('/');return name.full.replace('・','之').replace(/\s+/g,'')+` (${L}${R?' | '+R:''})`}
 function crossOfMe(){const ps=act('p','sun');if(!ps)return null;const prof=plProfile()||sProf.value;const ang=angleOf(prof)||'R';
  const four={ps,pe:act('p','earth'),ds:act('d','sun'),de:act('d','earth')};const nm=crossName(ps.g,ang);return {ps,prof,ang,guess:!angleOf(prof),four,name:nm,title:crossTitleOf(nm,four.ps,four.pe,four.ds,four.de),q:quarterOf(ps.g)}}
 const HD2N={};for(let n=1;n<=64;n++)HD2N[G[n].hd]=n;
 function gateTag(h){return h.replace(/(閘門 ?(?:\d+)?)?「(?:<span class="gnum">\d+<\/span>|\d+)?([^「」<>]+)」/g,(m,pre,name)=>{const g=HD2N[name];if(!g)return m;return `${(pre||'').replace(/\d+$/,'')}<span class="gname" data-open="${g}" title="看閘門 ${g} 說明"><span class="gnum">${g}</span>${name}</span>`})}
-
+function renderCross(){try{renderGeneKeys()}catch(e){}
+ const c=crossOfMe();const out=document.getElementById('cx-out');
+ const pf=plProfile();document.getElementById('cx-prof').textContent=pf?`由個性太陽與設計太陽的爻數算出人生角色 ${pf}，因此是${angleOf(pf)==='R'?'右角度':angleOf(pf)==='L'?'左角度':'並列'}。`:(sProf.value?`使用個人檔案的人生角色 ${sProf.value}。`:'填入太陽的爻數（例如 34.2），就能判斷人生角色與角度。');
+ const four=c?c.four:{};
+ document.getElementById('cx-wheel').innerHTML=wheel({acts:[['ps','p','sun'],['pe','p','earth'],['ds','d','sun'],['de','d','earth']].filter(x=>four[x[0]]).map(x=>({...four[x[0]],side:x[1],pk:x[2]})),cross:Object.values(four).filter(Boolean).map(a=>a.g),lines:[[four.ps&&four.ps.g,four.pe&&four.pe.g,'var(--ink)'],[four.ds&&four.ds.g,four.de&&four.de.g,'var(--red)']]});
+ document.getElementById('cx-desc').textContent=c?'輪迴交叉由四個閘門組成：個性太陽與個性地球是我意識得到的一條軸線，設計太陽與設計地球是身體帶著的另一條軸線。兩條軸線交會成一個十字，就是我這一生的方向。因此它常被稱為「人生使命」，是人類圖裡最受重視的四個閘門。':'';
+ const banner=PLSRC!=='calc'?'<div class="me" style="border-left-color:var(--red)"><h4 style="color:var(--red)">注意：目前顯示的是範例資料</h4><p>這不是你的輪迴交叉。請按右上角「＋ 出生資料」輸入出生資料，全站會自動套用。</p><div><button class="btn" type="button" data-go2="home">輸入出生資料</button></div></div>':'';
+ if(!c){out.innerHTML='<div class="me" style="border-left-color:var(--red)"><h4 style="color:var(--red)">還沒有出生資料</h4><p>請先按右上角「＋ 出生資料」輸入出生日期與時間，全站會自動套用。</p><div><button class="btn" type="button" data-go2="home">輸入出生資料</button></div></div>';return;out.innerHTML=(PLSRC==='none'&&MYHAS?'<div class="me" style="border-left-color:var(--red)"><h4 style="color:var(--red)">個人檔案裡的閘門無法判斷輪迴交叉</h4><p>輪迴交叉需要知道「哪一個是太陽」。請用出生資料排盤，或在左邊填入個性太陽與設計太陽。</p></div>':'')+'<h2>輸入個性太陽，就能找到我的輪迴交叉</h2><p class="muted">至少需要個性太陽；四個閘門都填，解讀會最完整。也可以先到「星體」頁按「載入範例」。</p>';return}
+ const Q=QUARTERS[c.q];
+ out.innerHTML=banner+`<div><div class="eyebrow">${c.name.en}</div><h2>${c.title}</h2><div class="tagrow" style="margin-top:6px"><span class="tag acc">${c.ang==='R'?'右角度・個人命運':c.ang==='L'?'左角度・跨個人業力':'並列・固定命運'}</span><span class="tag">${Q[0]}・${Q[2]}</span>${c.prof?`<span class="tag">人生角色 ${c.prof}</span>`:''}</div></div>
+  ${c.guess?'<p class="note">還不知道人生角色，暫時以右角度顯示。填入太陽的爻數或在個人檔案選擇人生角色後會自動更新。</p>':''}
+  <div class="grid2">${ROLES.map(([id,nm,role])=>{const a=four[id];if(!a)return `<div class="box"><h4>${nm}</h4><p class="muted">尚未輸入</p></div>`;return `<button class="box" data-open="${a.g}" style="text-align:left;font:inherit;color:inherit;cursor:pointer;display:flex;flex-direction:column;gap:6px"><h4 style="min-height:46px">${nm}・${role}</h4><div style="display:flex;gap:10px;align-items:center"><span style="color:${id[0]==='p'?'var(--ink)':'var(--red)'}">${hexSVG(a.g).replace('<svg ','<svg style="width:32px;height:32px" ')}</span><div><b style="font-family:var(--display);font-size:17px">${a.g}${a.l?'.'+a.l:''}　${fullHex(a.g)}</b><br><span class="muted" style="font-size:13px">${gN(a.g)}</span></div></div><p style="font-size:14px"><b>代表我：</b>${role}，是「${G[a.g].hd}」。${D[a.g].gift}。</p><p style="font-size:14px">${gkF(D[a.g].trait)}。</p><div style="display:flex;flex-direction:column;gap:6px;margin-top:auto"><span class="tag acc" style="align-self:flex-start">基因天命 ${a.g}</span>${gkSpectrum(a.g,true)}</div></button>`}).join('')}</div>
+  ${crossDeep(c).join('')}
+  <p class="note">輪迴交叉的名稱依國際通行的英文名稱翻譯，中文譯名各學院可能不同；交叉主題為入門說明。</p>`;
+ out.innerHTML=gateTag(out.innerHTML);
+ if(document.getElementById('cx-quarters'))document.getElementById('cx-quarters').innerHTML=QUARTERS.map((q,i)=>`<div class="box"${i===c.q?' style="border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)"':''}><h4>${q[1]}${i===c.q?'・我的象限':''}</h4><h3>${q[0]}</h3><p><b>${q[2]}</b>　${q[3]}</p><p class="muted" style="font-size:12px">閘門 ${[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].map(j=>WHEEL[(2+i*16+j)%64]).join('、')}</p></div>`).join('')}
 let cxL='R',cxSel=null;
-
-
-function crossSheet(){const c=crossOfMe();if(!c)return '';return `<div class="box"><h4>輪迴交叉</h4><p><b>${c.title}</b><span class="en-n" style="display:block;margin-top:3px">${c.name.en}</span>${c.guess?'（暫以右角度推算）':''}</p><p style="font-size:14px">代表我：這一生的主題是${c.name.t}</p><p class="muted" style="font-size:13px">${QUARTERS[c.q][0]}：${QUARTERS[c.q][2]}</p></div>`}
+function renderCrossBrowse(){if(!document.getElementById('cx-list'))return;
+ document.querySelectorAll('[data-cxl]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.cxl===cxL));
+ const L=document.getElementById('cx-list');
+ if(cxL==='R')L.innerHTML=RAX.map((r,k)=>`<button class="chip" data-cxs="R${k}" aria-pressed="${cxSel==='R'+k}">${r[0]}</button>`).join('');
+ else if(cxL==='L')L.innerHTML=LAXP.map((x,i)=>`<button class="chip" data-cxs="L${i}" aria-pressed="${cxSel==='L'+i}">${x[2]}</button>`).join('');
+ else L.innerHTML=Array.from({length:64},(_,i)=>i+1).map(g=>`<button class="chip" data-cxs="J${g}" aria-pressed="${cxSel==='J'+g}"><span class="num">${g}</span> ${G[g].hd}</button>`).join('');
+ const B=document.getElementById('cx-browse');if(!cxSel||cxSel[0]!==cxL){B.innerHTML='<p class="hint" style="margin-top:8px">點一個交叉，看它的主題與四個閘門。</p>';return}
+ let name,en,t,gates,note='';
+ if(cxSel[0]==='R'){const k=+cxSel.slice(1);[name,en,t]=RAX[k];gates=[0,1,2,3].map(j=>WHEEL[k+16*j]);name='右角度交叉・'+name;note=`這四個閘門輪流作為個性太陽，形成四個版本：${gates.map(g=>`太陽在 ${g} 是第 ${quarterOf(g)+1} 版`).join('、')}。`}
+ else if(cxSel[0]==='L'){const x=LAXP[+cxSel.slice(1)];name='左角度交叉・'+x[2];en=x[3];t=x[4];const d=WHEEL[(WIDX[x[0]]-15+64)%64];gates=[x[0],x[1],d,opp(d)];note=`個性太陽在 ${quarterOf(x[0])<=1?x[0]:x[1]} 是第 1 版，在 ${quarterOf(x[0])<=1?x[1]:x[0]} 是第 2 版（設計閘門也會跟著對調）。`}
+ else{const g=+cxSel.slice(1);name='並列交叉・'+G[g].hd;en='Juxtaposition';t=`以「${G[g].hd}」為固定的人生主軸。`;gates=[g,opp(g)];note='並列交叉的設計太陽依個人星盤而定，這裡只列個性太陽與地球。'}
+ const bTitle=cxSel[0]==='R'?name.replace('・','之')+' (依四個版本而定)':cxSel[0]==='L'?`左角度交叉之${LAXP[+cxSel.slice(1)][2]} (${gates[0]}/${gates[1]} | ${gates[2]}/${gates[3]})`:`並列交叉之${G[gates[0]].hd} (${gates[0]}/${gates[1]} | 依星盤而定)`;
+ B.innerHTML=`<div class="box" style="margin-top:10px"><h4>${en}</h4><h3>${bTitle}</h3><p>${t}</p><div class="chips" style="margin-top:4px">${gates.map(g=>`<button class="chip" data-open="${g}"><span class="num">${g}</span>　${G[g].hex}・${gN(g)}</button>`).join('')}</div><p class="muted" style="font-size:13px">${note}</p>
+  <div class="me" style="margin-top:6px"><h4>如果這是我的輪迴交叉</h4><p>${t.replace(/^以/,'我以')} 這些閘門的特質：${gates.map(g=>G[g].hd).join('、')}，會是我一生反覆出現、逐漸活出的主題。</p></div></div>`}
+document.getElementById('p-cross').addEventListener('click',e=>{const g2=e.target.closest('[data-go2]');if(g2){show(g2.dataset.go2);return}const l=e.target.closest('[data-cxl]');if(l){cxL=l.dataset.cxl;renderCrossBrowse();return}const s=e.target.closest('[data-cxs]');if(s){cxSel=s.dataset.cxs;renderCrossBrowse()}});
+function crossSheet(){const c=crossOfMe();if(!c)return '';return `<div class="box sh-t2"><h4>輪迴交叉</h4><p><b>${c.title}</b><span class="en-n" style="display:block;margin-top:3px;font-size:15px">${c.name.en}</span>${c.guess?'（暫以右角度推算）':''}</p><p style="font-size:14px">代表我：這一生的主題是${c.name.t}</p></div>`}
 
 /* ===== 定義（一分人、二分人…） ===== */
 const DEF_TXT={0:['無定義','No Definition','九個中心全部開放，是反映者。','我像一面鏡子，完整地感受、反映周圍的人與環境。我沒有固定的能量模式，所以「環境」與「身邊的人」對我特別重要。'],
@@ -2928,7 +3451,11 @@ function defAnalysis(gs){const r=analyseMap(gs);const adj={};r.chans.forEach(i=>
 function defText(d){const k=Math.min(d.n,4);const t=DEF_TXT[k];let extra='';
  if(d.n===2){const uniq=[...new Set(d.bridges.map(b=>b.gate))];extra=uniq.length?`<p><b>小分裂：</b>只要一個閘門就能把我的兩塊接起來，橋接閘門是 ${uniq.map(g=>`<button class="chip" data-open="${g}">${g} ${gN(g)}</button>`).join(' ')}。我常被擁有這些閘門的人吸引，和他們在一起會覺得「接通了」。</p>`:'<p><b>大分裂：</b>需要一整條通道才能把兩塊接起來。我不會固定被某一個人「補滿」，常需要不同的人或行運幫忙，所以更需要時間與耐心。</p>'}
  return {t,extra}}
-
+function renderDefinition(){const gs=MYHAS?MYGATES:new Map();const d=defAnalysis(gs);const suf={};d.comps.forEach((l,i)=>l.forEach(c=>suf[c]=CIRC[i]||''));
+ document.getElementById('df-bg').innerHTML=bodygraph({mode:'gate',gates:gs,defined:d.r.def,suffix:d.comps.length>1?suf:null});
+ const {t,extra}=defText(d);
+ document.getElementById('df-me').innerHTML=MYHAS?`<div class="me"><h4>這代表我</h4><h3>${t[0]}（${t[1]}）</h3><p>${t[3]}</p>${d.n>1?`<p class="sub">${d.comps.map((l,i)=>`${CIRC[i]} ${l.map(c=>CBY[c].name).join('、')}`).join('　')}</p>`:''}${extra}</div>`:'<div class="me" style="border-left-color:var(--red)"><h4 style="color:var(--red)">還沒有出生資料</h4><p>請先按右上角「＋ 出生資料」輸入出生日期與時間，全站會自動套用。</p><div><button class="btn" type="button" data-go2="home">輸入出生資料</button></div></div>';
+ document.getElementById('df-cards').innerHTML=[0,1,2,3,4].filter(k=>MYHAS&&Math.min(d.n,4)===k).map(k=>{const x=DEF_TXT[k];const mine=MYHAS&&Math.min(d.n,4)===k;return `<div class="box"${mine?' style="border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)"':''}><h4>${x[1]}${mine?'・我的定義':''}</h4><h3>${x[0]}</h3><p>${x[2]}</p><p class="hint">如果我是${x[0]}，代表我：${x[3]}</p></div>`}).join('')+(MYHAS&&d.n===2?`<div class="box"><h4>小分裂與大分裂</h4><p>二分人又分成兩種：只差「一個閘門」就能接起來的叫小分裂，會特別被擁有那個閘門的人吸引；需要「一整條通道」才能接起來的叫大分裂，比較不會依賴特定的人。</p></div>`:'')}
 
 /* ===== 人生週期 ===== */
 const CYC=[{k:'saturn',name:'土星回歸',en:'Saturn Return',age:'約 28–30 歲',meaning:'土星大約 29.5 年繞行一圈，回到出生時的位置。人類圖把它看成「第一次成熟的檢驗」：人生第一個階段結束，過去依照別人的期待（非自己）建立起來的生活，會在這時受到考驗。這也是 6 爻人生角色「走上屋頂」的時候。',me:'如果我在這之前已經依照策略與權威生活，土星回歸會帶來穩固與收成；如果一直在活別人期待的樣子，這段時間可能出現轉換工作、搬家、關係改變，提醒我回到自己。'},
@@ -3055,7 +3582,7 @@ bcEl('bc-go').onclick=()=>{const msg=bcEl('bc-msg');const ds=bcEl('bc-date').val
  sP.value=c.order.map(k=>PL.p[k]).join(', ');sD.value=c.order.map(k=>PL.d[k]).join(', ');const pf=c.p.sun.l+'/'+c.d.sun.l;if(PROFILES.find(x=>x[0]===pf))sProf.value=pf;
  if(sName.value===EX.name)sName.value='';
  BIRTH={date:ds,time:tm,place,tz:TZ,off,dst:TZ==='Asia/Taipei'?bcEl('bc-dst').checked:false,ms};ls.set('hd-birth',JSON.stringify(BIRTH));
- renderArrowPick();renderSheet();try{const el=id=>document.getElementById(id);el('hb-date').value=ds;el('hb-time').value=tm;el('hb-place').value=place}catch(e){}
+ renderPlanets();syncCrossInputs();renderArrowPick();renderSheet();renderCross();renderDefinition();try{const el=id=>document.getElementById(id);el('hb-date').value=ds;el('hb-time').value=tm;el('hb-place').value=place;renderHome()}catch(e){}
  const dd=new Date(c.designMs+off*3600000);msg.innerHTML=`已完成排盤：個性太陽 ${PL.p.sun}、設計太陽 ${PL.d.sun}，人生角色 ${pf}。設計時間約為 ${dd.getUTCFullYear()}/${dd.getUTCMonth()+1}/${dd.getUTCDate()}。`};
 
 /* ===== 基因天命（Gene Keys）與黃金路徑 ===== */
@@ -3198,7 +3725,7 @@ function runCalc(b){TU=!!b.tu;if(b.tu&&b.tuT)b={...b,time:b.tuT};setTz(b.tz);bcE
  if(typeof b.dst==='boolean'){bcEl('bc-dst').checked=b.dst;bcEl('bc-dst').dataset.touched='1'}else{delete bcEl('bc-dst').dataset.touched}bcSync();
  sName.value=b.name||'';ls.set('hd-name',sName.value);bcEl('bc-go').click();
  const el=id=>document.getElementById(id);el('hb-name').value=sName.value;if(el('hb-nick'))el('hb-nick').value=b.nick||'';el('hb-date').value=b.date;el('hb-time').value=b.time;el('hb-place').value=tzLabel(b.tz);{const tu=el('hb-tu');if(tu){tu.checked=TU;el('hb-time').disabled=TU}}
- renderSheet()}
+ renderSheet();renderHome();fillCpSelects()}
 function birthMs(b){const [y,m,d]=b.date.split('-').map(Number),[hh,mi]=((b.tu&&b.tuT)||b.time).split(':').map(Number);if(b.tz&&b.tz!=='Asia/Taipei')return zonedMs(y,m,d,hh,mi,b.tz);const dst=typeof b.dst==='boolean'?b.dst:twDst(y,m,d);return Date.UTC(y,m-1,d,hh,mi)-(8+(dst?1:0))*3600000}
 
 /* ===== 儲存人物（上限 500） ===== */
@@ -3224,10 +3751,14 @@ function ppInGroup(p){return !ppG||(ppG==='__none'?!pgOf(p).length:pgOf(p).inclu
 /* ===== 合圖：從人物清單選擇 ===== */
 function gatesOfBirth(b){const c=EPH.chart(birthMs(b));return c.order.map(k=>c.p[k].g).concat(c.order.map(k=>c.d[k].g)).join(', ')}
 /* 合圖：甲＝目前套用的人物；乙＝在此輸入出生資料（不儲存） */
-
-
-
-
+function cpApply(){const hasMe=BIRTH&&BIRTH.ms&&PLSRC==='calc';cpAn.value=hasMe?(sName.value||'甲'):'甲';cpA.value=hasMe?[sP.value,sD.value].filter(Boolean).join(', '):'';renderComposite()}
+function fillCpSelects(){cpApply()}
+document.getElementById('cb-tz').innerHTML=tzOptions();
+document.getElementById('cb-go').onclick=()=>{const er=document.getElementById('cb-err');er.textContent='';const date=document.getElementById('cb-date').value;const tu=document.getElementById('cb-tu').checked;let time=document.getElementById('cb-time').value;
+ if(!date){er.textContent='請填寫乙的出生日期。';return}
+ if(tu)time='12:00';else if(!time){er.textContent='請填寫乙的出生時間，或勾選「不知道出生時間」。';return}
+ const b={name:document.getElementById('cb-name').value.trim()||'乙',date,time,tz:document.getElementById('cb-tz').value||'Asia/Taipei',tu};
+ try{cpBn.value=b.name;cpB.value=gatesOfBirth(b);renderComposite()}catch(e){er.textContent='計算失敗，請確認乙的出生資料。'}};
 
 /* ===== 個人人類圖 chart ===== */
 function personalChart(){if(!BIRTH||!BIRTH.ms||PLSRC!=='calc')return '';
@@ -3235,13 +3766,13 @@ function personalChart(){if(!BIRTH||!BIRTH.ms||PLSRC!=='calc')return '';
  const col=side=>PLANETS.map(P=>{const a=act(side,P.k);return a?`<div data-open="${a.g}" title="${P.n}・${fullHex(a.g)}" style="display:flex;justify-content:space-between;gap:4px;cursor:pointer;padding:1px 0"><span>${psym(P)}</span><span class="num">${a.g}.${a.l}</span></div>`:''}).join('');
  const arr=k=>ARR[k]?(ARR[k]==='L'?'◀':'▶'):'·';
  return `<div class="result" style="gap:12px;padding:16px">
-  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;align-items:baseline"><div><div class="eyebrow">人類圖 HUMAN DESIGN CHART</div><h2 style="font-size:24px">${pv(esc(sName.value||'我的人類圖'))}</h2></div>
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;align-items:baseline"><div><div class="eyebrow">人類圖 HUMAN DESIGN CHART</div></div>
    ${(()=>{const F=TU&&tuPerson()?tuScan(tuPerson()).F:null;const tg=(f,v,cls)=>F&&!F[f].certain?'':`<span class="tag${cls||''}">${v}</span>`;return `<div class="tagrow">${F?'<span class="tu-tag">出生時間未知</span>':''}${tg('type',r.type,' acc')}${tg('auth',r.auth)}${tg('prof','人生角色 '+(sProf.value||'—'))}${tg('def',dt[0])}${c?tg('cross',c.title):''}</div>`})()}</div>
   <div class="pcgrid">
    <div class="pc-g">${bodygraph({mode:'gate',gates:r.gs,defined:r.def,arrows:{dir:ARR,c:ARRC,t:ARRT}})}</div>
-   <table class="pltab"><thead><tr><th class="d">設計</th><th>星體</th><th class="p">個性</th></tr></thead><tbody>${PLANETS.map(P=>{const a=act('d',P.k),b=act('p',P.k);return `<tr><td class="d"${a?` data-open="${a.g}" title="設計${P.n}・${fullHex(a.g)}"`:''}>${a?a.g+'.'+a.l:'—'}</td><td class="pn">${psym(P)}${P.n}</td><td class="p"${b?` data-open="${b.g}" title="個性${P.n}・${fullHex(b.g)}"`:''}>${b?b.g+'.'+b.l:'—'}</td></tr>`}).join('')}</tbody></table>
+   <div class="pc-tcol"><table class="pltab"><thead><tr><th class="d">設計</th><th>星體</th><th class="p">個性</th></tr></thead><tbody>${PLANETS.map(P=>{const a=act('d',P.k),b=act('p',P.k);return `<tr><td class="d"${a?` data-open="${a.g}" title="設計${P.n}・${fullHex(a.g)}"`:''}>${a?a.g+'.'+a.l:'—'}</td><td class="pn">${psym(P)}${P.n}</td><td class="p"${b?` data-open="${b.g}" title="個性${P.n}・${fullHex(b.g)}"`:''}>${b?b.g+'.'+b.l:'—'}</td></tr>`}).join('')}</tbody></table><div class="legend" style="justify-content:center;margin-top:10px"><span><i style="background:var(--ink)"></i>個性</span><span><i style="background:var(--red)"></i>設計</span><span><i style="background:var(--sunk)"></i>未啟動</span></div></div>
   </div>
-  <p class="hint" style="display:table;margin-left:auto;margin-right:auto;text-align:left">中心依脈輪配色。星體表左邊紅字為設計、右邊黑字為個性；頭頂兩側為四箭頭（數字＝色.調）。點數字或閘門看完整說明。</p><div class="pc-cr">© LEE HUI-YUN．PACIDAL全景人類圖</div></div>`}
+  <div class="pc-cr">© PACiDAL HUMAN DESIGN<br><a href="https://www.instagram.com/pacidal_flow/" target="_blank" rel="noopener">IG:pacidal_flow</a></div></div>`}
 
 
 /* ===== 出生時間誤差檢查（前後 30 分鐘） ===== */
@@ -3303,7 +3834,7 @@ function tuPop(f){const b=tuPerson();if(!b)return;const o=tuScan(b);const F=o.F[
   <div class="tu-cmp">${F.opts.map(x=>`<div class="box${pk[f]===x.v?' tu-on':''}" style="gap:6px"><h3 style="margin:0">${esc(x.v)}</h3><p class="num muted" style="font-size:13px">出生時段：${x.ts.join('、')}</p>${tuDetail(o,f,x.v)}<div><button type="button" class="btn ${pk[f]===x.v?'':'ghost '}sm" data-tupick="${f}" data-v="${esc(x.v)}">${pk[f]===x.v?'✓ 已選：這個像我':'這個像我'}</button></div></div>`).join('')}</div>
   <div id="tu-pop-range">${tuRangeHTML(o)}</div>`;
  mb.innerHTML=`<button class="x" aria-label="關閉" data-close>×</button>`+html;if(modal.hidden)lastFocus=document.activeElement;modal.hidden=false;document.body.style.overflow='hidden';modal.scrollTop=0}
-function tuRefresh(){try{renderSheet(false)}catch(e){}}
+function tuRefresh(){try{renderHome()}catch(e){}try{renderSheet(false)}catch(e){}}
 document.addEventListener('change',e=>{if(e.target.id==='pe-tu'){const t=document.getElementById('pe-time');if(t){t.disabled=e.target.checked;if(e.target.checked)t.value=''}}});
 document.addEventListener('click',e=>{const tt=e.target.closest('[data-tutry]');if(tt&&BIRTH){const t=tt.dataset.tutry;const k=curKeyNow();const L=ppLoad();const i=L.findIndex(x=>ppKey(x)===k);if(i>=0){L[i].tuT=t;ppSave(L)}const nick=((document.getElementById('hb-nick')||{}).value||'').trim();if(!modal.hidden)closeGate();runCalc({name:sName.value,nick,date:BIRTH.date,time:'12:00',tuT:t,tz:BIRTH.tz,dst:BIRTH.dst,tu:true});return}
  const o=e.target.closest('[data-tuf]');if(o){tuPop(o.dataset.tuf);return}
@@ -3345,7 +3876,7 @@ function hbInit(){const el=id=>document.getElementById(id);{const h=document.get
   runCalc({name:el('hb-name').value.trim(),nick:'',date:ds,time:tm,tz:el('hb-tz').value,tu});return;
   bcEl('bc-date').value=ds;bcEl('bc-time').value=tm;bcEl('bc-place').value=placeName(el('hb-place').value);el('hb-place').value=bcEl('bc-place').value;delete bcEl('bc-dst').dataset.touched;bcSync();
   bcEl('bc-go').click();if(el('hb-name').value.trim()){sName.value=el('hb-name').value.trim();renderSheet()}
-  }}
+  renderHome()}}
 function homeTriple(ms){const r=analyse(parseGates(sP.value),parseGates(sD.value));ms=ms||Date.now();const c=EPH.chart(ms).p;
  const TG={};PLANETS.forEach(P=>{const g=c[P.k].g;(TG[g]=TG[g]||[]).push(P)});const mine=MYGATES;
  const tg=new Map();Object.keys(TG).forEach(g=>tg.set(+g,'d'));const tr=analyseMap(tg);
@@ -3359,7 +3890,16 @@ function homeTriple(ms){const r=analyse(parseGates(sP.value),parseGates(sD.value
   <div class="tri">${col('我的人類圖',r.type+'・'+(sProf.value||''),bodygraph({mode:'gate',gates:r.gs,defined:r.def,pal:'sl'})+`<div class="tr-leg sl-leg"><span style="display:inline-flex;align-items:center;gap:5px"><i style="display:inline-block;width:22px;height:8px;border-radius:99px;background:var(--tr-me)"></i><b style="color:var(--tr-me)">個性</b></span><span style="display:inline-flex;align-items:center;gap:5px"><i style="display:inline-block;width:22px;height:8px;border-radius:99px;background:var(--sl-d)"></i><b style="color:var(--sl-d)">設計</b></span><span style="display:inline-flex;align-items:center;gap:5px"><i style="display:inline-block;width:22px;height:8px;border-radius:99px;background:repeating-linear-gradient(45deg,var(--tr-me) 0 3px,var(--sl-d) 3px 6px)"></i><b style="background:linear-gradient(90deg,var(--tr-me),var(--sl-d));-webkit-background-clip:text;background-clip:text;color:transparent">兩者都有</b></span></div>`)}${col('我 × 流日（合圖）',TR_LEG,bodygraph({mode:'gate',gates:cg,defined:all.def,pal:'tr',hlCenterSet:new Set([...all.def].filter(x=>!r.def.has(x)&&!tr.def.has(x)))}),'mid')}${col('流日','太陽 '+c.sun.g+' '+G[c.sun.g].hd,bodygraph({mode:'gate',gates:tg,defined:tr.def,pal:'tx'})+'<div class="sl-leg"><span style="display:inline-flex;align-items:center;gap:5px"><i style="display:inline-block;width:22px;height:8px;border-radius:99px;background:#E07A8F"></i><b style="color:#E07A8F">流日</b></span></div>')}</div>
   <p style="font-size:14px">${lit.length?`這個時間的流日接通我 <b>${lit.length}</b> 條通道：${lit.map(i=>`${CH[i][2]} ${CH[i][3]}（${CH[i][0]}-${CH[i][1]}）`).join('、')}。`:'這個時間的流日沒有接通我的新通道。'}${newC.length?`暫時有定義的中心 <b>${newC.length}</b> 個：${newC.map(x=>x.name).join('、')}。`:''}</p></div>`}
 function homeIntroHTML(){const who=sName.value?pv(esc(sName.value)):'';return `<div class="me"><h4>歡迎來到導覽</h4><p>這裡是學習的起點。建議依序看「第1步 → 第2步 → 第3步」，從單一的人類圖概念，慢慢理解整體。</p><p>完整的個人內容請到 ABOUT ME 查看。</p><div class="btnrow"><button class="btn" type="button" data-go2="sheet">前往 ABOUT ME</button></div></div>`}
-
+function renderHome(){try{updCur()}catch(e){}try{renderRoadmap()}catch(e){}const o=document.getElementById('hb-out');if(!BIRTH||!BIRTH.ms||PLSRC!=='calc'){o.innerHTML='<div class="me"><h4>還沒有出生資料</h4><p>按右上角「＋ 出生資料」，輸入出生日期、時間與地點，全站就會換成你的人類圖。也可以到「人物資料庫」直接點名字套用已儲存的人物。</p><div class="btnrow"><button class="btn" type="button" data-hb-open>輸入出生資料</button></div></div>';return}
+ o.innerHTML=homeIntroHTML();return;
+ const r=analyse(parseGates(sP.value),parseGates(sD.value));const c=crossOfMe();const d=defAnalysis(r.gs);const dt=defText(d).t;const ps=act('p','sun');const k=ps?gkOf(ps.g):null;
+ const card=(t,v,sub,go)=>`<button class="box" data-go2home="${go}" style="text-align:left;font:inherit;color:inherit;cursor:pointer"><h4>${t}</h4><b style="font-family:var(--display);font-size:19px">${v}</b><span class="muted" style="font-size:13px">${sub}</span></button>`;
+ o.innerHTML=personalChart()+(TU&&tuPerson()?tuCardHTML(tuPerson()):birthSensHTML())+`<div class="me" style="margin-top:12px"><h4>已套用到全站${sName.value?'・'+pv(esc(sName.value)):''}</h4><p>點下面任一張卡片，看完整說明。</p></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-top:10px">
+   ${card('類型',r.type,'策略：'+r.strategy,'sheet')}${card('內在權威',r.auth,AUTH_TIP[r.auth],'sheet')}${card('人生角色',sProf.value||'—',sProf.value?(()=>{const [a,b]=sProf.value.split('/');return LINES[a-1].name+'／'+LINES[b-1].name})():'','profile')}
+   ${card('定義',dt[0],dt[1],'definition')}${c?card('輪迴交叉',c.title,c.name.en,'cross'):''}${k?card('生命志業（基因天命）',ps.g+'・'+k.gi,'陰影 '+k.sh+' → 神性 '+k.si,'genekeys'):''}
+   ${card('有定義中心',r.def.size+' 個',[...r.def].map(x=>CBY[x].name.replace('中心','')).join('、')||'全部開放','centers')}${card('接通的通道',r.chans.length+' 條',r.chans.map(i=>CH[i][2]).slice(0,4).join('、')+(r.chans.length>4?'…':''),'channels')}${(()=>{let C=null;try{C=cyCompute(BIRTH)}catch(e){}if(!C)return '';const y=k=>{const e=C.evs.find(x=>x.k===k);return e&&e.ps.length?new Date(e.ps[0].t+8*3600000).getUTCFullYear()+' 年':'—'};return card('人生週期','土星回歸 '+pv(y('sat1')),'天王星對立 '+pv(y('ura'))+'・凱龍回歸 '+pv(y('chi')),'cycles')})()}
+  </div>`}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-go2home],[data-go2]');if(b){show(b.dataset.go2home||b.dataset.go2)}});
 
 /* ===== 「我」優先：各分頁先顯示我的內容 ===== */
@@ -3378,11 +3918,30 @@ function centerBox(c,on,click){const x=CENTER_D[c.id];const st=on?`background:${
  return `<${click?'button type="button" data-center-pick="'+c.id+'"':'div'} class="box" style="${st}${click?'text-align:left;font:inherit;color:inherit;cursor:pointer;':''}"><h4><span class="cswatch" style="background:${on?csoft(CHEX[c.id],.9):'var(--surface)'};border:1px solid var(--line)"></span>${c.name}・${c.chakra}・${on?'有定義（上色）':'開放（白色）'}</h4><p><b>主題：</b>${c.theme}</p><p>${on?x.def:x.open}</p>${on?'':`<p class="sub" style="font-size:13px;color:var(--muted)">問問自己：${c.ask}</p>`}</${click?'button':'div'}>`}
 function centerSub(t,d){return `<div class="csub"><h3>${t}</h3><p>${d}</p></div>`}
 const CSUB_ON='上色的中心：我穩定、一貫的能量，也是我會影響別人的地方。區塊顏色對應人體圖上各中心的脈輪色。',CSUB_OFF='白色的中心：我學習、感受別人能量的地方。它們會放大外在的能量，也是我智慧的來源。在這裡接收別人的能量、以為那是自己的，就是「制約」；依照策略與權威生活，慢慢分辨哪些是自己、哪些是外來的，就是「去制約」。';
-
+function renderCMine(){const el=document.getElementById('c-mine');if(!el)return;
+ if(!MYHAS){el.innerHTML=NOBIRTH;const L=document.getElementById('c-list');if(L)L.innerHTML='';return}
+ const chip=c=>`<button class="chip" data-center-pick="${c.id}" aria-pressed="${c.id===curC}"><span class="cswatch" style="background:var(--f-${c.id})"></span>${c.name}</button>`;
+ const on=CENTERS.filter(c=>MYDEF.has(c.id)),off=CENTERS.filter(c=>!MYDEF.has(c.id));
+ el.innerHTML=`<div class="result" style="gap:12px"><div><div class="eyebrow">我的九大中心</div><h2>${on.length} 個有定義、${off.length} 個開放</h2></div>
+  <div class="grid2"><div class="me"><h4>有定義（上色）：我穩定、一貫的能量</h4><div class="chips">${on.map(chip).join('')||'<span class="muted">無</span>'}</div></div>
+  <div class="box"><h4>開放（白色）：我學習、感受別人的地方</h4><div class="chips">${off.map(chip).join('')||'<span class="muted">無</span>'}</div></div></div>
+  <p class="hint">點一個中心，下方會顯示它代表我什麼。再往下是九大中心的完整介紹。</p></div>`;
+ const L=document.getElementById('c-list');if(L)L.innerHTML=(on.length?centerSub(`有定義的中心（${on.length} 個）`,CSUB_ON)+`<div class="info" style="gap:10px">${on.map(c=>centerBox(c,true,true)).join('')}</div>`:'')+(off.length?centerSub(`開放的中心（${off.length} 個）`,CSUB_OFF)+`<div class="info" style="gap:10px">${off.map(c=>centerBox(c,false,true)).join('')}</div>`:'')}
 
 /* 通道：我的通道 */
 let hTouched=false;
-
+function renderHMine(){const el=document.getElementById('h-mine');if(!el)return;
+ if(!MYHAS){el.innerHTML=NOBIRTH;return}
+ const mine=myChans();
+ const hang=[];MYGATES.forEach((st,n)=>{(CH_OF[n]||[]).forEach(i=>{const o=CH[i][0]===n?CH[i][1]:CH[i][0];if(!MYGATES.has(o))hang.push({n,o,i})})});
+ el.innerHTML=`<h3 style="margin-bottom:4px">我的通道（${mine.length} 條）</h3><p class="hint" style="margin-bottom:10px">兩端閘門我都有，這是我穩定、可以依賴的天賦。點「在圖上看」會在下方人體圖標示出來。</p>
+  ${mine.length?`<div class="grid2">${mine.map(i=>{const c=CH[i],m=CH_ME[chKey(i)],cir=CIRCUIT[m[0]];return `<div class="box" style="border-color:var(--accent)">
+   <div class="eyebrow">通道 <span class="num">${c[0]}-${c[1]}</span>・${esc(c[3])}</div><h3>${c[2]}通道</h3>${chAltHTML(i)}
+   <div class="tagrow"><span class="tag acc">${CBY[GC[c[0]]].name} ↔ ${CBY[GC[c[1]]].name}</span><span class="tag">${cir[0]}</span><span class="tag">閘門 ${c[0]} ${stName(MYGATES.get(c[0]))}</span><span class="tag">閘門 ${c[1]} ${stName(MYGATES.get(c[1]))}</span></div>
+   <p>${c[4]}</p><div class="me"><h4>這代表我</h4><p>${m[1]}</p></div>
+   <p style="font-size:14px"><b>天賦：</b>${m[2]}</p><p style="font-size:14px"><b>適合發展：</b>${m[3]}</p><p style="font-size:14px"><b>提醒：</b>${m[4]}</p>
+   <div><button class="chip" type="button" data-ch-pick="${i}">在圖上看</button></div></div>`}).join('')}</div>`:'<div class="me"><h4>我沒有完整接通的通道</h4><p>我所有的中心都是開放的，我透過別人和環境體驗各種能量。</p></div>'}
+  <div style="margin-top:12px">${hangTable()}</div>`}
 
 /* 四箭頭：我的箭頭 */
 function renderArMine(){const el=document.getElementById('ar-mine');if(!el)return;
@@ -3455,28 +4014,39 @@ const TYPE_ORDER=['生產者','顯示生產者','投射者','顯示者','反映�
 const AUTH_ORDER=['情緒權威','薦骨權威','直覺（脾）權威','意志力（自我）權威','自我投射權威','環境／心智權威','月亮權威'];
 function myR(){return MYHAS?analyseMap(MYGATES):null}
 function typeHTML(t,mine){const x=TYPE_D[t];return `<div class="${mine?'result':'box'}" style="gap:10px">${mine?`<div class="eyebrow">我的類型</div>`:''}<h${mine?2:3}>${t}<span class="muted" style="font-size:13px;font-weight:400;margin-left:8px">${x.pct}</span></h${mine?2:3}>
- <div class="kv"><div><small>策略</small><b>${x.strategy}</b></div><div><small>順著自己的感受（自己）</small><b>${x.sig}</b></div><div><small>偏離自己的感受（非我）</small><b>${x.notself}</b></div></div>
+ <div class="kv"><div><small>策略</small><b>${x.strategy}</b></div><div><small>順著自己的感受</small><b>${x.sig}</b></div><div><small>偏離自己的感受</small><b>${x.notself}</b></div></div>
  <p>${x.desc}</p><p><b>能量場：</b>${x.aura}</p>${mine?`<div class="me"><h4>這代表我在學校</h4><p>${x.school}</p></div><div class="me"><h4>這代表我在人際中</h4><p>${x.relation}</p></div><div class="box"><h4>給自己的提醒</h4><p>${x.advice}</p></div>`:`<p class="sub" style="font-size:13px;color:var(--muted)">在學校：${x.school}</p>`}</div>`}
 function authHTML(a,mine){const x=AUTH_D[a];return `<div class="${mine?'result':'box'}" style="gap:10px">${mine?`<div class="eyebrow">我的內在權威</div>`:''}<h${mine?2:3}>${a}<span class="muted" style="font-size:13px;font-weight:400;margin-left:8px">${x.center}・${x.pct}</span></h${mine?2:3}>
  <p>${x.how}</p><div class="${mine?'me':'box'}" style="gap:4px"><h4>${mine?'我可以這樣練習':'怎麼練習'}</h4>${x.tips.map(t=>`<p style="font-size:14px">・${t}</p>`).join('')}</div>
  <p><b>常見陷阱：</b>${x.pitfall}</p><p class="sub" style="font-size:14px;color:var(--muted)">${x.example}</p></div>`}
-
-
+function renderTypePage(){const el=document.getElementById('ty-mine');if(!el)return;const r=myR();
+ el.innerHTML=r?typeHTML(r.type,true):NOBIRTH;
+ document.getElementById('ty-all').innerHTML=TYPE_ORDER.map(t=>typeHTML(t,false)).join('')}
+function renderAuthPage(){const el=document.getElementById('au-mine');if(!el)return;const r=myR();
+ el.innerHTML=r?authHTML(r.auth,true):NOBIRTH;
+ document.getElementById('au-all').innerHTML=AUTH_ORDER.map(a=>authHTML(a,false)).join('')}
 function circuitOf(i){const k=CH_ME[chKey(i)][0];return Object.keys(CIRCUIT_D).find(g=>CIRCUIT_D[g].keys.includes(k))}
 function circuitHTML(g,mineCh){const x=CIRCUIT_D[g];const all=CH.map((c,i)=>i).filter(i=>circuitOf(i)===g);const sub=x.keys.map(k=>CIRCUIT[k]);
  return `<div class="box" style="gap:8px"><h4>${x.en}・${x.kw}</h4><h3>${x.name}${mineCh?`<span class="tag acc" style="margin-left:8px">我有 ${mineCh.length} 條</span>`:''}</h3><p>${x.desc}</p>
   ${sub.map(s=>`<p style="font-size:14px"><b>${s[0]}：</b>${s[1]}</p>`).join('')}
   ${mineCh&&mineCh.length?`<div class="me"><h4>這代表我</h4><p>${x.me}</p><p class="sub">我的${x.name}通道：${mineCh.map(i=>CH[i][2]+'（'+CH[i][0]+'-'+CH[i][1]+'）').join('、')}</p></div>`:''}
   <p class="hint">包含通道：${all.map(i=>`${CH[i][0]}-${CH[i][1]} ${CH[i][2]}`).join('、')}</p></div>`}
-
+function renderCircuitPage(){const el=document.getElementById('ci-mine');if(!el)return;
+ if(!MYHAS){el.innerHTML=NOBIRTH}else{const mine=myChans();const by={};mine.forEach(i=>{const g=circuitOf(i);(by[g]=by[g]||[]).push(i)});
+  const gates={};MYGATES.forEach((s,n)=>{(CH_OF[n]||[]).forEach(i=>{const g=circuitOf(i);(gates[g]=gates[g]||new Set()).add(n)})});
+  el.innerHTML=`<div class="result" style="gap:12px"><div><div class="eyebrow">我的迴路</div><h2>${mine.length?Object.keys(by).map(g=>CIRCUIT_D[g].name+' '+by[g].length+' 條').join('・'):'我沒有完整接通的通道'}</h2></div>
+   <p>迴路是把 36 條通道依照「能量的目的」分組。我接通的通道屬於哪些迴路，代表我天生在哪一種生命主題上最穩定；只有閘門、沒有接成通道的部分，則是我會被吸引、向外尋找的主題。</p>
+   <div class="kv">${Object.keys(CIRCUIT_D).map(g=>`<div><small>${CIRCUIT_D[g].name}</small><b>${(by[g]||[]).length} 條通道</b><p>相關閘門 ${(gates[g]||new Set()).size} 個</p></div>`).join('')}</div>
+   ${Object.keys(by).map(g=>circuitHTML(g,by[g])).join('')}</div>`}
+ document.getElementById('ci-all').innerHTML=Object.keys(CIRCUIT_D).map(g=>circuitHTML(g,null)).join('')}
 function hangList(){const out=[];MYGATES.forEach((st,n)=>{(CH_OF[n]||[]).forEach(i=>{const o=CH[i][0]===n?CH[i][1]:CH[i][0];if(!MYGATES.has(o))out.push({n,o,i})})});return out.sort((a,b)=>a.n-b.n||a.o-b.o)}
 function hangTable(){const h=hangList();if(!h.length)return '';return `<div class="box" style="gap:6px"><h4>我的懸掛閘門（${h.length}）：會吸引我的另一端</h4><p class="hint">左邊是我有的閘門，右邊是我缺的另一端。擁有右邊閘門的人，會讓我覺得被「接通」。</p>
  <div class="tscroll" style="margin-top:0"><table class="t hang"><thead><tr><th>我有的閘門</th><th>我缺的閘門</th><th>接成的通道</th></tr></thead><tbody>${h.map(x=>`<tr><td><b class="num">${x.n}</b> ${gN(x.n)}</td><td><b class="num">${x.o}</b> ${gN(x.o)}</td><td><button class="chip" type="button" data-ch-pick="${x.i}">${chN(x.i)} ${CH[x.i][0]}-${CH[x.i][1]}</button></td></tr>`).join('')}</tbody></table></div></div>`}
 
 /* ===== 隱私模式 ===== */
-
-
-
+function setPriv(on){on=false;if(typeof PJ!=='undefined'&&PJ.on)on=true;document.body.classList.toggle('priv',on);const b=document.getElementById('priv-btn');if(b){b.setAttribute('aria-pressed',on);b.textContent='隱私'}ls.set('hd-priv',on?'1':'');try{renderComposite()}catch(e){}}
+document.getElementById('priv-btn').onclick=()=>setPriv(!document.body.classList.contains('priv'));
+setPriv(ls.get('hd-priv')==='1');
 
 /* 滑鼠移到通道上時，把該通道移到其他通道之上 */
 document.addEventListener('pointerover',e=>{const g=e.target&&e.target.closest?e.target.closest('svg.bg g.ch'):null;if(!g||!g.parentNode)return;const sib=[...g.parentNode.children].filter(x=>x.classList.contains('ch'));const last=sib[sib.length-1];if(last&&last!==g)last.after(g)});
@@ -3503,7 +4073,7 @@ function curInfo(){if(!BIRTH||!BIRTH.ms||PLSRC!=='calc')return null;const k=curK
  const nick=rec?rec.nick:((document.getElementById('hb-nick')||{}).value||'').trim();
  return {k,rec,name:sName.value.trim()||'未命名',nick,s:ppSum({name:sName.value,date:BIRTH.date,time:BIRTH.time,tz:BIRTH.tz,dst:BIRTH.dst,tu:TU})}}
 function updCur(){const w=document.getElementById('cur-who');if(!w)return;const c=curInfo();
- w.textContent=c?(c.nick||c.name):'尚未套用';
+ w.textContent='＋人物';
  try{updLeeBtn()}catch(e){}
  const b=document.getElementById('cur-btn');if(b){b.setAttribute('aria-current',document.getElementById('p-people')&&!document.getElementById('p-people').hidden?'page':'false')}
 }
@@ -3512,18 +4082,30 @@ document.addEventListener('click',e=>{if(e.target.closest('#cur-btn')){hbOpen();
 
 
 /* ===== 學習路線與初學模式 ===== */
-
-
+const RM=[{n:'第 1 步',t:'先學會怎麼做決定',tabs:[['type','類型'],['authority','內在權威']],why:'這是人類圖最核心、今天就能開始練習的部分：用對的方式做決定。',q:'我是哪一種類型？我的策略是什麼？做決定時，我該聽身體的哪裡？',exp:'這週做三個小決定前，先照自己的策略與權威試試看，記下感覺有什麼不同。'},
+ {n:'第 2 步',t:'認識我的能量結構',tabs:[['centers','九大中心'],['definition','定義'],['profile','六爻與人生角色']],why:'看懂哪些能量是我穩定的、哪些容易受別人影響，以及我學習與相處的方式。',q:'哪些中心是我的？哪些容易被放大？我用什麼方式學習、和人相處？',exp:'留意一次「被別人情緒或壓力帶著走」的時刻，對照我的開放中心。'},
+ {n:'第 3 步',t:'看懂天賦的細節',tabs:[['channels','36 通道'],['circuit','迴路'],['gates','64 閘門']],why:'從通道與閘門找到天賦的來源，再看四個閘門組成的人生主題。',q:'我穩定的天賦是什麼？我常被什麼樣的人吸引？我這一生的主題是什麼？',exp:'找一位朋友，互相說說對方身上最明顯的一個天賦，對照彼此的通道。'},
+ {n:'第 4 步・進階',t:'延伸與應用',adv:1,tabs:[['planets','星體'],['composite','合圖']],why:'前三步熟悉後再來：看每天的能量天氣、人與人之間的互動，以及更深的層次。',q:'今天的流日怎麼影響我？我和家人、同學在一起時會變成什麼樣子？',exp:'用流日頁觀察一週，記下哪幾天特別有感。'}];
+const BEG_TABS=new Set(['home','glossary','type','authority','centers','definition','profile','channels','circuit','gates','sheet']);
 function rmSeen(){try{return new Set(JSON.parse(localStorage.getItem('hd-seen')||'[]'))}catch(e){return new Set()}}
 function rmMark(t){try{const s=rmSeen();if(!s.has(t)){s.add(t);localStorage.setItem('hd-seen',JSON.stringify([...s]))}}catch(e){}}
-
-
-
-
-
-
-
-
+function rmToggle(t){try{const s=rmSeen();if(s.has(t))s.delete(t);else s.add(t);localStorage.setItem('hd-seen',JSON.stringify([...s]))}catch(e){}renderRoadmap()}
+document.addEventListener('click',e=>{const c=e.target.closest('[data-rm]');if(c){e.preventDefault();rmToggle(c.dataset.rm)}});
+function renderRoadmap(){const el=document.getElementById('roadmap');if(!el)return;const seen=rmSeen();const core=RM.filter(x=>!x.adv).flatMap(x=>x.tabs.map(t=>t[0]));const done=core.filter(t=>seen.has(t)).length;
+ const nowI=RM.findIndex(x=>!x.adv&&x.tabs.some(t=>!seen.has(t[0])));const r=MYHAS?myR():null;const beg=document.body.classList.contains('beg');
+ const me=i=>{if(!r)return '';if(i===0)return `<p class="rm-me">我是<b>${r.type}</b>，策略是「${r.strategy}」，權威是<b>${r.auth}</b>。</p>`;if(i===1)return `<p class="rm-me">我有 <b>${r.def.size}</b> 個有定義的中心${sProf.value?`，人生角色 <b>${sProf.value}</b>`:''}。</p>`;if(i===2){const c=crossOfMe();return `<p class="rm-me">我有 <b>${r.chans.length}</b> 條通道${c?`，輪迴交叉是 <b>${c.title}</b>`:''}。</p>`}return ''};
+ el.innerHTML=`<div class="rm-head"><div><div class="eyebrow">學習路線</div><h2>從這裡開始：四步驟認識人類圖</h2><p class="muted" style="margin-top:4px;max-width:44em">第一次接觸人類圖，建議依序走前三步，第四步等熟悉後再看。看過的分頁會打勾，方便知道自己走到哪裡。</p></div>
+  <div style="display:flex;flex-direction:column;gap:6px;align-items:flex-end"><span class="hint">前三步已讀 ${done}／${core.length} 個分頁</span><div class="rm-bar" style="width:240px"><i style="width:${Math.round(done/core.length*100)}%"></i></div><button class="btn ${beg?'':'ghost '}sm" type="button" data-beg>${beg?'初學模式：開（只顯示前三步的分頁）':'開啟初學模式'}</button></div></div>
+  ${MYHAS?'':'<p class="hint" style="margin-top:8px">按右上角「＋ 出生資料」輸入後，每一步都會顯示「我的」答案。</p>'}
+  <div class="rm-steps">${RM.map((x,i)=>`<div class="rm-step${i===nowI?' now':''}${x.adv?' adv':''}">${i===nowI?'<span class="rm-tag">建議從這裡繼續</span>':''}<span class="rm-n">${x.n}</span><h3>${x.t}</h3><p style="font-size:14px">${x.why}</p>
+   <div class="rm-tabs">${x.tabs.map(([k,t])=>`<button type="button" data-rm="${k}" aria-pressed="${seen.has(k)}" class="${seen.has(k)?'seen':''}${x.adv?' hid':''}"${k==='composite'?' disabled title="合圖為進階功能，目前不另設分頁"':''}>${t}</button>`).join('')}</div>
+   <p class="rm-q"><b>讀完後，我能回答：</b>${x.q}</p>${me(i)}<p class="rm-q"><b>小實驗：</b>${x.exp}</p></div>`).join('')}</div>
+  <p class="hint" style="margin-top:8px">讀完前三步後，到「<a href="#sheet" data-go2="sheet">ABOUT ME</a>」整理成自己的人類圖特色卡。</p>`}
+function setBeg(on){on=false;document.body.classList.toggle('beg',on);const b=document.getElementById('beg-btn');if(b){b.setAttribute('aria-pressed',on);b.textContent='初學模式：'+(on?'開':'關')}try{localStorage.setItem('hd-beg',on?'1':'')}catch(e){}renderRoadmap()}
+document.querySelectorAll('nav.tabs button').forEach(b=>{if(BEG_TABS.has(b.dataset.tab))b.classList.add('beg')});
+document.addEventListener('click',e=>{if(e.target.closest('[data-beg]'))setBeg(!document.body.classList.contains('beg'))});
+{const _s=show;show=function(t){_s(t);rmMark(t);if(t==='home')renderRoadmap()}}
+setBeg((()=>{try{return localStorage.getItem('hd-beg')==='1'}catch(e){return false}})());
 /* ===== 內容來源層級標籤 ===== */
 const SRC_L={hd:['原典','Ra Uru Hu／Jovian Archive 的人類圖系統'],yi:['易經經文','《周易》經文（卦辭、爻辭、大象傳）與傳統易學'],gk:['基因天命','Richard Rudd《The Gene Keys》；中文譯名依布克文化《基因天命》（Kammy Chung、Deeps Gwai 譯）'],ext:['本站延伸解讀','本站依原典整理的舉例、個人化說明與教學用解讀']};
 const srcTag=k=>`<span class="src-tag ${k}" title="${SRC_L[k][1]}">${SRC_L[k][0]}</span>`;
@@ -3531,7 +4113,11 @@ const SRC_PAGE={home:['hd','ext'],yijing:['yi','ext'],centers:['hd','ext'],type:
 const SRC_RULES=[['yi',/卦辭|大象|爻辭|易經|六爻全變|用九|用六|八卦|我的爻|^陽爻|^陰爻|由下往上讀|卦名的念法|六爻名稱|^當位|^得中|^相應|十翼/],['hd',/^(如果我有一條通道|如果我只有一端|如果兩端我都沒有|.*中心・第.脈輪|所屬迴路|與它配對的通道|[1-6] 爻・|規則$|前面的數字|卦 → 閘門|爻 → 閘門|六爻 → 人生角色|人生角色代表我什麼)|・(Sun|Earth|North Node|South Node|Moon|Mercury|Venus|Mars|Jupiter|Saturn|Uranus|Neptune|Pluto)$/],['ext',/^如果我(的|有這|只有閘門|是)|我和這個閘門|閘門特質|^天賦$|陰影與課題|適合發展的地方|自我探索提問|給我的提醒|這一卦在說什麼|卦象與閘門的關係|讀一個閘門的五個步驟|我的懸掛閘門|^意識的我|^身體的我|我的.*中心$/],['gk',/基因天命|黃金路徑|啟動序列|金星序列|珍珠序列|Gene Key|神性「|陰影「|天賦「/],
  ['hd',/^(策略|內在權威|類型|有定義|未定義|開放|夢通道|入口閘門|右角度|左角度|並列|.*象限|五個里程碑的定義|中心的「有定義」|看夢圖上|和清醒人體圖的算法|夢閘門的六爻|用一個比喻|什麼是|迴路|小團體結構|四種通道連結|兩人一起時|團體仍然開放)/],
  ['ext',/三方互證|編程夥伴|這代表我|我的版本|舉例|人際相處|組合起來|在不同的角色|給自己的|我會遇到|我可能會有|會變成什麼樣子|chart 會變得|前半生|今天適合|這條通道的樣子|小實驗|我和這條通道|如果這是我的|我的解讀|之於我的意義|走在軌道上|我這一生的主題|兩條軸線|四個閘門速覽|我的夢|我的五個中心|今天的我|我可能會特別|這一格在問我|生活中的樣子|我的學習方式|我的人際關係|和我的人體圖有關|給自己的建議|這時期|我可能會發生|我可能會經歷|每個人為團體帶來|這代表我們/]];
-
+function srcAnnotate(root){return;if(!root||/^p-(teacher|people|glossary|stats)$/.test(root.id))return;
+ root.querySelectorAll('h4').forEach(h=>{if(h.querySelector('.src-tag')||h.closest('#gl-pop'))return;const t=h.textContent.trim();const ks=SRC_RULES.filter(([k,re])=>re.test(t)).map(x=>x[0]);if(!ks.length)return;
+  const w=document.createElement('span');w.className='src-tags';w.innerHTML=[...new Set(ks)].map(srcTag).join('');h.appendChild(w)});
+ if(!root.querySelector(':scope > .src-row')){const id=root.id.replace(/^p-/,'');const ks=SRC_PAGE[id];const h=root.querySelector(':scope > h2, :scope .hero h1');if(ks&&h){const d=document.createElement('div');d.className='src-row';d.innerHTML=`<span class="muted">本頁內容來源：</span>${ks.map(srcTag).join('')}<button type="button" class="src-help" data-go2="glossary" title="看四種來源標籤的說明">這是什麼？</button>`;
+  if(root.id==='p-home'){const hb=root.querySelector('#roadmap');if(hb)hb.before(d)}else h.after(d)}}}
 const SRC_LEGEND=`<div class="box src-legend" style="gap:6px"><h4>內容來源標籤</h4><p style="font-size:14px">本站融合了幾種不同來源的內容。標題旁的小標籤說明這段內容出自哪裡，方便分辨哪些是原典、哪些是延伸解讀：</p><p style="font-size:14px;display:flex;flex-direction:column;gap:4px">${Object.keys(SRC_L).map(k=>`<span>${srcTag(k)}　${SRC_L[k][1]}</span>`).join('')}</p><p class="hint">「本站延伸解讀」是為了教學與自我探索而寫的舉例與個人化說明，不是原典的內容，閱讀時請當作參考。</p></div>`;
 
 /* ===== 術語小卡與名詞解釋 ===== */
@@ -3615,15 +4201,20 @@ const GLOSS=[
 const GL_MAP=new Map(GLOSS.map(x=>[x[1],x]));
 const GL_TERMS=[...GL_MAP.keys()].sort((a,b)=>b.length-a.length);
 const GL_TAB_NAME={home:'導覽',centers:'九大中心',type:'類型',authority:'內在權威',definition:'定義',profile:'六爻與人生角色',channels:'36 通道',circuit:'迴路',cross:'輪迴交叉',gates:'64 閘門',planets:'星體',transit:'流日',composite:'合圖',arrows:'四箭頭',dream:'夢圖',cycles:'人生週期',genekeys:'基因天命',yijing:'易經入門',chakra:'脈輪・水晶・精油',numer:'生命靈數'};
-const GL_SKIP='.src-tag,.src-row,button,a,select,option,textarea,input,label,svg,script,style,h1,h2,h3,.gl,.tag,.eyebrow,.chip,nav,.pv,.legend,.num,.card,.toc-row,.tri-h,.rm-tabs,code';
+const GL_SKIP='.src-tag,.src-row,button,a,select,option,textarea,input,label,svg,script,style,h1,h2,h3,.gl,.tag,.eyebrow,.chip,nav,.pv,.tabs,.legend,.num,.card,.toc-row,.tri-h,.rm-tabs,code';
 const GL_RE=new RegExp(GL_TERMS.map(t=>t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|'),'g');
-
+function glAnnotate(root){if(!root||root.id==='p-teacher'||root.id==='p-people'||root.id==='p-glossary')return;
+ const used=new Set([...root.querySelectorAll('.gl')].map(x=>x.dataset.gl));if(used.size>=GL_TERMS.length)return;
+ const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>{const p=n.parentElement;if(!p||!n.nodeValue.trim())return NodeFilter.FILTER_REJECT;if(p.closest(GL_SKIP)||p.closest('[hidden]'))return NodeFilter.FILTER_REJECT;return NodeFilter.FILTER_ACCEPT}});
+ const nodes=[];while(w.nextNode())nodes.push(w.currentNode);
+ nodes.forEach(n=>{let node=n;GL_RE.lastIndex=0;let m;while(node&&(m=GL_RE.exec(node.nodeValue))){const t=m[0];if(used.has(t))continue;used.add(t);
+  const after=node.splitText(m.index);const rest=after.splitText(t.length);const sp=document.createElement('span');sp.className='gl';sp.dataset.gl=t;sp.tabIndex=0;sp.setAttribute('role','button');sp.title='點一下看「'+t+'」的解釋';sp.textContent=t;after.replaceWith(sp);node=rest;GL_RE.lastIndex=0}})}
 let GL_T=null,GL_BUSY=false;
-
-
-
+function glRun(){if(GL_BUSY)return;GL_BUSY=true;const P=document.querySelector('main .panel:not([hidden])');try{srcAnnotate(P)}catch(e){}try{glAnnotate(P)}catch(e){}const M=document.getElementById('m-body');if(M&&!document.getElementById('modal').hidden){try{srcAnnotate(M)}catch(e){}try{glAnnotate(M)}catch(e){}}GL_BUSY=false}
+new MutationObserver(()=>{if(GL_BUSY)return;clearTimeout(GL_T);GL_T=setTimeout(glRun,120)}).observe(document.querySelector('main'),{childList:true,subtree:true,attributes:true,attributeFilter:['hidden']});
+new MutationObserver(()=>{if(GL_BUSY)return;clearTimeout(GL_T);GL_T=setTimeout(glRun,120)}).observe(document.getElementById('modal'),{childList:true,subtree:true,attributes:true,attributeFilter:['hidden']});
 function glCard(t,el){const x=GL_MAP.get(t);if(!x)return;let c=document.getElementById('gl-pop');if(!c){c=document.createElement('div');c.id='gl-pop';c.setAttribute('role','dialog');document.body.appendChild(c)}
- c.innerHTML=`<div class="gl-h"><b>${x[1]}</b><span>${x[2]}</span><button type="button" class="gl-x" aria-label="關閉">✕</button></div><p>${x[3]}</p><div class="gl-a">''<button type="button" class="btn ghost sm" data-gl-go="glossary" data-gl-q="${x[1]}">名詞解釋</button></div>`;
+ c.innerHTML=`<div class="gl-h"><b>${x[1]}</b><span>${x[2]}</span><button type="button" class="gl-x" aria-label="關閉">✕</button></div><p>${x[3]}</p><div class="gl-a">${x[4]&&x[4]!=='home'?`<button type="button" class="btn ghost sm" data-gl-go="${x[4]}">到「${GL_TAB_NAME[x[4]]||x[4]}」看更多</button>`:''}<button type="button" class="btn ghost sm" data-gl-go="glossary" data-gl-q="${x[1]}">名詞解釋</button></div>`;
  if(el.closest&&el.closest('#p-sheet')){const ga=c.querySelector('.gl-a');if(ga)ga.remove()}
  c.hidden=false;const r=el.getBoundingClientRect();const W=Math.min(340,innerWidth-24);c.style.width=W+'px';let left=Math.min(Math.max(12,r.left),innerWidth-W-12);let top=r.bottom+8;c.style.left=left+'px';c.style.top=top+'px';
  const h=c.offsetHeight;if(top+h>innerHeight-12)c.style.top=Math.max(12,r.top-h-8)+'px'}
@@ -3634,18 +4225,29 @@ document.addEventListener('click',e=>{const g=e.target.closest('.gl');if(g){e.pr
 document.addEventListener('keydown',e=>{if(e.key==='Escape')glClose();const g=e.target.closest&&e.target.closest('.gl');if(g&&(e.key==='Enter'||e.key===' ')){e.preventDefault();glCard(g.dataset.gl,g)}});
 addEventListener('scroll',glClose,{passive:true});
 let GL_Q='';
-
-
-
+function renderGlossary(){const el=document.getElementById('gl-list');if(!el)return;{const sl=document.getElementById('gl-src');if(sl&&!sl.innerHTML)sl.innerHTML=SRC_LEGEND}const inp=document.getElementById('gl-q');if(GL_Q){inp.value=GL_Q;GL_Q=''}const q=inp.value.trim().toLowerCase();
+ const cats=['基本','中心','類型','結構','進階'];let n=0;
+ el.innerHTML=cats.map(cat=>{const L=GLOSS.filter(x=>x[0]===cat&&(!q||(x[1]+x[2]+x[3]).toLowerCase().includes(q)));n+=L.length;if(!L.length)return '';
+  return `<div class="sec"><h3>${cat}</h3><div class="gl-grid">${L.map(x=>`<div class="box gl-item${q&&x[1].toLowerCase()===q?' hit':''}"><h4>${x[1]} <span class="muted" style="font-weight:400;font-size:12px">${x[2]}</span></h4><p style="font-size:14px">${x[3]}</p>${false?`<div><button type="button" class="chip" data-go2="${x[4]}">${GL_TAB_NAME[x[4]]||x[4]} →</button></div>`:''}</div>`).join('')}</div></div>`}).join('')||'<p class="muted">找不到符合的名詞。</p>';
+ document.getElementById('gl-count').textContent=q?`找到 ${n} 個`:`共 ${GLOSS.length} 個名詞`;
+ const hit=el.querySelector('.hit');if(hit)hit.scrollIntoView({block:'center'})}
+document.getElementById('gl-q').addEventListener('input',renderGlossary);
+{const _s=show;show=function(t){_s(t);if(t==='glossary')renderGlossary();setTimeout(glRun,60)}}
 
 /* ===== 課堂投影模式 ===== */
-
-
-
-
-
-
-
+var PJ={on:false,cards:[],i:0,priv:false};
+function pjCards(){const P=document.querySelector('main .panel:not([hidden])');if(!P)return [];const vis=x=>x.offsetParent!==null&&x.textContent.trim().length>15;
+ const cards=[...P.querySelectorAll('.box,.me,.dpair')].filter(vis).filter(x=>!x.parentElement.closest('.box,.me,.dpair'));
+ const conts=[...P.querySelectorAll('.result,.block,.hero')].filter(vis).filter(x=>!cards.some(c=>x.contains(c))&&!x.parentElement.closest('.result,.block'));
+ const all=[...cards,...conts];return all.sort((a,b)=>a.compareDocumentPosition(b)&Node.DOCUMENT_POSITION_FOLLOWING?-1:1)}
+function pjOpen(){const cards=pjCards();if(!cards.length)return;PJ={on:true,cards,i:0,priv:document.body.classList.contains('priv')};setPriv(true);document.body.classList.add('proj');pjShow()}
+function pjShow(){let o=document.getElementById('pj');if(!o){o=document.createElement('div');o.id='pj';document.body.appendChild(o)}o.hidden=false;
+ const c=PJ.cards[PJ.i].cloneNode(true);c.querySelectorAll('[id]').forEach(x=>x.removeAttribute('id'));c.querySelectorAll('button,input,select,textarea').forEach(x=>x.replaceWith(Object.assign(document.createElement('span'),{textContent:x.textContent})));
+ o.innerHTML=`<div class="pj-top"><span class="pj-n num">${PJ.i+1} ／ ${PJ.cards.length}</span><span class="pj-t">${esc((document.querySelector('main .panel:not([hidden]) h2')||{}).textContent||'')}</span><span class="pj-priv">隱私模式已開啟</span><button type="button" class="btn ghost sm" data-pj="x">結束投影（Esc）</button></div><div class="pj-card"></div><div class="pj-nav"><button type="button" class="btn ghost" data-pj="p" ${PJ.i?'':'disabled'}>◀ 上一張</button><button type="button" class="btn" data-pj="n" ${PJ.i<PJ.cards.length-1?'':'disabled'}>下一張 ▶</button></div>`;
+ o.querySelector('.pj-card').appendChild(c);o.querySelector('.pj-card').scrollTop=0}
+function pjClose(){PJ.on=false;const o=document.getElementById('pj');if(o)o.hidden=true;document.body.classList.remove('proj');setPriv(PJ.priv)}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-pj]');if(b){const a=b.dataset.pj;if(a==='x')pjClose();else if(a==='n'&&PJ.i<PJ.cards.length-1){PJ.i++;pjShow()}else if(a==='p'&&PJ.i>0){PJ.i--;pjShow()}return}if(e.target.closest('#pj-btn'))pjOpen()});
+document.addEventListener('keydown',e=>{if(!PJ.on)return;if(e.key==='Escape')pjClose();else if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){e.preventDefault();if(PJ.i<PJ.cards.length-1){PJ.i++;pjShow()}}else if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();if(PJ.i>0){PJ.i--;pjShow()}}});
 
 
 
@@ -3665,12 +4267,42 @@ sName.value=ls.get('hd-name')||'';
 PL={p:{},d:{}};PLSRC='none';sP.value='';sD.value='';sProf.value='';
 bcInit();
 if(BIRTH&&BIRTH.date&&BIRTH.time){const nm=sName.value;bcEl('bc-go').click();sName.value=nm}
-renderSheet(false);
-hbInit();
+renderPlanets();syncCrossInputs();renderCross();renderCrossBrowse();renderSheet(false);
+renderCenter();renderChannels();renderGates();renderDefinition();hbInit();renderHome();fillCpSelects();renderProfile();renderComposite();renderTypePage();renderAuthPage();renderCircuitPage();
 show((location.hash||'').slice(1)||'sheet');
 
 /* ===== 雲端同步（只在 claude.ai 上、只同步到自己的帳號；其他環境不啟用） ===== */
-
+(function(){
+ return; /* 本站不啟用雲端同步：出生資料只留在使用者自己的瀏覽器 */
+ const SKIP=new Set(['hd-priv','hd-memo']);const KEYS=()=>{const o=[];try{for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k&&k.startsWith('hd-')&&!k.startsWith('hd-sync')&&!SKIP.has(k)&&!['hd-demo','hd-seen','hd-beg'].includes(k))o.push(k)}}catch(e){}return o};
+ const R=k=>{try{return localStorage.getItem(k)}catch(e){return null}},W=(k,v)=>{try{v==null?localStorage.removeItem(k):localStorage.setItem(k,v)}catch(e){}};
+ const DEV=R('hd-sync-dev')||(()=>{const d=Math.random().toString(36).slice(2,10);W('hd-sync-dev',d);return d})();
+ let ref=null,timer=null,busy=false,again=false,READY=false;
+ const st=t=>{const e=document.getElementById('cloud-st');if(e)e.innerHTML=t};
+ const ON='最多可儲存 500 人。<b style="color:var(--accent)">☁ 雲端同步已開啟</b>：人物資料庫與目前的出生資料會存到你的 Claude 帳號，用電腦、iPad、手機打開這個網址都會看到同一份資料。';
+ const local=()=>{const kv={};KEYS().forEach(k=>{const v=R(k);if(v!=null)kv[k]=v});return kv};
+ const ppMerge=(a,b)=>{let A=[],B=[];try{A=JSON.parse(a||'[]')}catch(e){}try{B=JSON.parse(b||'[]')}catch(e){}const m=new Map();[...B,...A].forEach(p=>{const k=ppKey(p),o=m.get(k);if(!o||(p.t||0)>=(o.t||0))m.set(k,p)});return JSON.stringify([...m.values()].sort((x,y)=>(y.t||0)-(x.t||0)))};
+ const apply=kv=>{const cur=KEYS();cur.forEach(k=>{if(!(k in kv))W(k,null)});Object.keys(kv).forEach(k=>W(k,kv[k]))};
+ async function push(){if(!ref)return;if(busy){again=true;return}busy=true;try{const ts=Date.now();await ref.set({kv:local(),ts,dev:DEV});W('hd-sync-ts',String(ts));W('hd-sync-dirty',null);st(ON)}catch(e){st('最多可儲存 500 人。<b style="color:var(--red)">雲端同步暫時失敗</b>（'+((e&&e.code)||'')+'），資料仍保存在這台裝置，稍後會再試。');setTimeout(()=>window.cloudTouch&&cloudTouch('hd-people'),15000)}busy=false;if(again){again=false;push()}}
+ window.cloudTouch=k=>{if(!READY||DEMO||!k||!k.startsWith('hd-')||SKIP.has(k))return;W('hd-sync-dirty','1');if(!ref)return;clearTimeout(timer);timer=setTimeout(push,1500)};
+ const reload=ts=>{try{if(sessionStorage.getItem('hd-sync-rl')===String(ts))return false;sessionStorage.setItem('hd-sync-rl',String(ts))}catch(e){return false}location.reload();return true};
+ if(window.HD_NOSTORE)st('<b style="color:var(--red)">課堂展示版：不會儲存任何資料。</b>輸入的出生資料與人物只在這次開啟期間有效，重新整理或關閉後就會清空。');
+ (async()=>{if(window.HD_NOSTORE||DEMO||!window.claude||!window.claude.use)return;let db=null,user=null;try{db=await window.claude.use('db');user=await window.claude.use('user')}catch(e){}if(!db||!user)return;
+  let uid=null;try{uid=await user.id()}catch(e){}if(!uid)return;
+  ref=db.doc('data/users/'+uid+'/hdstate');let snap;try{snap=await ref.get()}catch(e){return}
+  const last=R('hd-sync-ts'),dirty=R('hd-sync-dirty')==='1';
+  if(!snap.exists){await push()}
+  else{const r=snap.data()||{};const rkv=r.kv||{};
+   if(String(r.ts)!==last){
+    if(!dirty||!Object.keys(local()).length){apply(rkv);W('hd-sync-ts',String(r.ts));W('hd-sync-dirty',null);if(reload(r.ts))return}
+    else{const kv=Object.assign({},rkv,local());kv['hd-people']=ppMerge(local()['hd-people'],rkv['hd-people']);apply(kv);await push();if(reload(R('hd-sync-ts')))return}}
+   else if(dirty)await push();st(ON)}
+  READY=true;
+  ref.onSnapshot(sn=>{if(!sn.exists)return;const r=sn.data()||{};if(r.dev===DEV||String(r.ts)===R('hd-sync-ts'))return;if(R('hd-sync-dirty')==='1')return;
+   apply(r.kv||{});W('hd-sync-ts',String(r.ts));try{fillCpSelects()}catch(e){}
+   st(ON+' <button class="btn ghost sm" type="button" onclick="location.reload()">已從其他裝置更新，按這裡重新載入</button>')},()=>{});
+ })();
+})();
 </script>
 
 <script>(function(){var SEL='svg.bg [data-gate],svg.bg [data-ch],[data-open],[data-chpop],[data-gochan],[data-gl-go]';var PL=['太陽','地球','月亮','北交點','南交點','水星','金星','火星','木星','土星','天王星','海王星','冥王星'];function blocked(e){var t=e.target;if(!t||!t.closest)return false;var g=t.closest('.gl');if(g){return PL.indexOf(g.dataset.gl)<0}return !!t.closest(SEL)}document.addEventListener('click',function(e){if(blocked(e)){e.stopPropagation();e.preventDefault();}},true);document.addEventListener('keydown',function(e){if(e.key==='Enter'&&blocked(e)){e.stopPropagation();e.preventDefault();}},true);})();</script>
@@ -3698,4 +4330,48 @@ h4{font-family:"Noto Sans TC",sans-serif}
 /* 本站不開放搜尋，僅供檢視 */
 input.search,input[type=search]{display:none!important}
 </style>
+<script>
+(function(){
+ function drawMini(){try{
+  var el=document.getElementById('hd-mini');if(!el||typeof EPH==='undefined')return;
+  var c=EPH.chart(Date.now()).p;
+  var gs=new Map();PLANETS.forEach(function(P){gs.set(c[P.k].g,'d')});
+  var all=analyseMap(gs);
+  el.innerHTML=bodygraph({mode:'gate',gates:gs,defined:all.def});
+  el.querySelectorAll('polygon.ctr').forEach(function(p){if(!all.def.has(p.getAttribute('data-center')))p.style.setProperty('fill','transparent','important')});
+  el.querySelectorAll('svg').forEach(function(s){s.style.background='transparent'});
+ }catch(e){}}
+ if(document.readyState==='complete')drawMini();else window.addEventListener('load',drawMini);
+})();
+/* 標題兩行等寬：PACiDAL 依寬度放大，HUMAN DESIGN 101 依同一寬度加字距撐滿 */
+(function(){
+ function fit(){try{
+  var box=document.querySelector('.brand-row .pz-en');if(!box)return;
+  var a=box.querySelector('.pz-l1'),b=box.querySelector('.pz-l2');if(!a||!b)return;
+  var chart=document.getElementById('hd-mini');if(!chart)return;
+  var H=chart.getBoundingClientRect().height;if(!H)return;
+  var f=H/1.42;
+  var row=document.querySelector('.brand-row');
+  var used=0;if(row){[].forEach.call(row.children,function(el){if(el!==box.closest('.brand'))used+=el.getBoundingClientRect().width});used+=8*Math.max(0,row.children.length-1)}
+  var avail=row?row.clientWidth-used:Infinity;
+  var W=1;
+  for(var pass=0;pass<2;pass++){
+   box.style.width='auto';box.style.gap=(0.12*f).toFixed(2)+'px';
+   a.style.letterSpacing='0';a.style.fontSize=f.toFixed(2)+'px';
+   b.style.letterSpacing='0';b.style.fontSize=(0.3*f).toFixed(2)+'px';
+   W=a.getBoundingClientRect().width||1;
+   if(W<=avail)break;
+   f=f*avail/W;
+  }
+  box.style.width=W.toFixed(2)+'px';
+  var wb=b.getBoundingClientRect().width||1;
+  var n=b.textContent.length;
+  var ls=(W-wb)/Math.max(1,n-1);
+  b.style.letterSpacing=ls.toFixed(2)+'px';
+  b.style.marginRight=(-ls).toFixed(2)+'px';
+ }catch(e){}}
+ window.addEventListener('load',fit);window.addEventListener('resize',fit);
+ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);
+})();
+</script>
 </body></html>
