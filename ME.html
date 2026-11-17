@@ -26,8 +26,9 @@ h1{font-family:'Italiana',serif;font-weight:400;font-size:52px;letter-spacing:.0
 .link.primary:hover{background:#2c3b5c}
 .link small{display:block;font-size:12px;font-weight:500;opacity:.75;letter-spacing:.04em}
 .tx{display:flex;flex-direction:column;align-items:center}
-footer{margin-top:40px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);line-height:1.8}
-footer .en{font-family:'Italiana',serif;font-size:18px;color:var(--ink);letter-spacing:.06em}
+footer{margin-top:40px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);line-height:1.8;display:grid;justify-content:center;justify-items:stretch}
+footer .en{font-family:'Italiana',serif;font-size:20px;color:#5C4310;-webkit-text-stroke:.7px #5C4310;letter-spacing:.06em;text-align:center;white-space:nowrap}
+footer p{margin:8px 0 0;font-size:12px;white-space:nowrap;text-align:center}
 @media (max-width:380px){h1{font-size:44px}.link{font-size:16px;padding:15px 16px}}
 </style>
 </head>
@@ -40,15 +41,29 @@ footer .en{font-family:'Italiana',serif;font-size:18px;color:var(--ink);letter-s
 
   <nav class="links">
     <a class="link primary" href="https://canna720-hub.github.io/pacidal101/" target="_blank" rel="noopener"><span class="tx">免費查詢我的人類圖<small>輸入出生資料，即刻看見您的設計</small></span></a>
-    <a class="link" href="https://vocus.cc/salon/pacidal_flow" target="_blank" rel="noopener"><span class="tx">流日文章｜為五種類型提供策略</span></a>
+    <a class="link" href="https://vocus.cc/salon/pacidal_flow" target="_blank" rel="noopener"><span class="tx">流日電子報｜五種類型實用策略</span></a>
     <a class="link" href="https://www.instagram.com/pacidal_flow/" target="_blank" rel="noopener"><span class="tx">人類圖流日閘門｜Instagram</span></a>
     <a class="link" href="https://lin.ee/rnaWgBq" target="_blank" rel="noopener"><span class="tx">個人檔案及流日預約｜LINE</span></a>
   </nav>
 
   <footer>
-    <div class="en">PACiDAL | PACIDAL HUMAN DESIGN</div>
+    <div class="en">PACiDAL HUMAN DESIGN</div>
     <p>版權所有 © 2026 LEE HUI-YUN．All rights reserved.</p>
   </footer>
 </main>
+<script>
+(function(){
+  function fit(){
+    var en=document.querySelector('footer .en'), cp=document.querySelector('footer p');
+    if(!en||!cp) return;
+    en.style.fontSize='20px';
+    var target=cp.getBoundingClientRect().width;
+    var rg=document.createRange(); rg.selectNodeContents(en); var w=rg.getBoundingClientRect().width;
+    if(w>0 && target>0){ en.style.fontSize=(20*target/w)+'px'; }
+  }
+  if(document.fonts&&document.fonts.ready){ document.fonts.ready.then(fit); }
+  window.addEventListener('load',fit); window.addEventListener('resize',fit); fit();
+})();
+</script>
 </body>
 </html>
