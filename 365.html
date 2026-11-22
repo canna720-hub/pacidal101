@@ -181,6 +181,15 @@
     .stick-title { grid-row: 2; }
     .side-chart, .archive#calendar { grid-row: 3; }
   }
+  /* phone: two lines — logo | title | brand, date on the second line under the title */
+  @media (max-width: 1023px) {
+    .stick-title { display: grid; grid-template-columns: auto auto 1fr; grid-template-areas: "logo h1 h1" "logo date brand"; align-items: center; column-gap: 10px; row-gap: 2px; padding: 8px 14px; text-align: left; }
+    .stick-title .mini-logo { grid-area: logo; width: 44px; height: 44px; flex: none; }
+    .stick-title h1 { grid-area: h1; white-space: nowrap; }
+    .stick-title .brand { grid-area: brand; justify-self: end; white-space: nowrap; font-size: 10px; letter-spacing: .06em; }
+    .stick-title .wk-range { grid-area: date; justify-self: start; font-size: 16px; }
+    body.weekly-mode .stick-title .brand { display: none; }
+  }
 </style>
 </head>
 <body>
@@ -3410,7 +3419,7 @@
     }
 
     function fmtKey(d) { return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()); }
-    function pickWeekly(w) {
+    function pickWeekly(w, noScroll) {
       selectedKey = null;
       selectedWeek = w.monday;
       const card = document.getElementById("todayCard");
@@ -3426,7 +3435,7 @@
       document.querySelector("#today .label").style.color = "#3f6157";
       { const lb = document.querySelector("#today .label"); lb.style.position = "sticky"; lb.style.top = document.querySelector(".stick-title").offsetHeight + "px"; lb.style.zIndex = "55"; lb.style.background = "var(--paper)"; lb.style.padding = "8px 0"; }
       draw();
-      document.getElementById("today").scrollIntoView({ behavior: "smooth" });
+      if (!noScroll) document.getElementById("today").scrollIntoView({ behavior: "smooth" });
     }
 
     function draw() {
@@ -3471,6 +3480,11 @@
       cur = cur.m === 11 ? { y: cur.y + 1, m: 0 } : { y: cur.y, m: cur.m + 1 };
       draw();
     });
+    // Sunday 21:00–24:00 (Taipei): open the upcoming week's report by default
+    { const tp = new Date(new Date().toLocaleString("en-US", { timeZone: "Asia/Taipei" }));
+      const tomorrow = fmtKey(new Date(tp.getFullYear(), tp.getMonth(), tp.getDate() + 1));
+      const wk = WEEKLY.find((w) => w.monday === tomorrow);
+      if (tp.getDay() === 0 && tp.getHours() >= 21 && wk && todayKey() >= wk.publish) pickWeekly(wk, true); }
     draw();
   }
 
